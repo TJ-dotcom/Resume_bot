@@ -25,8 +25,8 @@ resume_path = ""
 # Load the spaCy model
 nlp = spacy.load("en_core_web_sm")
 
-# Set DeepSeek API key
-deepseek_api_key = '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'
+# Set the DeepSeek model endpoint
+deepseek_endpoint = 'http://127.0.0.1:1234/v1/completions'
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Send a message when the command /start is issued."""
@@ -111,27 +111,52 @@ def generate_tailored_resume(sections, original_resume_path):
     pdf.set_font("Arial", size=12)
 
     for section, content in sections.items():
+        pdf.set_font("Arial", 'B', size=14)
         pdf.cell(200, 10, txt=section.capitalize(), ln=True, align='L')
+        pdf.set_font("Arial", size=12)
         for line in content:
-            pdf.cell(200, 10, txt=line.encode('latin-1', 'replace').decode('latin-1'), ln=True, align='L')
+            try:
+                pdf.multi_cell(0, 10, txt=line.encode('latin-1', 'replace').decode('latin-1'), align='L')
+            except fpdf.errors.FPDFException as e:
+                logger.error(f"Error rendering text: {line}")
+                logger.error(e)
+                pdf.multi_cell(0, 10, txt="Error rendering text", align='L')
         pdf.ln(10)
 
     pdf.output(tailored_resume_path)
     return tailored_resume_path
 
+import time
+
 def generate_deepseek_response(prompt):
     headers = {
-        'Authorization': f'Bearer {deepseek_api_key}',
         'Content-Type': 'application/json',
     }
     data = {
+        'model': 'deepseek-coder-v2-lite-instruct',  # Specify the model
         'prompt': prompt,
         'max_tokens': 150,
         'temperature': 0.7,
     }
-    response = requests.post('https://api.deepseek.com/v1/completions', headers=headers, json=data)
-    response.raise_for_status()
-    return response.json()['choices'][0]['text'].strip()
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(deepseek_endpoint, headers=headers, json=data)
+            response.raise_for_status()
+            response_json = response.json()
+            logger.info(f"DeepSeek API response: {response_json}")
+            if 'choices' in response_json:
+                return response_json['choices'][0]['text'].strip()
+            else:
+                logger.error(f"Unexpected response format: {response_json}")
+                return "Error: Unexpected response format from DeepSeek API"
+        except requests.exceptions.RequestException as err:
+            logger.error(f"Request error occurred: {err}")
+            if attempt < max_retries - 1:
+                logger.info(f"Retrying... ({attempt + 1}/{max_retries})")
+                time.sleep(2)  # Wait for 2 seconds before retrying
+            else:
+                return f"Error: {err}"
 
 async def process_files(job_description, resume_path, update, context):
     # Extract keywords from the job description

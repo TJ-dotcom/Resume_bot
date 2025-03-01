@@ -1136,3 +1136,779 @@ requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://a
 2025-02-26 23:04:36,141 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
 2025-02-26 23:04:36,141 - INFO - Application is stopping. This might take a moment.
 2025-02-26 23:04:36,141 - INFO - Application.stop() complete
+2025-03-01 13:07:43,393 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-01 13:07:43,512 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-01 13:07:43,514 - INFO - Application started
+2025-03-01 13:07:53,822 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:03,900 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:03,902 - INFO - Command /start issued
+2025-03-01 13:08:04,476 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:08:13,919 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:13,921 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 13:08:14,488 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:08:14,613 - INFO - Extracted Keywords: {'concept', 'management', 'ongoing', 'requirements', 'Snowflake', 'technical', 'internal', 'actionable', 'resolution', 'Analyst', 'creation', 'analysis', 'approaches', 'Prior', 'multiple', 'product', 'experience', 'markets', 'overall', 'tools', 'Metabase', 'project', 'insights', 'automation', 'problem', 'patterns', 'planning', 'solution', 'Collaborate', 'service', 'reliability', 'priorities', 'Support', 'data', 'engineering', 'team', 'liaison', 'Finance', 'reconciling', 'findings', 'SQL', 'teams', 'Team', 'skills', 'Responsible', 'datasets', 'use', 'projections', 'fix', 'reporting', 'decision', 'optimize', 'Strong', 'loan', 'unstructured', 'metrics', 'functional', 'general', 'projects', 'performance', 'vendors', 'Python', 'self', 'potential', 'organizational', 'description', 'intelligence', 'Drive', 'cross', 'products', 'lenders', 'operations', 'gaps', 'Experience', 'automate', 'Ability', 'trends', 'visibility', 'marketing', 'financial', 'large', 'meaningful', 'lead', 'differences', 'Dig', 'capital', 'Amplitude', 'execution', 'translate', 'efforts', 'database', 'quality', 'curious', 'detail', 'ledger', 'R', 'role', 'specifications', 'deadlines', 'ability', 'finance', 'Attention', 'dataset', 'business', 'work', 'external', 'collection', 'issues', 'Data', 'key', 'environment', 'job'}
+2025-03-01 13:08:14,978 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:08:15,355 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:08:24,031 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:34,135 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:39,765 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:40,976 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 13:08:41,282 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_62.pdf "HTTP/1.1 200 OK"
+2025-03-01 13:08:41,384 - INFO - Received resume: Vignesh_TJ(res).pdf
+2025-03-01 13:08:41,754 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:08:42,438 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR 
+
++1-716-547-1968 
+
+vigneshtj2404@gmail.com 
+
+Buffalo, NY 
+https://linkedin.com/in/vignesh-t-j/ 
+
+https://github.com/TJ-dotcom 
+
+Education 
+State University of New York at Buffalo 
+MS, Engineering Science (Data Science) 
+Sri Venkateswara College of Engineering 
+Bachelor of Engineering, Electronics and Communications 
+
+Skills 
+
+Jan 2024 - Present 
+
+Aug 2018 - Jul 2022 
+
+•Cloud: AWS 
+•Database: MySQL, PostgreSQL, MongoDB 
+•Languages: Python, SQL, R 
+•CI/CD: Git, Doc...
+2025-03-01 13:08:42,506 - ERROR - Other error occurred: 'choices'
+2025-03-01 13:08:42,507 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_application.py", line 1325, in process_update
+    await coroutine
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 78, in receive_files
+    await process_files(job_description, resume_path, update, context)
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 156, in process_files
+    tailored_sections[section] = generate_deepseek_response(prompt)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 134, in generate_deepseek_response
+    return response.json()['choices'][0]['text'].strip()
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'choices'
+2025-03-01 13:08:49,876 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:08:59,980 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:09:10,085 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:09:20,192 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:09:30,302 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:09:40,405 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:09:50,509 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:00,629 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:10,735 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:20,836 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:30,952 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:41,057 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:10:51,170 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:01,272 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:11,379 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:21,483 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:31,584 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:41,687 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:11:51,790 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:01,893 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:12,013 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:22,116 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:32,223 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:42,328 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:12:52,434 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:02,537 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:12,649 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:22,762 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:32,868 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:42,972 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:13:53,081 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:03,186 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:13,290 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:23,407 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:33,509 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:43,613 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:14:53,717 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:03,821 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:13,926 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:24,035 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:34,142 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:44,256 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:15:54,389 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:04,497 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:14,601 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:24,705 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:34,810 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:38,164 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:38,170 - INFO - Application is stopping. This might take a moment.
+2025-03-01 13:16:38,176 - INFO - Application.stop() complete
+2025-03-01 13:16:49,585 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-01 13:16:49,686 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-01 13:16:49,687 - INFO - Application started
+2025-03-01 13:16:52,473 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:16:52,475 - INFO - Command /start issued
+2025-03-01 13:16:52,841 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:17:00,052 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:00,053 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 13:17:00,647 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:17:00,728 - INFO - Extracted Keywords: {'Analyst', 'automation', 'requirements', 'reporting', 'translate', 'fix', 'collection', 'patterns', 'ledger', 'lead', 'teams', 'Ability', 'Data', 'data', 'business', 'curious', 'potential', 'multiple', 'Team', 'team', 'Metabase', 'insights', 'planning', 'external', 'project', 'trends', 'dataset', 'Collaborate', 'gaps', 'SQL', 'capital', 'specifications', 'lenders', 'markets', 'projections', 'priorities', 'efforts', 'Finance', 'use', 'datasets', 'organizational', 'reliability', 'performance', 'Responsible', 'resolution', 'meaningful', 'Support', 'Python', 'creation', 'approaches', 'products', 'role', 'Attention', 'execution', 'product', 'analysis', 'Drive', 'actionable', 'service', 'automate', 'unstructured', 'tools', 'financial', 'skills', 'reconciling', 'Snowflake', 'projects', 'concept', 'technical', 'environment', 'cross', 'Experience', 'detail', 'findings', 'loan', 'problem', 'key', 'Amplitude', 'marketing', 'quality', 'visibility', 'Prior', 'optimize', 'self', 'functional', 'operations', 'vendors', 'liaison', 'database', 'decision', 'intelligence', 'deadlines', 'Dig', 'metrics', 'differences', 'Strong', 'work', 'ability', 'management', 'general', 'internal', 'experience', 'large', 'engineering', 'ongoing', 'R', 'finance', 'description', 'issues', 'overall', 'job', 'solution'}
+2025-03-01 13:17:01,109 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:17:01,480 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:17:10,161 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:20,264 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:30,367 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:40,470 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:44,280 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:45,792 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 13:17:45,994 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_63.pdf "HTTP/1.1 200 OK"
+2025-03-01 13:17:46,198 - INFO - Received resume: Vignesh_TJ(res).pdf
+2025-03-01 13:17:46,685 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:17:46,889 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR 
+
++1-716-547-1968 
+
+vigneshtj2404@gmail.com 
+
+Buffalo, NY 
+https://linkedin.com/in/vignesh-t-j/ 
+
+https://github.com/TJ-dotcom 
+
+Education 
+State University of New York at Buffalo 
+MS, Engineering Science (Data Science) 
+Sri Venkateswara College of Engineering 
+Bachelor of Engineering, Electronics and Communications 
+
+Skills 
+
+Jan 2024 - Present 
+
+Aug 2018 - Jul 2022 
+
+•Cloud: AWS 
+•Database: MySQL, PostgreSQL, MongoDB 
+•Languages: Python, SQL, R 
+•CI/CD: Git, Doc...
+2025-03-01 13:17:46,956 - ERROR - Other error occurred: 'choices'
+2025-03-01 13:17:46,957 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_application.py", line 1325, in process_update
+    await coroutine
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 78, in receive_files
+    await process_files(job_description, resume_path, update, context)
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 156, in process_files
+    tailored_sections[section] = generate_deepseek_response(prompt)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 134, in generate_deepseek_response
+    return response.json()['choices'][0]['text'].strip()
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'choices'
+2025-03-01 13:17:54,387 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:59,644 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:17:59,645 - INFO - Application is stopping. This might take a moment.
+2025-03-01 13:17:59,645 - INFO - Application.stop() complete
+2025-03-01 13:18:08,604 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-01 13:18:08,704 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-01 13:18:08,704 - INFO - Application started
+2025-03-01 13:18:11,711 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:18:11,714 - INFO - Command /start issued
+2025-03-01 13:18:12,101 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:18:21,818 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:18:25,155 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:18:25,156 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 13:18:25,738 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:18:25,869 - INFO - Extracted Keywords: {'gaps', 'Responsible', 'management', 'lenders', 'Dig', 'performance', 'potential', 'data', 'decision', 'efforts', 'Support', 'trends', 'Drive', 'solution', 'work', 'collection', 'Ability', 'deadlines', 'general', 'metrics', 'Team', 'detail', 'differences', 'large', 'team', 'quality', 'environment', 'execution', 'cross', 'Strong', 'reliability', 'approaches', 'organizational', 'SQL', 'products', 'visibility', 'analysis', 'skills', 'reconciling', 'concept', 'key', 'operations', 'Analyst', 'business', 'specifications', 'R', 'financial', 'capital', 'use', 'Attention', 'liaison', 'markets', 'fix', 'Prior', 'job', 'database', 'automate', 'problem', 'ledger', 'service', 'project', 'dataset', 'experience', 'translate', 'description', 'planning', 'Experience', 'marketing', 'external', 'actionable', 'resolution', 'intelligence', 'meaningful', 'functional', 'technical', 'internal', 'findings', 'Amplitude', 'creation', 'tools', 'requirements', 'engineering', 'unstructured', 'vendors', 'insights', 'Collaborate', 'projections', 'loan', 'ongoing', 'self', 'patterns', 'Python', 'Metabase', 'ability', 'Data', 'reporting', 'curious', 'finance', 'role', 'overall', 'issues', 'Snowflake', 'datasets', 'lead', 'automation', 'projects', 'Finance', 'multiple', 'priorities', 'optimize', 'teams', 'product'}
+2025-03-01 13:18:26,245 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:18:26,629 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:18:35,259 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:18:45,365 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:18:55,469 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:05,576 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:11,941 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:12,734 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 13:19:13,040 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_64.pdf "HTTP/1.1 200 OK"
+2025-03-01 13:19:13,142 - INFO - Received resume: Vignesh_TJ(res).pdf
+2025-03-01 13:19:13,508 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:19:14,037 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR 
+
++1-716-547-1968 
+
+vigneshtj2404@gmail.com 
+
+Buffalo, NY 
+https://linkedin.com/in/vignesh-t-j/ 
+
+https://github.com/TJ-dotcom 
+
+Education 
+State University of New York at Buffalo 
+MS, Engineering Science (Data Science) 
+Sri Venkateswara College of Engineering 
+Bachelor of Engineering, Electronics and Communications 
+
+Skills 
+
+Jan 2024 - Present 
+
+Aug 2018 - Jul 2022 
+
+•Cloud: AWS 
+•Database: MySQL, PostgreSQL, MongoDB 
+•Languages: Python, SQL, R 
+•CI/CD: Git, Doc...
+2025-03-01 13:19:14,089 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,089 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,098 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,098 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,107 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,107 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,115 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,115 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,125 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,125 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,129 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,129 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,133 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,133 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,138 - INFO - DeepSeek API response: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,138 - ERROR - Unexpected response format: {'error': 'Unexpected endpoint or method. (POST /generate)'}
+2025-03-01 13:19:14,183 - INFO - Tailored resume created at resumes\Vignesh_TJ(res)_tailored.pdf
+2025-03-01 13:19:15,457 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendDocument "HTTP/1.1 200 OK"
+2025-03-01 13:19:15,835 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:19:22,050 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:32,153 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:42,255 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:19:52,360 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:02,462 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:12,567 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:22,671 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:32,778 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:42,882 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:20:52,986 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:03,090 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:13,194 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:23,299 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:33,402 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:43,507 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:21:53,611 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:03,713 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:13,817 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:23,923 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:34,029 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:44,134 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:22:54,237 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:04,343 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:14,446 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:24,560 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:34,664 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:44,760 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:23:54,872 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:04,975 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:15,079 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:25,184 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:35,287 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:45,392 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:24:55,495 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:05,607 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:15,712 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:25,814 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:35,919 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:46,022 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:25:56,124 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:06,227 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:16,331 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:26,454 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:36,556 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:46,667 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:26:56,797 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:06,902 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:17,006 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:27,117 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:37,220 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:47,325 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:27:57,431 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:07,554 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:17,661 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:27,763 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:37,864 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:47,969 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:28:58,072 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:08,175 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:18,280 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:28,382 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:38,487 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:48,591 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:29:58,697 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:08,800 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:18,903 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:29,008 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:39,110 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:49,214 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:30:59,317 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:09,426 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:19,536 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:29,638 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:39,740 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:49,843 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:31:59,949 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:32:10,054 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:32:20,161 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:32:30,269 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:32:40,370 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:32:50,471 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:00,600 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:10,702 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:20,807 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:30,910 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:41,030 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:33:51,137 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:01,241 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:11,345 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:21,451 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:31,557 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:41,664 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:34:52,207 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:02,315 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:12,420 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:22,525 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:32,654 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:42,758 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:35:52,861 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:02,965 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:13,068 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:23,173 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:33,280 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:43,383 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:36:53,485 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:03,591 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:13,698 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:23,802 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:33,905 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:44,014 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:37:54,119 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:04,224 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:14,341 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:24,450 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:34,553 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:44,658 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:38:54,761 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:04,864 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:11,863 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:11,869 - INFO - Application is stopping. This might take a moment.
+2025-03-01 13:39:11,876 - INFO - Application.stop() complete
+2025-03-01 13:39:24,019 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-01 13:39:24,128 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-01 13:39:24,131 - INFO - Application started
+2025-03-01 13:39:30,851 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:30,854 - INFO - Command /start issued
+2025-03-01 13:39:31,442 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:39:40,967 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:44,403 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:39:44,406 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 13:39:44,997 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:39:45,144 - INFO - Extracted Keywords: {'loan', 'differences', 'concept', 'team', 'experience', 'Drive', 'Experience', 'Data', 'ledger', 'business', 'issues', 'detail', 'collection', 'dataset', 'finance', 'use', 'liaison', 'lenders', 'technical', 'self', 'execution', 'Support', 'overall', 'decision', 'unstructured', 'deadlines', 'optimize', 'problem', 'Collaborate', 'SQL', 'organizational', 'markets', 'efforts', 'intelligence', 'functional', 'product', 'operations', 'priorities', 'data', 'Responsible', 'fix', 'planning', 'R', 'approaches', 'curious', 'automation', 'projections', 'specifications', 'project', 'marketing', 'large', 'tools', 'environment', 'solution', 'actionable', 'job', 'Python', 'Snowflake', 'management', 'findings', 'gaps', 'patterns', 'ongoing', 'financial', 'key', 'Dig', 'internal', 'general', 'multiple', 'Team', 'database', 'translate', 'capital', 'resolution', 'service', 'meaningful', 'requirements', 'skills', 'creation', 'external', 'datasets', 'Metabase', 'Strong', 'role', 'Prior', 'work', 'ability', 'insights', 'visibility', 'products', 'quality', 'Ability', 'Attention', 'reliability', 'lead', 'projects', 'vendors', 'description', 'automate', 'metrics', 'trends', 'reconciling', 'engineering', 'potential', 'Finance', 'Analyst', 'analysis', 'reporting', 'Amplitude', 'cross', 'teams', 'performance'}
+2025-03-01 13:39:45,510 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:39:45,903 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:39:54,513 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:40:02,268 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:40:03,701 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 13:40:04,007 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_65.pdf "HTTP/1.1 200 OK"
+2025-03-01 13:40:04,106 - INFO - Received resume: Vignesh_TJ(res).pdf
+2025-03-01 13:40:04,494 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:40:04,905 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR 
+
++1-716-547-1968 
+
+vigneshtj2404@gmail.com 
+
+Buffalo, NY 
+https://linkedin.com/in/vignesh-t-j/ 
+
+https://github.com/TJ-dotcom 
+
+Education 
+State University of New York at Buffalo 
+MS, Engineering Science (Data Science) 
+Sri Venkateswara College of Engineering 
+Bachelor of Engineering, Electronics and Communications 
+
+Skills 
+
+Jan 2024 - Present 
+
+Aug 2018 - Jul 2022 
+
+•Cloud: AWS 
+•Database: MySQL, PostgreSQL, MongoDB 
+•Languages: Python, SQL, R 
+•CI/CD: Git, Doc...
+2025-03-01 13:40:24,490 - INFO - DeepSeek API response: {'id': 'cmpl-7tvbfvbzw23o1o2amyaucb', 'object': 'text_completion', 'created': 1740854405, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': " Bachelor's degree in Finance\n\n[] Advanced Excel and PowerPoint Skills\n\n[] Six Sigma Black Belt Certification\n\n[] Graduate Coursework in Accounting\n\nRewrite the Education Section:\n\nEducation:\n- Bachelor's degree in Finance, with a focus on accounting principles and financial analysis.\n- Advanced skills in Microsoft Excel, PowerPoint, and data visualization tools such as Tableau for creating impactful reports and presentations.\n- Six Sigma Black Belt certification, demonstrating my ability to optimize processes and improve efficiency through structured methodologies.\n- Graduate coursework in Accounting, providing deep insights into financial reporting and compliance standards.\n\nThis revised education section highlights the candidate's academic background in finance and accounting, as well as their advanced skills in data", 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 303, 'completion_tokens': 149, 'total_tokens': 452}, 'stats': {}}
+2025-03-01 13:40:39,278 - INFO - DeepSeek API response: {'id': 'cmpl-3zy7x16no625kvabv1ktoc', 'object': 'text_completion', 'created': 1740854424, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': "\n\nRewritten Skills Section:\n- Led financial data engineering projects, translating business requirements into technical specifications and ensuring the overall reporting solution's quality, reliability, and performance.\n- Collaborated extensively with cross-functional teams including product, marketing, operations to provide data-driven insights, optimize financial projections, and manage key financial metrics.\n- Developed self-service tools for automation efforts, including creation of business intelligence reports using Metabase, Snowflake, and Amplitude.\n- Demonstrated strong SQL skills and the ability to use R and Python; capable of understanding business requirements to provide meaningful insights from large datasets.\n- Showcased a keen eye for detail and the ability to work with complex data, uncovering", 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 669, 'completion_tokens': 149, 'total_tokens': 818}, 'stats': {}}
+2025-03-01 13:40:57,521 - INFO - DeepSeek API response: {'id': 'cmpl-tve5ipuvabfnemm5s1ho3j', 'object': 'text_completion', 'created': 1740854439, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n\nRewritten Experience Section:\nAs a Data Analyst for the Finance Team, I have excelled in translating business requirements into technical specifications and driving data projects from concept to execution. My responsibilities include ensuring the overall quality, reliability, and performance of reporting solutions, as well as reconciling and resolving differences between internal and external data sources. I collaborate extensively with cross-functional teams including Product, Marketing, and Operations to provide data-driven insights that optimize financial projections and drive business operations forward.\n\nIn addition to my role in finance, I have supported capital markets efforts by pulling loan data for potential lenders and proactively determining approaches to optimize data collection through automation efforts, including the creation of self-service tools. My strong SQL skills enable me', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 867, 'completion_tokens': 149, 'total_tokens': 1016}, 'stats': {}}
+2025-03-01 13:41:09,664 - INFO - DeepSeek API response: {'id': 'cmpl-yg72co3ng3ofhwl5x185b', 'object': 'text_completion', 'created': 1740854457, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': "\n\nNew Projects Section:\n['Translate business requirements into technical specifications, driving financial planning and analysis projects for the finance team.', \n'Liaise with the finance team to develop key financial metrics, automating reporting to provide ongoing visibility into product and business operations.', \n'Manage large datasets to uncover meaningful patterns and trends, ensuring accuracy in data collection and reconciliation efforts.', \n'Collaborate extensively cross-functionally to provide data-driven insights that optimize financial projections and improve performance across products.', \n'Support capital markets efforts by pulling loan data required for potential lenders and ensure the quality and reliability of overall reporting solutions.']", 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 867, 'completion_tokens': 130, 'total_tokens': 997}, 'stats': {}}
+2025-03-01 13:41:18,219 - INFO - DeepSeek API response: {'id': 'cmpl-epzkqk93embuw0targ2ux', 'object': 'text_completion', 'created': 1740854469, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Developed and maintained financial models, conducted statistical analysis, and created detailed reports for senior management.\n[] Collaborated with cross-functional teams to gather requirements and develop solutions that improved data accuracy and efficiency.\n[] Utilized SQL, Python, and R to manipulate large datasets and extract meaningful insights for decision-making purposes.\n[] Engineered process improvements by automating reporting tasks and creating self-service tools for the finance team.\n\nRewritten Summary Section:\n[ ] Developed and maintained financial models, conducted statistical analysis, and created detailed reports for senior management to ensure accurate and efficient financial operations.\n[ ] Collaborated with cross-functional teams including accounting, finance, engineering, marketing, and product development to gather requirements', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 303, 'completion_tokens': 149, 'total_tokens': 452}, 'stats': {}}
+2025-03-01 13:41:32,300 - INFO - DeepSeek API response: {'id': 'cmpl-6gkna7desrk0nt8lhdbdl8j', 'object': 'text_completion', 'created': 1740854478, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Led a team of three in the development and implementation of new financial reporting software, resulting in an increase in data accuracy by 40% and a reduction in manual processing time by 35%.\n[] Developed and presented monthly performance reports to the CFO and executive team, which led to improved decision-making and strategic initiatives.\n[] Spearheaded the integration of new data analytics tools that increased financial forecasting accuracy by 20%, directly contributing to our Q4 revenue target achievement.\n[] Collaborated with cross-functional teams including marketing, operations, and product development, resulting in enhanced product offerings and market positioning through data-driven insights.\n[] Implemented a new reconciliation process which reduced discrepancies between internal and external financial data by ', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 305, 'completion_tokens': 149, 'total_tokens': 454}, 'stats': {}}
+2025-03-01 13:41:47,988 - INFO - DeepSeek API response: {'id': 'cmpl-xaj02rldfnbbv9jw5gs5ww', 'object': 'text_completion', 'created': 1740854492, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Certified Public Accountant (CPA)\n[] Chartered Global Management Accountant (CGMA)\n[] Data Analyst Certification from IBM\n[] Project Management Professional (PMP)\n\nRewritten Certifications Section:\n- [x] Certified Public Accountant (CPA) - Demonstrates expertise in financial regulations and standards, ensuring compliance and accuracy.\n- [x] Chartered Global Management Accountant (CGMA) - Highlights ability to manage complex financial strategies across global markets, enhancing strategic decision making.\n- [x] Data Analyst Certification from IBM - Certifies proficiency in data analysis techniques and tools such as SQL, Python, and R, essential for extracting insights from large datasets.\n- [x] Project Management Professional (', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 304, 'completion_tokens': 149, 'total_tokens': 453}, 'stats': {}}
+2025-03-01 13:42:04,001 - INFO - DeepSeek API response: {'id': 'cmpl-f2tzftzfuydaddd25o88cc', 'object': 'text_completion', 'created': 1740854507, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nAnswer: Name Section:\nVIGNESH THALUR JAYACHANDRAKUMAR +1-716-547-1968 vigneshtj2404@gmail.com Buffalo, NY https://linkedin.com/in/vignesh-t-j/ https://github.com/TJ-dotcom\n\nSkills:\nJan 2024 - Present\n- Cloud: AWS\n- Database: MySQL, PostgreSQL, MongoDB\n- Languages: Python, SQL, R\n- CI/CD: Git, Docker, Jenkins\n- Tools: Power BI, Hadoop, Spark\n- Libraries: Pandas, NumPy, FastAI', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 1067, 'completion_tokens': 149, 'total_tokens': 1216}, 'stats': {}}
+2025-03-01 13:42:04,339 - INFO - Tailored resume created at resumes\Vignesh_TJ(res)_tailored.pdf
+2025-03-01 13:42:04,376 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:42:06,240 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendDocument "HTTP/1.1 200 OK"
+2025-03-01 13:42:06,719 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:42:14,505 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:42:24,613 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:42:34,718 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:42:44,824 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:42:54,934 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:05,036 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:15,145 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:25,249 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:35,361 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:45,467 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:43:55,575 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:05,683 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:15,793 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:25,913 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:36,017 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:46,127 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:44:56,230 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:06,333 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:16,441 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:26,543 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:36,648 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:46,754 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:45:56,873 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:06,990 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:17,104 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:27,207 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:37,314 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:47,417 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:46:57,522 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:07,628 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:17,756 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:27,859 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:37,969 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:48,077 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:47:58,184 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:08,293 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:18,398 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:28,506 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:38,609 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:48,714 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:48:58,826 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:08,935 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:19,040 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:29,143 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:39,258 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:49,371 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:49:59,475 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:50:09,581 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:50:19,688 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:50:29,797 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:50:40,028 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:50:40,034 - INFO - Application is stopping. This might take a moment.
+2025-03-01 13:50:40,036 - INFO - Application.stop() complete
+2025-03-01 13:51:50,860 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-01 13:51:50,970 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-01 13:51:50,972 - INFO - Application started
+2025-03-01 13:51:56,712 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:51:56,714 - INFO - Command /start issued
+2025-03-01 13:51:57,301 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:52:03,994 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:52:03,995 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 13:52:04,569 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:52:04,656 - INFO - Extracted Keywords: {'meaningful', 'differences', 'organizational', 'solution', 'automate', 'capital', 'gaps', 'general', 'engineering', 'fix', 'analysis', 'projections', 'experience', 'intelligence', 'overall', 'dataset', 'external', 'approaches', 'detail', 'liaison', 'cross', 'markets', 'loan', 'Drive', 'patterns', 'products', 'tools', 'datasets', 'service', 'ability', 'vendors', 'work', 'Data', 'ongoing', 'efforts', 'planning', 'execution', 'reporting', 'self', 'Snowflake', 'requirements', 'skills', 'optimize', 'database', 'Support', 'multiple', 'technical', 'R', 'Collaborate', 'insights', 'team', 'translate', 'Experience', 'Dig', 'Responsible', 'reliability', 'use', 'visibility', 'role', 'project', 'large', 'SQL', 'lenders', 'quality', 'teams', 'actionable', 'reconciling', 'key', 'performance', 'creation', 'job', 'findings', 'potential', 'specifications', 'finance', 'Prior', 'Metabase', 'trends', 'business', 'curious', 'projects', 'problem', 'lead', 'Ability', 'resolution', 'environment', 'Team', 'metrics', 'priorities', 'financial', 'Finance', 'Python', 'unstructured', 'Amplitude', 'collection', 'issues', 'Attention', 'automation', 'data', 'functional', 'internal', 'operations', 'management', 'Analyst', 'product', 'ledger', 'deadlines', 'decision', 'marketing', 'concept', 'description', 'Strong'}
+2025-03-01 13:52:05,029 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:52:05,398 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:52:13,242 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:52:14,515 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 13:52:14,826 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_66.pdf "HTTP/1.1 200 OK"
+2025-03-01 13:52:14,925 - INFO - Received resume: Vignesh_TJ(res).pdf
+2025-03-01 13:52:15,303 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 13:52:15,935 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR 
+
++1-716-547-1968 
+
+vigneshtj2404@gmail.com 
+
+Buffalo, NY 
+https://linkedin.com/in/vignesh-t-j/ 
+
+https://github.com/TJ-dotcom 
+
+Education 
+State University of New York at Buffalo 
+MS, Engineering Science (Data Science) 
+Sri Venkateswara College of Engineering 
+Bachelor of Engineering, Electronics and Communications 
+
+Skills 
+
+Jan 2024 - Present 
+
+Aug 2018 - Jul 2022 
+
+•Cloud: AWS 
+•Database: MySQL, PostgreSQL, MongoDB 
+•Languages: Python, SQL, R 
+•CI/CD: Git, Doc...
+2025-03-01 13:52:28,081 - INFO - DeepSeek API response: {'id': 'cmpl-falxwhttx8e2sobeid8ifz', 'object': 'text_completion', 'created': 1740855135, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': " Bachelor's degree in Finance or related field.\n[] Advanced Excel and PowerPoint skills.\n[] SQL certification from a reputable institution.\n\nRevised Education Section:\n[] Bachelor’s degree in Finance, with a strong academic record and relevant coursework including data analysis, accounting principles, and financial modeling.\n[] Advanced proficiency in Microsoft Excel, PowerPoint, and Access for data management and reporting.\n[] Completion of an SQL certification program from a recognized institution, demonstrating a foundational understanding of database querying and manipulation.", 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 303, 'completion_tokens': 103, 'total_tokens': 406}, 'stats': {}}
+2025-03-01 13:52:39,690 - INFO - DeepSeek API response: {'id': 'cmpl-9i68eti41c9xkiho1di52f', 'object': 'text_completion', 'created': 1740855148, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n\nRewritten Skills Section:\n- Proficient in SQL, Python, and R for data manipulation and analysis.\n- Experienced in translating business requirements into technical specifications.\n- Skilled in automating reporting processes to improve efficiency and accuracy.\n- Strong ability to work with large datasets to identify meaningful patterns and trends.\n- Experience working as a liaison between finance teams and other cross-functional departments.\n- Proven track record of reconciling differences between internal data and external vendors’ reports.\n- Ability to lead projects from concept to execution, ensuring quality and reliability in solutions.\n- Strong attention to detail and organizational skills with the ability to manage multiple priorities effectively.\n- Experience using business intelligence tools like Metabase', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 669, 'completion_tokens': 149, 'total_tokens': 818}, 'stats': {}}
+2025-03-01 13:52:51,576 - INFO - DeepSeek API response: {'id': 'cmpl-de4u4zopl9o73n0z8jls89', 'object': 'text_completion', 'created': 1740855159, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n\nNew Experience Section:\n\nAs a Data Analyst for the Finance Team, I have successfully translated business requirements into technical specifications and liaised between finance, data engineering, and cross-functional teams to drive financial analysis projects. My responsibilities include reconciling differences with general ledger and external vendors, managing overall reporting solution quality and reliability, and identifying gaps in database work. I collaborate extensively to provide data-driven insights that optimize financial projections and continuously monitor performance for products and business operations. My expertise includes working with large datasets to uncover meaningful patterns and trends, using SQL, R, and Python skills to understand and interpret complex information. Additionally, I have experience with tools like Metabase and Snowflake, demonstrating my ability to create actionable insights and support', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 867, 'completion_tokens': 149, 'total_tokens': 1016}, 'stats': {}}
+2025-03-01 13:53:04,954 - INFO - DeepSeek API response: {'id': 'cmpl-jd89qm98gzo46and1iej8', 'object': 'text_completion', 'created': 1740855171, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n\nHere is the revised projects section of a resume:\n\nProjects Section:\n- Led the development and implementation of a new financial reporting system that improved data accuracy by 30% and reduced reconciliation time by 25%.\n- Created self-service BI tools using Snowflake, enabling non-technical teams to access critical financial data for better decision-making.\n- Collaborated with cross-functional teams including product, marketing, and operations to provide data-driven insights that optimized financial projections and operational efficiency.\n- Analyzed large datasets to uncover patterns and trends, leading to actionable insights that informed key business decisions.\n- Responsible for reconciling discrepancies between internal data and external vendor reports, ensuring the reliability of overall reporting', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 867, 'completion_tokens': 149, 'total_tokens': 1016}, 'stats': {}}
+2025-03-01 13:53:13,612 - INFO - DeepSeek API response: {'id': 'cmpl-n8ne26hi0qp3a6p93ia6d', 'object': 'text_completion', 'created': 1740855184, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Led the development of financial models and reports, ensuring accuracy in all data provided to stakeholders.\n[] Collaborated with cross-functional teams such as product marketing and operations to provide valuable data insights for decision making.\n[] Utilized SQL and Python to analyze complex datasets and uncover hidden patterns that led to better business outcomes.\n[] Developed self-service tools and automated reporting processes, improving efficiency within the finance department.\n[] Worked closely with the finance team to develop key financial metrics and ensure high-quality reporting standards are maintained.\nResume Summary Section:\nI am a skilled data analyst with extensive experience in translating complex financial data into actionable insights for senior stakeholders. My expertise includes developing financial models, leading automation efforts, and creating self', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 303, 'completion_tokens': 149, 'total_tokens': 452}, 'stats': {}}
+2025-03-01 13:53:22,042 - INFO - DeepSeek API response: {'id': 'cmpl-xokw22a3hpe52b06cxwf2j', 'object': 'text_completion', 'created': 1740855193, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Developed financial models and forecasting tools that improved accuracy by 20% over last year.\n[] Spearheaded a data quality initiative resulting in an 85% reduction of errors across the finance department.\n[] Streamlined reporting processes, reducing time spent on manual updates from two days to one hour per month.\n[] Created interactive dashboards using Tableau that enabled senior management to make more informed decisions.\n[] Authored SQL queries and data manipulation scripts that increased processing speed by 40% for critical financial reports.\n[] Collaborated with cross-functional teams to implement new KPIs, leading to a 35% increase in operational efficiency.\n\nRewritten Achievements Section:\nDeveloped financial models and', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 305, 'completion_tokens': 149, 'total_tokens': 454}, 'stats': {}}
+2025-03-01 13:53:29,121 - INFO - DeepSeek API response: {'id': 'cmpl-wb9v864tevcrmfmlhody3m', 'object': 'text_completion', 'created': 1740855202, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': ' Six Sigma Green Belt, [ ] Certified Public Accountant (CPA), [X] SQL Certification\n\nRewritten Certifications Section:\n- Six Sigma Green Belt\n- Certified Public Accountant (CPA)\n- SQL Certification\n\nJustification for Changes Made:\n1. Removed the "X" from the original certifications section, as it is not a standard notation and does not clearly indicate which certification has been achieved.\n2. Added spaces between words in the names of the certifications to match common practice and improve readability.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 304, 'completion_tokens': 110, 'total_tokens': 414}, 'stats': {}}
+2025-03-01 13:53:49,549 - INFO - DeepSeek API response: {'id': 'cmpl-lab12ovgvmkleenhfw3777', 'object': 'text_completion', 'created': 1740855209, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nAnswer: VIGNESH THALUR JAYACHANDRAKUMAR +1-716-547-1968 vigneshtj2404@gmail.com Buffalo, NY https://linkedin.com/in/vignesh-t-j/ https://github.com/TJ-dotcom\n\n**Education:** State University of New York at Buffalo, MS, Engineering Science (Data Science) | Aug 2018 - Jul 2022  \nSri Venkateswara College of Engineering, Bachelor of Engineering, Electronics and Communications\n\n**Skills:** Cloud: AWS, Database: MySQL, PostgreSQL, MongoDB, Languages:', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 1067, 'completion_tokens': 149, 'total_tokens': 1216}, 'stats': {}}
+2025-03-01 13:53:49,553 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_application.py", line 1325, in process_update
+    await coroutine
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 78, in receive_files
+    await process_files(job_description, resume_path, update, context)
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 173, in process_files
+    tailored_resume_path = generate_tailored_resume(tailored_sections, resume_path)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\resume_bot\resume_bot\bot\handlers.py", line 118, in generate_tailored_resume
+    pdf.multi_cell(0, 10, txt=line.encode('latin-1', 'replace').decode('latin-1'), align='L')
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\fpdf\fpdf.py", line 215, in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\fpdf\deprecation.py", line 32, in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\fpdf\fpdf.py", line 3993, in multi_cell
+    text_line = multi_line_break.get_line()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ideal\anaconda3\envs\DIC\Lib\site-packages\fpdf\line_break.py", line 772, in get_line
+    raise FPDFException(
+fpdf.errors.FPDFException: Not enough horizontal space to render a single character
+2025-03-01 13:53:49,562 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:53:59,667 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:54:09,775 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:54:19,887 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:54:29,992 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:54:40,096 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:54:50,200 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:55:00,311 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:55:03,739 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 13:55:03,740 - INFO - Application is stopping. This might take a moment.
+2025-03-01 13:55:03,740 - INFO - Application.stop() complete
