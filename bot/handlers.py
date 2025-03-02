@@ -3,8 +3,9 @@ from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, 
 import logging
 import spacy
 import os
+import json
 import requests
-from fpdf import FPDF
+from fpdf import FPDF, errors as fpdf_errors
 from .resume_parser import parse_resume, parse_extracted_text
 
 # Configure logging
@@ -45,12 +46,12 @@ async def receive_job_description(update: Update, context: ContextTypes.DEFAULT_
     logger.info(f"Received job description: {job_description}")
     await update.message.reply_text('Loading...')
     
-    # Extract keywords using spaCy
-    extracted_keywords = extract_keywords(job_description)
+    # Extract keywords using DeepSeek
+    extracted_keywords = extract_keywords_with_deepseek(job_description)
     
     logger.info(f"Extracted Keywords: {extracted_keywords}")
     
-    await update.message.reply_text(f'Extracted Keywords:\n{", ".join(extracted_keywords)}')
+    await update.message.reply_text(f'Extracted Keywords:\n{", ".join(extracted_keywords["technical_skills"] | extracted_keywords["soft_skills"] | extracted_keywords["programming_languages"] | extracted_keywords["technical_tools"] | extracted_keywords["data_tools"] | extracted_keywords["cloud_technologies"])}')
     await update.message.reply_text('Send your current resume in PDF format.')
     return RESUME
 
@@ -68,8 +69,13 @@ async def receive_files(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
         # Download the file
-        file = await context.bot.get_file(document.file_id)
-        await file.download_to_drive(file_path)
+        try:
+            file = await context.bot.get_file(document.file_id)
+            await file.download_to_drive(file_path)
+        except Exception as e:
+            logger.error(f"Error downloading file: {e}")
+            await update.message.reply_text('Error downloading file. Please try again.')
+            return RESUME
 
         logger.info(f"Received resume: {file_name}")
         await update.message.reply_text(f"Received {file_name}")
@@ -81,52 +87,6 @@ async def receive_files(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
         logger.warning("Unsupported file type received")
         await update.message.reply_text('Unsupported file type. Please send a .pdf resume.')
         return RESUME
-
-def extract_keywords(job_description):
-    doc = nlp(job_description)
-    keywords = set()
-    for token in doc:
-        if token.pos_ in ["NOUN", "PROPN", "ADJ"]:  # Extract nouns, proper nouns, and adjectives
-            keywords.add(token.text)
-    return keywords
-
-def infuse_keywords(sections, keywords):
-    for keyword in keywords:
-        if "skills" in sections and isinstance(sections["skills"], list):
-            if keyword not in sections["skills"]:
-                sections["skills"].append(keyword)
-        if "experience" in sections and isinstance(sections["experience"], list):
-            if keyword not in sections["experience"]:
-                sections["experience"].append(f"Experience with {keyword}")
-        if "projects" in sections and isinstance(sections["projects"], list):
-            if keyword not in sections["projects"]:
-                sections["projects"].append(f"Project involving {keyword}")
-
-    return sections
-
-def generate_tailored_resume(sections, original_resume_path):
-    tailored_resume_path = original_resume_path.replace(".pdf", "_tailored.pdf")
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
-
-    for section, content in sections.items():
-        pdf.set_font("Arial", 'B', size=14)
-        pdf.cell(200, 10, txt=section.capitalize(), ln=True, align='L')
-        pdf.set_font("Arial", size=12)
-        for line in content:
-            try:
-                pdf.multi_cell(0, 10, txt=line.encode('latin-1', 'replace').decode('latin-1'), align='L')
-            except fpdf.errors.FPDFException as e:
-                logger.error(f"Error rendering text: {line}")
-                logger.error(e)
-                pdf.multi_cell(0, 10, txt="Error rendering text", align='L')
-        pdf.ln(10)
-
-    pdf.output(tailored_resume_path)
-    return tailored_resume_path
-
-import time
 
 def generate_deepseek_response(prompt):
     headers = {
@@ -158,9 +118,88 @@ def generate_deepseek_response(prompt):
             else:
                 return f"Error: {err}"
 
+def extract_keywords_with_deepseek(job_description):
+    prompt = (
+        f"Extract the following categories of keywords from the job description:\n\n"
+        f"Job Description:\n{job_description}\n\n"
+        f"Categories:\n"
+        f"1. Technical Skills\n"
+        f"2. Soft Skills\n"
+        f"3. Programming Languages\n"
+        f"4. Technical Tools\n"
+        f"5. Data Tools\n"
+        f"6. Cloud Technologies\n\n"
+        f"Provide the keywords in the following JSON format:\n"
+        f"{{\n"
+        f"  \"technical_skills\": [\"skill1\", \"skill2\", ...],\n"
+        f"  \"soft_skills\": [\"skill1\", \"skill2\", ...],\n"
+        f"  \"programming_languages\": [\"language1\", \"language2\", ...],\n"
+        f"  \"technical_tools\": [\"tool1\", \"tool2\", ...],\n"
+        f"  \"data_tools\": [\"tool1\", \"tool2\", ...],\n"
+        f"  \"cloud_technologies\": [\"technology1\", \"technology2\", ...]\n"
+        f"}}"
+    )
+    response = generate_deepseek_response(prompt)
+    logger.info(f"DeepSeek keyword extraction response: {response}")
+    try:
+        return json.loads(response)
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON response: {e}")
+        return {
+            "technical_skills": [],
+            "soft_skills": [],
+            "programming_languages": [],
+            "technical_tools": [],
+            "data_tools": [],
+            "cloud_technologies": []
+        }
+
+def infuse_keywords(sections, keywords):
+    for keyword in keywords["technical_skills"]:
+        if "skills" in sections and isinstance(sections["skills"], list):
+            if keyword not in sections["skills"]:
+                sections["skills"].append(keyword)
+        if "experience" in sections and isinstance(sections["experience"], list):
+            if keyword not in sections["experience"]:
+                sections["experience"].append(f"Experience with {keyword}")
+        if "projects" in sections and isinstance(sections["projects"], list):
+            if keyword not in sections["projects"]:
+                sections["projects"].append(f"Project involving {keyword}")
+
+    return sections
+
+def generate_tailored_resume(sections, original_resume_path):
+    tailored_resume_path = original_resume_path.replace(".pdf", "_tailored.pdf")
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+
+    for section, content in sections.items():
+        pdf.set_font("Arial", 'B', size=14)
+        pdf.cell(200, 10, txt=section.capitalize(), ln=True, align='L')
+        pdf.set_font("Arial", size=12)
+        for line in content:
+            try:
+                # Handle bullet points
+                if line.startswith("- "):
+                    pdf.cell(10, 10, txt="•", ln=False, align='L')
+                    pdf.multi_cell(0, 10, txt=line[2:].encode('latin-1', 'replace').decode('latin-1'), align='L')
+                else:
+                    pdf.multi_cell(0, 10, txt=line.encode('latin-1', 'replace').decode('latin-1'), align='L')
+            except fpdf_errors.FPDFException as e:
+                logger.error(f"Error rendering text: {line}")
+                logger.error(e)
+                pdf.multi_cell(0, 10, txt="Error rendering text", align='L')
+        pdf.ln(10)
+
+    pdf.output(tailored_resume_path)
+    return tailored_resume_path
+
+import time
+
 async def process_files(job_description, resume_path, update, context):
     # Extract keywords from the job description
-    extracted_keywords = extract_keywords(job_description)
+    extracted_keywords = extract_keywords_with_deepseek(job_description)
     
     # Parse the resume
     parsed_data = parse_resume(resume_path)
@@ -171,8 +210,21 @@ async def process_files(job_description, resume_path, update, context):
     
     # Generate tailored content using DeepSeek
     for section in tailored_sections:
-        prompt = f"Rewrite the following {section} section of a resume to better match the job description:\n\nJob Description:\n{job_description}\n\n{section.capitalize()} Section:\n{tailored_sections[section]}"
-        tailored_sections[section] = generate_deepseek_response(prompt)
+        if section == "projects":
+            for i, line in enumerate(tailored_sections[section]):
+                prompt = (
+                    f"Rewrite the following project description to better match the job description:\n\n"
+                    f"Job Description:\n{job_description}\n\n"
+                    f"Project Description:\n{line}\n\n"
+                    f"Ensure the description includes the following keywords:\n"
+                    f"Technical Skills: {', '.join(extracted_keywords['technical_skills'])}\n"
+                    f"Soft Skills: {', '.join(extracted_keywords['soft_skills'])}\n"
+                    f"Programming Languages: {', '.join(extracted_keywords['programming_languages'])}\n"
+                    f"Technical Tools: {', '.join(extracted_keywords['technical_tools'])}\n"
+                    f"Data Tools: {', '.join(extracted_keywords['data_tools'])}\n"
+                    f"Cloud Technologies: {', '.join(extracted_keywords['cloud_technologies'])}."
+                )
+                tailored_sections[section][i] = generate_deepseek_response(prompt)
     
     # Generate the tailored resume
     tailored_resume_path = generate_tailored_resume(tailored_sections, resume_path)
