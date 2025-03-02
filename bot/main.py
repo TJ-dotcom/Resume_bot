@@ -1,39 +1,37 @@
-from telegram.ext import ApplicationBuilder
 import logging
 import os
-from .handlers import setup_handlers, error_handler
+import sys
+
+# Add current directory to path for local imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
+# Now we can import local modules 
+from handlers import setup_handlers, error_handler
+from telegram.ext import ApplicationBuilder
 
 # Configure logging
 logging.basicConfig(
-    filename='bot.log',
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-logger = logging.getLogger(__name__)
 
 def main():
     """Start the bot."""
-    try:
-        # Set your bot token directly
-        token = "8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M"
-        
-        # Create the application
-        application = ApplicationBuilder().token(token).build()
-
-        # Set up handlers
-        setup_handlers(application)
-        
-        # Register error handler
-        application.add_error_handler(error_handler)
-        
-        # Start the bot
-        logger.info("Starting bot...")
-        print("Bot is running...")
-        application.run_polling()
+    # Use your bot token here
+    application = ApplicationBuilder().token("8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M").build()
     
-    except Exception as e:
-        logger.error(f"Error starting bot: {e}", exc_info=True)
-        print(f"Error starting bot: {e}")
+    # Set up handlers
+    setup_handlers(application)
+    
+    # Add error handler
+    application.add_error_handler(error_handler)
+    
+    # Start the Bot
+    application.run_polling()
+    
+    logging.info("Bot started.")
 
 if __name__ == "__main__":
     main()

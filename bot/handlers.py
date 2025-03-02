@@ -2,15 +2,20 @@ from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler, ApplicationBuilder
 import logging
 import os
+import sys
 import time
-from .pdf_generator import generate_resume_pdf
-from .resume_parser import parse_resume, parse_extracted_text
-from .utils import (
-    extract_keywords_with_deepseek,
-    generate_deepseek_response,
-    infuse_keywords,
-    rephrase_and_tailor_resume
-)
+import json
+
+# Add current directory to path for local imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
+# Local imports
+from pdf_generator import generate_resume_pdf, generate_simple_pdf
+from resume_parser import parse_resume, parse_extracted_text
+from utils import extract_keywords_with_deepseek, generate_deepseek_response, infuse_keywords, rephrase_and_tailor_resume
+from json_resume_converter import convert_to_json_resume, convert_from_json_resume
 
 # Configure logging
 logging.basicConfig(
@@ -108,12 +113,14 @@ async def process_files(job_description, resume_path, update, context):
     # Extract keywords from the job description
     extracted_keywords = extract_keywords_with_deepseek(job_description)
     
-    # Parse the resume
     try:
         # Send status messages to keep the user informed
         await update.message.reply_text("Parsing your resume...")
         
         parsed_data = parse_resume(resume_path)
+        
+        # Store original content for verification
+        original_resume = {}
         
         # Check if parsed_data is a dictionary with a 'text' key
         if isinstance(parsed_data, dict) and "text" in parsed_data:
@@ -127,6 +134,11 @@ async def process_files(job_description, resume_path, update, context):
         # Parse the extracted text into sections
         sections = parse_extracted_text(resume_text)
         
+        # Store original sections for comparison
+        for key in sections:
+            if isinstance(sections[key], list):
+                original_resume[key] = sections[key].copy()
+        
         # Progress update
         await update.message.reply_text("Tailoring your resume to match the job description...")
         
@@ -136,42 +148,129 @@ async def process_files(job_description, resume_path, update, context):
         # Rephrase and tailor the resume content using DeepSeek (focusing on experience and projects)
         tailored_sections = rephrase_and_tailor_resume(tailored_sections, extracted_keywords, job_description)
         
-        # Progress update
-        await update.message.reply_text("Generating your tailored resume document...")
+        # Verify that content was actually modified
+        modification_verified = verify_content_modification(original_resume, tailored_sections)
         
-        # Add error handling around the PDF generation
-        try:
-            # Generate the tailored resume
-            tailored_resume_path = generate_resume_pdf(tailored_sections, "tailored_resume.pdf")
-            
-            logger.info(f"Tailored resume created at {tailored_resume_path}")
-            
-            # Send the tailored resume back to the user
-            await context.bot.send_document(chat_id=update.effective_chat.id, document=open(tailored_resume_path, 'rb'))
-            await update.message.reply_text('Your tailored resume has been processed and sent back to you.')
-        except Exception as pdf_error:
-            logger.error(f"Error generating PDF: {pdf_error}", exc_info=True)
-            # Create a simple text file with the resume content
-            text_output = "tailored_resume.txt"
-            with open(text_output, "w", encoding="utf-8") as f:
-                f.write("# TAILORED RESUME\n\n")
-                f.write("## Skills\n")
-                for skill in tailored_sections.get('skills', []):
-                    f.write(f"- {skill}\n")
-                f.write("\n## Experience\n")
-                for exp in tailored_sections.get('experience', []):
-                    f.write(f"- {exp}\n")
-                f.write("\n## Projects\n")
-                for proj in tailored_sections.get('projects', []):
-                    f.write(f"- {proj}\n")
-                
-            await context.bot.send_document(chat_id=update.effective_chat.id, document=open(text_output, 'rb'))
-            await update.message.reply_text('Your tailored resume has been processed as a text file due to PDF generation issues.')
+        if not modification_verified:
+            # If content wasn't modified enough, force another round of tailoring
+            logger.warning("Content not sufficiently modified. Attempting deeper tailoring.")
+            tailored_sections = force_deeper_tailoring(tailored_sections, extracted_keywords, job_description)
+        
+        # Progress update
+        await update.message.reply_text("Generating your tailored resume as PDF...")
+        
+        # Generate unique filename based on timestamp in the resumes folder
+        timestamp = int(time.time())
+        output_dir = os.path.join("resumes", "outputs")
+        os.makedirs(output_dir, exist_ok=True)
+        output_filename = os.path.join(output_dir, f"tailored_resume_{timestamp}.pdf")
+        
+        # Try to generate PDF
+        tailored_resume_path = generate_resume_pdf(
+            tailored_sections, 
+            output_filename,
+            force_pdf=True  # Always try to force PDF output
+        )
+        
+        logger.info(f"Resume generated at {tailored_resume_path}")
+        
+        # Send the tailored resume back to the user
+        if os.path.exists(tailored_resume_path):
+            with open(tailored_resume_path, 'rb') as resume_file:
+                await context.bot.send_document(
+                    chat_id=update.effective_chat.id, 
+                    document=resume_file,
+                    filename=os.path.basename(tailored_resume_path)
+                )
+            await update.message.reply_text('Your tailored resume has been processed as PDF and sent back to you.')
+        else:
+            raise FileNotFoundError(f"Generated file not found: {tailored_resume_path}")
     
     except Exception as e:
         logger.error(f"Error in process_files: {e}", exc_info=True)
         await update.message.reply_text(f"An error occurred while processing your resume. Please try again.")
         raise
+
+def verify_content_modification(original, tailored):
+    """
+    Verify that the tailored content is sufficiently different from the original.
+    
+    Args:
+        original (dict): Original resume sections
+        tailored (dict): Tailored resume sections
+        
+    Returns:
+        bool: True if content was modified beyond a threshold, False otherwise
+    """
+    if not original or not tailored:
+        return True  # Can't verify, assume it's ok
+        
+    # Count modifications
+    modifications = 0
+    total_items = 0
+    
+    for section in ['experience', 'projects', 'skills']:
+        if section in original and section in tailored:
+            orig_items = original[section]
+            tail_items = tailored[section]
+            
+            # If lengths differ, content was definitely modified
+            if len(orig_items) != len(tail_items):
+                return True
+                
+            for i in range(min(len(orig_items), len(tail_items))):
+                total_items += 1
+                if orig_items[i] != tail_items[i]:
+                    modifications += 1
+    
+    # If at least 40% of content was modified, consider it sufficient
+    return total_items == 0 or (modifications / total_items) >= 0.4
+
+def force_deeper_tailoring(sections, keywords, job_description):
+    """
+    Force deeper tailoring when initial tailoring wasn't sufficient.
+    
+    Args:
+        sections (dict): Resume sections
+        keywords (dict): Extracted keywords
+        job_description (str): Job description
+        
+    Returns:
+        dict: More thoroughly tailored resume sections
+    """
+    logger.info("Forcing deeper tailoring of resume content")
+    
+    # Create a stronger prompt that emphasizes the need for significant changes
+    stronger_prompt = (
+        f"You MUST significantly modify and enhance the following resume sections to "
+        f"match the job description. The previous modifications were insufficient. "
+        f"Make substantial changes while keeping the core information intact.\n\n"
+        f"Job Description:\n{job_description}\n\n"
+    )
+    
+    # Specially handle each section
+    for section in ['experience', 'projects', 'skills']:
+        if section in sections and isinstance(sections[section], list):
+            for i, item in enumerate(sections[section]):
+                if section == 'skills':
+                    continue  # Skills are best handled by the infuse_keywords function
+                
+                prompt = stronger_prompt + f"Content to significantly enhance:\n{item}\n\nKeywords to incorporate: "
+                prompt += ", ".join([kw for category in keywords.values() for kw in category])
+                
+                # Get stronger tailoring
+                enhanced_content = generate_deepseek_response(prompt)
+                
+                # Only use the response if it's not too short
+                if enhanced_content and len(enhanced_content) > 20:
+                    # For experience/projects, preserve company/project name format
+                    if ':' in item:
+                        prefix = item.split(':', 1)[0]
+                        sections[section][i] = f"{prefix}: {enhanced_content}"
+                    else:
+                        sections[section][i] = enhanced_content
+    
+    return sections
 
 def setup_handlers(application):
     """Set up the command and message handlers for the bot."""
