@@ -2,12 +2,15 @@ from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler, ApplicationBuilder
 import logging
 import os
-import json
-import requests
+import time
 from .pdf_generator import generate_resume_pdf
-
-# Import the necessary functions
 from .resume_parser import parse_resume, parse_extracted_text
+from .utils import (
+    extract_keywords_with_deepseek,
+    generate_deepseek_response,
+    infuse_keywords,
+    rephrase_and_tailor_resume
+)
 
 # Configure logging
 logging.basicConfig(
@@ -24,12 +27,14 @@ JOB_DESCRIPTION, RESUME = range(2)
 job_description = ""
 resume_path = ""
 
-# Set the DeepSeek model endpoint
-deepseek_endpoint = 'http://127.0.0.1:1234/v1/completions'
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Send a message when the command /start is issued."""
-    logger.info("Command /start issued")
+    # Reset global variables to ensure a fresh start
+    global job_description, resume_path
+    job_description = ""
+    resume_path = ""
+    
+    logger.info("Command /start issued - resetting conversation")
     await update.message.reply_text('Hello! Share the job title and its description.')
     return JOB_DESCRIPTION
 
@@ -42,15 +47,22 @@ async def receive_job_description(update: Update, context: ContextTypes.DEFAULT_
     global job_description
     job_description = update.message.text
     logger.info(f"Received job description: {job_description}")
-    await update.message.reply_text('Loading...')
+    await update.message.reply_text('Analyzing job description...')
     
     # Extract keywords using DeepSeek
     extracted_keywords = extract_keywords_with_deepseek(job_description)
     
     logger.info(f"Extracted Keywords: {extracted_keywords}")
     
-    all_keywords = list(set(extracted_keywords["technical_skills"] + extracted_keywords["soft_skills"] + extracted_keywords["programming_languages"] + extracted_keywords["technical_tools"] + extracted_keywords["data_tools"] + extracted_keywords["cloud_technologies"]))
-    await update.message.reply_text(f'Extracted Keywords:\n{", ".join(all_keywords)}')
+    # Format keywords for display
+    keywords_display = []
+    for category, keywords in extracted_keywords.items():
+        if keywords:
+            category_name = category.replace("_", " ").title()
+            keywords_display.append(f"• {category_name}: {', '.join(keywords)}")
+    
+    formatted_keywords = "\n".join(keywords_display)
+    await update.message.reply_text(f"Extracted Keywords:\n{formatted_keywords}")
     await update.message.reply_text('Send your current resume in PDF format.')
     return RESUME
 
@@ -92,150 +104,74 @@ async def receive_files(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
         await update.message.reply_text('Unsupported file type. Please send a .pdf resume.')
         return RESUME
 
-def generate_deepseek_response(prompt):
-    headers = {
-        'Content-Type': 'application/json',
-    }
-    data = {
-        'model': 'deepseek-coder-v2-lite-instruct',  # Specify the model
-        'prompt': prompt,
-        'max_tokens': 150,
-        'temperature': 0.7,
-    }
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = requests.post(deepseek_endpoint, headers=headers, json=data)
-            response.raise_for_status()
-            response_json = response.json()
-            logger.info(f"DeepSeek API response: {response_json}")
-            if 'choices' in response_json:
-                return response_json['choices'][0]['text'].strip()
-            else:
-                logger.error(f"Unexpected response format: {response_json}")
-                return "Error: Unexpected response format from DeepSeek API"
-        except requests.exceptions.RequestException as err:
-            logger.error(f"Request error occurred: {err}")
-            if attempt < max_retries - 1:
-                logger.info(f"Retrying... ({attempt + 1}/{max_retries})")
-                time.sleep(2)  # Wait for 2 seconds before retrying
-            else:
-                return f"Error: {err}"
-
-def extract_keywords_with_deepseek(job_description):
-    prompt = (
-        f"Extract the following categories of keywords from the job description:\n\n"
-        f"Job Description:\n{job_description}\n\n"
-        f"Categories:\n"
-        f"1. Technical Skills\n"
-        f"2. Soft Skills\n"
-        f"3. Programming Languages\n"
-        f"4. Technical Tools\n"
-        f"5. Data Tools\n"
-        f"6. Cloud Technologies\n\n"
-        f"Provide the top 5-7 keywords for each category in the following format:\n"
-        f"Technical Skills: skill1, skill2, ...\n"
-        f"Soft Skills: skill1, skill2, ...\n"
-        f"Programming Languages: language1, language2, ...\n"
-        f"Technical Tools: tool1, tool2, ...\n"
-        f"Data Tools: tool1, tool2, ...\n"
-        f"Cloud Technologies: technology1, technology2, ...\n"
-    )
-    response = generate_deepseek_response(prompt)
-    logger.info(f"DeepSeek keyword extraction response: {response}")
-    try:
-        lines = response.split('\n')
-        keywords = {
-            "technical_skills": set(),
-            "soft_skills": set(),
-            "programming_languages": set(),
-            "technical_tools": set(),
-            "data_tools": set(),
-            "cloud_technologies": set()
-        }
-        for line in lines:
-            if line.startswith("Technical Skills:"):
-                keywords["technical_skills"].update([skill.strip() for skill in line[len("Technical Skills:"):].split(',')][:7])
-            elif line.startswith("Soft Skills:"):
-                keywords["soft_skills"].update([skill.strip() for skill in line[len("Soft Skills:"):].split(',')][:7])
-            elif line.startswith("Programming Languages:"):
-                keywords["programming_languages"].update([language.strip() for language in line[len("Programming Languages:"):].split(',')][:7])
-            elif line.startswith("Technical Tools:"):
-                keywords["technical_tools"].update([tool.strip() for tool in line[len("Technical Tools:"):].split(',')][:7])
-            elif line.startswith("Data Tools:"):
-                keywords["data_tools"].update([tool.strip() for tool in line[len("Data Tools:"):].split(',')][:7])
-            elif line.startswith("Cloud Technologies:"):
-                keywords["cloud_technologies"].update([technology.strip() for technology in line[len("Cloud Technologies:"):].split(',')][:7])
-        # Convert sets back to lists
-        for key in keywords:
-            keywords[key] = list(keywords[key])
-        return keywords
-    except Exception as e:
-        logger.error(f"Error parsing response: {e}")
-        return {
-            "technical_skills": [],
-            "soft_skills": [],
-            "programming_languages": [],
-            "technical_tools": [],
-            "data_tools": [],
-            "cloud_technologies": []
-        }
-
-def infuse_keywords(sections, keywords):
-    for keyword in keywords["technical_skills"]:
-        if "skills" in sections and isinstance(sections["skills"], list):
-            if keyword not in sections["skills"]:
-                sections["skills"].append(keyword)
-        if "experience" in sections and isinstance(sections["experience"], list):
-            if keyword not in sections["experience"]:
-                sections["experience"].append(f"Experience with {keyword}")
-        if "projects" in sections and isinstance(sections["projects"], list):
-            if keyword not in sections["projects"]:
-                sections["projects"].append(f"Project involving {keyword}")
-
-    return sections
-
 async def process_files(job_description, resume_path, update, context):
     # Extract keywords from the job description
     extracted_keywords = extract_keywords_with_deepseek(job_description)
     
     # Parse the resume
-    parsed_data = parse_resume(resume_path)
-    sections = parse_extracted_text(parsed_data["text"])
+    try:
+        # Send status messages to keep the user informed
+        await update.message.reply_text("Parsing your resume...")
+        
+        parsed_data = parse_resume(resume_path)
+        
+        # Check if parsed_data is a dictionary with a 'text' key
+        if isinstance(parsed_data, dict) and "text" in parsed_data:
+            resume_text = parsed_data["text"]
+        else:
+            # If parsed_data is already a string or has unexpected format
+            resume_text = str(parsed_data)
+            
+        logger.info(f"Resume text extracted successfully. Length: {len(resume_text)}")
+        
+        # Parse the extracted text into sections
+        sections = parse_extracted_text(resume_text)
+        
+        # Progress update
+        await update.message.reply_text("Tailoring your resume to match the job description...")
+        
+        # Infuse keywords into the resume sections (focusing on skills section)
+        tailored_sections = infuse_keywords(sections, extracted_keywords)
+        
+        # Rephrase and tailor the resume content using DeepSeek (focusing on experience and projects)
+        tailored_sections = rephrase_and_tailor_resume(tailored_sections, extracted_keywords, job_description)
+        
+        # Progress update
+        await update.message.reply_text("Generating your tailored resume document...")
+        
+        # Add error handling around the PDF generation
+        try:
+            # Generate the tailored resume
+            tailored_resume_path = generate_resume_pdf(tailored_sections, "tailored_resume.pdf")
+            
+            logger.info(f"Tailored resume created at {tailored_resume_path}")
+            
+            # Send the tailored resume back to the user
+            await context.bot.send_document(chat_id=update.effective_chat.id, document=open(tailored_resume_path, 'rb'))
+            await update.message.reply_text('Your tailored resume has been processed and sent back to you.')
+        except Exception as pdf_error:
+            logger.error(f"Error generating PDF: {pdf_error}", exc_info=True)
+            # Create a simple text file with the resume content
+            text_output = "tailored_resume.txt"
+            with open(text_output, "w", encoding="utf-8") as f:
+                f.write("# TAILORED RESUME\n\n")
+                f.write("## Skills\n")
+                for skill in tailored_sections.get('skills', []):
+                    f.write(f"- {skill}\n")
+                f.write("\n## Experience\n")
+                for exp in tailored_sections.get('experience', []):
+                    f.write(f"- {exp}\n")
+                f.write("\n## Projects\n")
+                for proj in tailored_sections.get('projects', []):
+                    f.write(f"- {proj}\n")
+                
+            await context.bot.send_document(chat_id=update.effective_chat.id, document=open(text_output, 'rb'))
+            await update.message.reply_text('Your tailored resume has been processed as a text file due to PDF generation issues.')
     
-    # Infuse keywords into the resume sections
-    tailored_sections = infuse_keywords(sections, extracted_keywords)
-    
-    # Rephrase and tailor the resume content using DeepSeek
-    tailored_sections = rephrase_and_tailor_resume(tailored_sections, extracted_keywords, job_description)
-    
-    # Generate the tailored resume
-    tailored_resume_path = generate_resume_pdf(tailored_sections, resume_path)
-
-    logger.info(f"Tailored resume created at {tailored_resume_path}")
-
-    # Send the tailored resume back to the user
-    await context.bot.send_document(chat_id=update.effective_chat.id, document=open(tailored_resume_path, 'rb'))
-    await update.message.reply_text('Your tailored resume has been processed and sent back to you.')
-
-def rephrase_and_tailor_resume(sections, keywords, job_description):
-    for section in ['skills', 'experience', 'projects']:
-        if section in sections:
-            for i, line in enumerate(sections[section]):
-                prompt = (
-                    f"Rewrite the following content to better match the job description:\n\n"
-                    f"Job Description:\n{job_description}\n\n"
-                    f"Content:\n{line}\n\n"
-                    f"Ensure the description includes the following keywords:\n"
-                    f"Technical Skills: {', '.join(keywords['technical_skills'])}\n"
-                    f"Soft Skills: {', '.join(keywords['soft_skills'])}\n"
-                    f"Programming Languages: {', '.join(keywords['programming_languages'])}\n"
-                    f"Technical Tools: {', '.join(keywords['technical_tools'])}\n"
-                    f"Data Tools: {', '.join(keywords['data_tools'])}\n"
-                    f"Cloud Technologies: {', '.join(keywords['cloud_technologies'])}."
-                )
-                sections[section][i] = generate_deepseek_response(prompt)
-    return sections
+    except Exception as e:
+        logger.error(f"Error in process_files: {e}", exc_info=True)
+        await update.message.reply_text(f"An error occurred while processing your resume. Please try again.")
+        raise
 
 def setup_handlers(application):
     """Set up the command and message handlers for the bot."""
@@ -245,7 +181,10 @@ def setup_handlers(application):
             JOB_DESCRIPTION: [MessageHandler(filters.TEXT & ~filters.COMMAND, receive_job_description)],
             RESUME: [MessageHandler(filters.Document.PDF, receive_files)]
         },
-        fallbacks=[CommandHandler("help", help_command)]
+        fallbacks=[
+            CommandHandler("start", start),  # Added /start as fallback to restart at any time
+            CommandHandler("help", help_command)
+        ]
     )
     application.add_handler(conv_handler)
     application.add_handler(CommandHandler("help", help_command))
