@@ -4095,3 +4095,165 @@ Please note that "None identified in the job description" for Cloud Technologies
 2025-03-01 23:59:18,228 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
 2025-03-01 23:59:18,333 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
 2025-03-01 23:59:18,335 - INFO - Application started
+2025-03-01 23:59:28,642 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 23:59:29,448 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 23:59:29,449 - INFO - Command /start issued
+2025-03-01 23:59:30,061 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 23:59:35,421 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 23:59:35,422 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-01 23:59:36,001 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 23:59:42,533 - INFO - DeepSeek API response: {'id': 'cmpl-wmkp7e92qb7t6pvhnvpypb', 'object': 'text_completion', 'created': 1740891576, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n---\n\nCategories:\n1. Technical Skills:\n   - SQL\n   - Python\n   - R\n   - Business Intelligence Tools\n   - Data Visualization\n   - Project Management\n   \n2. Soft Skills:\n   - Attention to Detail\n   - Problem Solving\n   - Collaboration\n   - Communication\n   - Proactivity\n   - Intellectually Curious\n   - Self-Driven\n\n3. Programming Languages:\n   - SQL\n   - R\n   - Python\n\n4. Technical Tools:\n   - Metabase\n   - Snowflake\n   - Amplitude\n\n5. Data Tools:\n   - Business Intelligence Tools\n   - Data Visualization', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 411, 'completion_tokens': 149, 'total_tokens': 560}, 'stats': {}}
+2025-03-01 23:59:42,533 - INFO - DeepSeek keyword extraction response: ---
+
+Categories:
+1. Technical Skills:
+   - SQL
+   - Python
+   - R
+   - Business Intelligence Tools
+   - Data Visualization
+   - Project Management
+   
+2. Soft Skills:
+   - Attention to Detail
+   - Problem Solving
+   - Collaboration
+   - Communication
+   - Proactivity
+   - Intellectually Curious
+   - Self-Driven
+
+3. Programming Languages:
+   - SQL
+   - R
+   - Python
+
+4. Technical Tools:
+   - Metabase
+   - Snowflake
+   - Amplitude
+
+5. Data Tools:
+   - Business Intelligence Tools
+   - Data Visualization
+2025-03-01 23:59:42,533 - INFO - Extracted Keywords: {'technical_skills': [], 'soft_skills': [], 'programming_languages': [], 'technical_tools': [], 'data_tools': [], 'cloud_technologies': []}
+2025-03-01 23:59:43,108 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 23:59:43,507 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 23:59:45,527 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 23:59:50,537 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-01 23:59:51,229 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getFile "HTTP/1.1 200 OK"
+2025-03-01 23:59:51,434 - INFO - HTTP Request: GET https://api.telegram.org/file/bot8163454634%3AAAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/documents/file_73.pdf "HTTP/1.1 200 OK"
+2025-03-01 23:59:51,537 - INFO - Received resume: Vignesh_resume.pdf
+2025-03-01 23:59:51,977 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-01 23:59:58,070 - INFO - DeepSeek API response: {'id': 'cmpl-yhud032ci0eo5oy624vpnk', 'object': 'text_completion', 'created': 1740891591, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\n---\n\n**Answer:**\n\nTechnical Skills: reconcile, resolve differences, SQL skills, data reporting issues, large datasets, uncover meaningful patterns, manage multiple priorities\n\nSoft Skills: collaborate extensively, communicate key findings, intellectually curious, self-driven, learn, manage deadlines\n\nProgramming Languages: None specifically mentioned; likely to include Python and R based on the job description context.\n\nTechnical Tools: Metabase, Snowflake, Amplitude (though not explicitly listed as tools used in the job description, they are commonly associated with BI and data analytics)\n\nData Tools: SQL, ability to use business intelligence tools for reporting and insights.\n\nCloud Technologies: None specifically mentioned; typically related technologies like AWS or Azure', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 411, 'completion_tokens': 149, 'total_tokens': 560}, 'stats': {}}
+2025-03-01 23:59:58,071 - INFO - DeepSeek keyword extraction response: ---
+
+**Answer:**
+
+Technical Skills: reconcile, resolve differences, SQL skills, data reporting issues, large datasets, uncover meaningful patterns, manage multiple priorities
+
+Soft Skills: collaborate extensively, communicate key findings, intellectually curious, self-driven, learn, manage deadlines
+
+Programming Languages: None specifically mentioned; likely to include Python and R based on the job description context.
+
+Technical Tools: Metabase, Snowflake, Amplitude (though not explicitly listed as tools used in the job description, they are commonly associated with BI and data analytics)
+
+Data Tools: SQL, ability to use business intelligence tools for reporting and insights.
+
+Cloud Technologies: None specifically mentioned; typically related technologies like AWS or Azure
+2025-03-01 23:59:58,236 - INFO - Extracted text from resume: VIGNESH THALUR JAYACHANDRAKUMAR
+
+(cid:131) +1 716-547-1968 — # vigneshtj2404@gmail.com — (cid:239) linkedin.com/in/vignesh-t-j/ — § github.com/TJ-dotcom — Buffalo, NY
+
+Education
+
+State University of New York at Buffalo
+MS in Engineering Science (Data Science)
+
+Sri Venkateswara College of Engineering
+Bachelor of Engineering in Electronics and Communications
+
+Skills
+
+Cloud AWS (EC2, S3, RDS), Azure, Snowflake
+
+Database MySQL, PostgreSQL, MongoDB
+Languages Python, SQL, R, Bash, SAS, Stata
+
+CI/CD Gi...
+2025-03-02 00:00:02,362 - INFO - DeepSeek API response: {'id': 'cmpl-2tco7goz9hktehvpys6wrn', 'object': 'text_completion', 'created': 1740891598, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Level: The role requires prior experience working with finance teams, likely indicating that this is an experienced position focused on data analysis rather than entry-level roles.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 445, 'completion_tokens': 33, 'total_tokens': 478}, 'stats': {}}
+2025-03-02 00:00:06,260 - INFO - DeepSeek API response: {'id': 'cmpl-m818pcs3qtom1fac4bul9n', 'object': 'text_completion', 'created': 1740891602, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nIndustry Focus: Finance (specifically capital markets, accounting, financial planning) \nExperience Level: Typically targets candidates with a few years of experience in data analysis within finance roles.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 445, 'completion_tokens': 36, 'total_tokens': 481}, 'stats': {}}
+2025-03-02 00:00:11,441 - INFO - DeepSeek API response: {'id': 'cmpl-x14jk73vfazbyjki8636', 'object': 'text_completion', 'created': 1740891606, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Requirements: finance teams experience is required; capital markets experience may be beneficial.\nResponsibilities include driving data projects from concept to execution, ensuring quality in the overall reporting solution, and managing differences with internal and external vendors. The role involves working closely with various departments (product marketing, operations) to provide data-driven insights that optimize financial projections for products and business operations.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 444, 'completion_tokens': 76, 'total_tokens': 520}, 'stats': {}}
+2025-03-02 00:00:15,022 - INFO - DeepSeek API response: {'id': 'cmpl-e50nqkiq6iflttc1v2klrc', 'object': 'text_completion', 'created': 1740891611, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nDomain-Specific Knowledge: finance team development, capital markets efforts, potential lenders.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 444, 'completion_tokens': 17, 'total_tokens': 461}, 'stats': {}}
+2025-03-02 00:00:24,331 - INFO - DeepSeek API response: {'id': 'cmpl-p6hfak87l8kni7vnjh6r1k', 'object': 'text_completion', 'created': 1740891615, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Level: Typically refers to mid-level professionals who can manage multiple tasks and prioritize effectively.\nIndustry Focus: Finance, ideally capital markets and accounting.\nJob Description Keywords: Data Analyst, Finance Team, Liaison, Technical Specifications, Reporting Solution, Business Intelligence Tools, Data Engineering Teams, Product Marketing Operations, Capital Markets, Loan Data, Automation Efforts, Self-Service Tools, Significant Experience Required (to indicate mid to senior level).', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 444, 'completion_tokens': 91, 'total_tokens': 535}, 'stats': {}}
+2025-03-02 00:00:39,070 - INFO - DeepSeek API response: {'id': 'cmpl-n23h4alsz7o2xnylmtsa7', 'object': 'text_completion', 'created': 1740891624, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nIndustry/Domain Knowledge: finance teams, financial projections, data collection efforts, capital markets, accounting, financial planning, general ledger, cross-functional teams\nExperience Levels: the job description suggests a need for experience working with finance teams and possibly more senior roles as indicated by "prior experience required".\nRoles and Responsibilities: \n1. Liaison between Finance and Data Engineering to translate business requirements into technical specifications.\n2. Drive accounting, financial planning, analysis, and related data projects from concept to execution.\n3. Ensure the overall quality, reliability, and performance of reporting solutions.\n4. Responsible for reconciling and resolving differences with internal data, external vendors, and general ledger across functional teams.\n5. Assist', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 149, 'total_tokens': 595}, 'stats': {}}
+2025-03-02 00:00:44,246 - INFO - DeepSeek API response: {'id': 'cmpl-pz2achf9dsje2cune49lfr', 'object': 'text_completion', 'created': 1740891639, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Levels: Prior experience working with finance teams is required.\nResponsibilities: reconcile, data reporting issues, resolve differences, large datasets, uncover meaningful patterns, manage multiple priorities', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 445, 'completion_tokens': 36, 'total_tokens': 481}, 'stats': {}}
+2025-03-02 00:00:54,254 - INFO - DeepSeek API response: {'id': 'cmpl-ep0qfbaj5xw34f4cj4isfj', 'object': 'text_completion', 'created': 1740891644, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nBusiness Areas: finance, capital markets, accounting, financial planning analysis\nProject Management: manage multiple priorities meet deadlines\nRoles/Teams: liaise with the finance team, cross-functional teams, work closely with product marketing operations\nResponsibilities: reconcile resolving differences, provide data-driven insights, optimize financial projections\nOutcomes: ensure overall reporting solution quality and reliability, performance\n\nRewritten Content:\nJob Description:\nData Analyst for Finance Team\n\nAs a Data Analyst on our finance team, you will collaborate closely with various cross-functional teams such as product, marketing, and operations to provide data-driven insights that optimize financial projections. You will be responsible for driving accounting, financial planning analysis, and capital markets', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 445, 'completion_tokens': 149, 'total_tokens': 594}, 'stats': {}}
+2025-03-02 00:00:58,137 - INFO - DeepSeek API response: {'id': 'cmpl-y1ln076amzdy4aqnmf1r9e', 'object': 'text_completion', 'created': 1740891654, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nSpecialized Knowledge: financial planning analysis, capital markets data projects, understand business requirements, provide meaningful insights, proactive determination of approaches, automation efforts including creation of self-service tools.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 37, 'total_tokens': 484}, 'stats': {}}
+2025-03-02 00:01:05,383 - INFO - DeepSeek API response: {'id': 'cmpl-o4ljzlzss0qdetod2k4eq', 'object': 'text_completion', 'created': 1740891658, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': "\nIndustry Knowledge: finance, accounting, financial planning, capital markets, data projects execution.\nResponsibilities encompass understanding of technical specifications, driving analysis, reconciliation of internal and external vendor data, working closely with cross-functional teams to optimize financial projections, support for capital market efforts, automation tools creation, etc. The job description emphasizes the role's importance in providing meaningful insights through data analytics and its influence on strategic decision making within a finance team.", 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 90, 'total_tokens': 536}, 'stats': {}}
+2025-03-02 00:01:15,866 - INFO - DeepSeek API response: {'id': 'cmpl-ake2z877softne7sogji1', 'object': 'text_completion', 'created': 1740891665, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': "\nIndustry Knowledge: Finance, Capital Markets\nRoles/Responsibilities: The role involves liaison between finance data engineering translating business requirements into technical specifications. It also includes driving financial planning analysis projects around capital markets-related data. Additionally, the individual is responsible for ensuring overall reporting solutions' quality, reliability and performance. They are expected to reconcile differences with internal data or external vendors, general ledger, cross-functional teams, and assist in problem resolution related to data reporting issues. The role also involves identifying gaps in database work and working closely with finance team to develop key financial metrics, automate reporting, and provide ongoing visibility into the performance of products, business operations. They need to dig into datasets to uncover insights, optimize financial projections using a data-driven", 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 149, 'total_tokens': 595}, 'stats': {}}
+2025-03-02 00:01:18,656 - INFO - DeepSeek API response: {'id': 'cmpl-yzaa0c5wbcreepggv3ejz', 'object': 'text_completion', 'created': 1740891675, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nBusiness Areas: Finance, Capital Markets, Accounting, Financial Planning', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 13, 'total_tokens': 459}, 'stats': {}}
+2025-03-02 00:01:21,365 - INFO - DeepSeek API response: {'id': 'cmpl-8uycy8p54jeupdguxjsaq', 'object': 'text_completion', 'created': 1740891678, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nDomain Experience: finance team experience is required', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 9, 'total_tokens': 456}, 'stats': {}}
+2025-03-02 00:01:25,882 - INFO - DeepSeek API response: {'id': 'cmpl-cr0i3qevps6aq6x2g5t6ko', 'object': 'text_completion', 'created': 1740891681, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Level: Mid-Senior level based on multiple mentions of managing priorities, working with large datasets, and likely requiring prior experience in finance teams.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 30, 'total_tokens': 477}, 'stats': {}}
+2025-03-02 00:01:40,612 - INFO - DeepSeek API response: {'id': 'cmpl-ke7rqahb6texl911bbvu4j', 'object': 'text_completion', 'created': 1740891685, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nIndustry Knowledge: Finance, capital markets, accounting, financial planning\nResponsibilities involve working with data sets, developing key financial metrics, automating reporting processes, providing ongoing visibility into performance of products and business operations, and collaborating cross-functionally to drive decision making.\n\nRevised Content:\nJob Description for Data Analyst - Finance Team\n\nAs a Data Analyst in the Finance team, you will serve as a liaison between finance, data engineering, and accounting by translating business requirements into technical specifications. Your role involves driving financial planning analysis, capital markets related data projects from concept to execution, ensuring overall reporting solution quality, reliability, and performance. You are responsible for reconciling, resolving differences with internal data, external vendors, and the', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 445, 'completion_tokens': 149, 'total_tokens': 594}, 'stats': {}}
+2025-03-02 00:01:43,105 - INFO - DeepSeek API response: {'id': 'cmpl-z8uq81qrdv7ztjqybc31z', 'object': 'text_completion', 'created': 1740891700, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 0, 'total_tokens': 447}, 'stats': {}}
+2025-03-02 00:01:57,019 - INFO - DeepSeek API response: {'id': 'cmpl-hcqeouqivde18vr45p7ja7', 'object': 'text_completion', 'created': 1740891703, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nIndustry/Domain: Finance\n\nRewritten Content:\nJob Description:\nData Analyst - Finance Team\n\nThe role involves liaising with the finance team, translating business requirements into technical specifications, and driving data projects related to accounting, financial planning, analysis, and capital markets. The position requires a strong understanding of data engineering concepts and the ability to execute them effectively from start to finish. \n\nResponsibilities include ensuring the overall quality, reliability, and performance of reporting solutions, reconciling discrepancies with internal data or external vendors, and working closely with general ledger cross-functional teams to resolve issues related to data reconciliation and reporting. The Data Analyst will assist in problem resolution for data reporting issues by identifying gaps and collaborating with database', 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 149, 'total_tokens': 595}, 'stats': {}}
+2025-03-02 00:02:10,984 - INFO - DeepSeek API response: {'id': 'cmpl-0ejqyd8i3txbciztwb7lucu', 'object': 'text_completion', 'created': 1740891717, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nResponsibilities include handling large datasets and resolving discrepancies in internal data or with external vendors. The role also involves collaborating with cross-functional teams (product, marketing, operations) to provide data-driven insights that optimize financial projections and improve business operations. \nThe ideal candidate should have strong SQL skills, the ability to work with Python and R for analysis, and experience using BI tools like Metabase or Snowflake for reporting and creating actionable insights from complex datasets. They should be intellectually curious, self-driven, and able to learn in an unstructured environment. Prior experience working within a finance team is required, as well as strong project management and organizational skills that enable them to handle multiple priorities effectively while meeting deadlines.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 143, 'total_tokens': 589}, 'stats': {}}
+2025-03-02 00:02:16,576 - INFO - DeepSeek API response: {'id': 'cmpl-3qffjrramvqnv4klcw27jb', 'object': 'text_completion', 'created': 1740891730, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nBusiness Areas: Finance, Data Analytics, Business Intelligence, Capital Markets\nExperience Levels: Typically includes intermediate-to-senior level roles, often requiring 3+ years of relevant experience in a similar role.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 446, 'completion_tokens': 43, 'total_tokens': 489}, 'stats': {}}
+2025-03-02 00:02:24,643 - INFO - DeepSeek API response: {'id': 'cmpl-pegxww13j09oqodv97rlp', 'object': 'text_completion', 'created': 1740891736, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Level: Mid-level to Senior level role likely required based on experience requirements (e.g., "prior experience working finance teams").\nRole Type: Full-time, possibly remote work options available depending on the employer\'s policy.\nIndustry/Domain: Finance, ideally with a focus on data analysis within financial planning and accounting roles.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 71, 'total_tokens': 518}, 'stats': {}}
+2025-03-02 00:02:30,995 - INFO - DeepSeek API response: {'id': 'cmpl-2ycj29t5xdeevf1lmacnni', 'object': 'text_completion', 'created': 1740891744, 'model': 'deepseek-coder-v2-lite-instruct', 'choices': [{'index': 0, 'text': '\nExperience Level: Mid-level to senior level position; experience with finance teams is required.\nResponsibilities: They are listed in the job description, including driving financial planning analysis, reconcile differences, provide data-driven insights and support capital markets efforts.', 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 447, 'completion_tokens': 51, 'total_tokens': 498}, 'stats': {}}
+2025-03-02 00:02:30,995 - ERROR - Error processing files: replace() argument 2 must be str, not list
+2025-03-02 00:02:31,005 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:02:31,626 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-02 00:02:41,109 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:02:51,211 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:01,315 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:11,419 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:21,524 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:31,627 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:41,743 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:03:51,848 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:04:01,950 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:04:12,056 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:04:19,052 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-02 00:04:19,055 - INFO - Application is stopping. This might take a moment.
+2025-03-02 00:04:19,057 - INFO - Application.stop() complete
