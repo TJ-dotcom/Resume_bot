@@ -30,9 +30,9 @@ def generate_latex_content(resume_data):
     \renewcommand{\footrulewidth}{0pt}
     \setlength{\oddsidemargin}{-0.6in}
     \setlength{\evensidemargin}{-0.6in}
-    \setlength{\textwidth}{1.2in}
+    \setlength{\textwidth}{7.5in}
     \setlength{\topmargin}{-0.7in}
-    \setlength{\textheight}{1.4in}
+    \setlength{\textheight}{9.4in}
     \raggedbottom
     \raggedright
     \begin{document}
@@ -178,7 +178,7 @@ def generate_simple_pdf(resume_data, output_path):
     \raggedbottom
     \raggedright
     \begin{document}
-    \begin{center>
+    \begin{center}
         \textbf{\Large {{ name }}}
     \end{center>
 
@@ -193,7 +193,7 @@ def generate_simple_pdf(resume_data, output_path):
 
     \section*{Education}
     {{ education }}
-    \end{document>
+    \end{document}
     """
 
     # Format skills as comma-separated text

@@ -69,3 +69,126 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+# Resume Parser with Deepseek Integration
+
+This module enhances the resume parsing capabilities by using specialized Python libraries to extract text from various document formats and leveraging Deepseek's AI to convert the extracted data into structured JSON.
+
+## Features
+
+- Parse resumes in multiple formats (PDF, DOCX, TXT, CSV, XLSX)
+- Extract structured information using Deepseek AI
+- Output results in clean JSON format
+- Support for batch processing directories of resumes
+
+## Installation
+
+1. Install required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Set up your Deepseek API key as an environment variable:
+
+```bash
+# For Linux/Mac
+export DEEPSEEK_API_KEY=your_api_key_here
+
+# For Windows
+set DEEPSEEK_API_KEY=your_api_key_here
+```
+
+## Usage
+
+### Process a single resume
+
+```bash
+python main.py path/to/resume.pdf
+```
+
+### Process all resumes in a directory
+
+```bash
+python main.py path/to/resumes_directory
+```
+
+### Specify output directory
+
+```bash
+python main.py path/to/resume.pdf -o path/to/output
+```
+
+### Process directories recursively
+
+```bash
+python main.py path/to/resumes_directory -r
+```
+
+### Provide API key directly
+
+```bash
+python main.py path/to/resume.pdf -k your_api_key_here
+```
+
+## Output Format
+
+The parsed resume is saved as a JSON file with the following structure:
+
+```json
+{
+  "personal_info": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "location": "New York, NY"
+  },
+  "education": [
+    {
+      "institution": "University Name",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "start_date": "2015-09",
+      "end_date": "2019-05",
+      "gpa": "3.8/4.0"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Company Name",
+      "position": "Software Engineer",
+      "start_date": "2019-06",
+      "end_date": "Present",
+      "responsibilities": [
+        "Developed and maintained web applications",
+        "Collaborated with cross-functional teams"
+      ]
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "JavaScript", "SQL"],
+    "soft": ["Communication", "Leadership"],
+    "languages": ["English", "Spanish"]
+  },
+  "projects": [
+    {
+      "name": "Project Name",
+      "description": "Short description of project",
+      "technologies": ["React", "Node.js"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "date": "2020-03"
+    }
+  ]
+}
+```
+
+## Notes
+
+- The Deepseek API key must be provided either as an environment variable or through the command line argument.
+- Make sure the input files are in supported formats.
+- For best results, ensure resumes have clear formatting and structure.

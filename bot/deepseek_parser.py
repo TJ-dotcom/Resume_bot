@@ -9,17 +9,17 @@ from typing import Dict, Any, Optional
 
 logger = logging.getLogger(__name__)
 
-# Placeholder for your Deepseek API endpoint and credentials
-DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"  # Replace with actual endpoint
-DEEPSEEK_API_KEY = ""  # Set this via environment variable in production
+# Updated to use local server and specified model
+DEEPSEEK_API_URL = "http://127.0.0.1:1234/v1/chat/completions"
+DEEPSEEK_MODEL = "deepseek-r1-distill-qwen-7b"
 
 class DeepseekParser:
     """Class to handle parsing resumes with Deepseek LLM."""
     
-    def __init__(self, api_key=None, api_url=None):
-        """Initialize the Deepseek parser with API credentials."""
-        self.api_key = api_key or DEEPSEEK_API_KEY
+    def __init__(self, api_url=None, model=None):
+        """Initialize the Deepseek parser with API endpoint and model."""
         self.api_url = api_url or DEEPSEEK_API_URL
+        self.model = model or DEEPSEEK_MODEL
     
     def parse_resume_to_json_schema(self, resume_text: str) -> Dict[str, Any]:
         """
@@ -74,17 +74,13 @@ class DeepseekParser:
             return self._get_empty_schema()
     
     def _call_deepseek_api(self, system_prompt: str, user_message: str) -> Dict[str, Any]:
-        """Make an API call to Deepseek."""
-        if not self.api_key:
-            raise ValueError("Deepseek API key not configured")
-        
+        """Make an API call to local Deepseek server."""
         headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}"
+            "Content-Type": "application/json"
         }
         
         data = {
-            "model": "deepseek-chat",  # Replace with the appropriate model
+            "model": self.model,
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
@@ -93,10 +89,13 @@ class DeepseekParser:
             "max_tokens": 2000
         }
         
-        response = requests.post(self.api_url, headers=headers, json=data)
-        response.raise_for_status()
-        
-        return response.json()
+        try:
+            response = requests.post(self.api_url, headers=headers, json=data)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Failed to connect to Deepseek API: {e}")
+            raise
     
     def _extract_json_from_response(self, response: Dict[str, Any]) -> Dict[str, Any]:
         """Extract JSON from the Deepseek response."""
