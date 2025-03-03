@@ -9,6 +9,9 @@ from typing import Union, Dict, Any, Optional
 # Import our modules
 from resume_parser import ResumeParser
 from bot.deepseek_processor import DeepseekProcessor
+from resume_bot.extraction import extract_resume_data
+from resume_bot.keyword_extraction import extract_keywords
+from resume_bot.rephrasing import enhance_resume_content
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -57,16 +60,28 @@ def process_resume_file(
         logger.error(f"Failed to process resume with Deepseek: {file_path}")
         return None
     
+    # Extract structured data from the resume
+    print("Extracting resume data...")
+    resume_data = extract_resume_data(file_path)
+    
+    # Extract keywords from the resume
+    print("Extracting keywords...")
+    resume_data = extract_keywords(resume_data)
+    
+    # Enhance content with rephrasing
+    print("Enhancing resume content...")
+    enhanced_resume = enhance_resume_content(resume_data)
+    
     # Save results to JSON file
-    output_file = output_dir / f"{file_path.stem}_parsed.json"
+    output_file = output_dir / f"{file_path.stem}_enhanced.json"
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(parsed_data, f, indent=2, ensure_ascii=False)
-        logger.info(f"Parsed resume saved to: {output_file}")
+            json.dump(enhanced_resume, f, indent=2, ensure_ascii=False)
+        logger.info(f"Enhanced resume saved to: {output_file}")
     except Exception as e:
         logger.error(f"Failed to save JSON output: {e}")
     
-    return parsed_data
+    return enhanced_resume
 
 def process_directory(
     dir_path: Union[str, Path], 

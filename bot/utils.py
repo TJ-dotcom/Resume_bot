@@ -50,8 +50,8 @@ def generate_qwen_response(prompt):
 def extract_keywords_with_qwen(job_description):
     """
     Extract keywords from a job description using QWEN API.
-    Only extracts keywords that actually appear in the job description,
-    except for categories with zero keywords where minimal fallbacks are provided.
+    Extracts ALL relevant keywords that appear in the job description,
+    with no restrictions or limits on number of keywords per category.
     
     Args:
         job_description (str): The job description text
@@ -61,29 +61,86 @@ def extract_keywords_with_qwen(job_description):
     """
     if not job_description:
         logger.warning("Empty job description provided")
-        return {"technical_skills": [], "soft_skills": [], "domain_knowledge": [], "qualifications": []}
+        return {"technical_skills": [], "soft_skills": [], "cloud_technologies": [], "programming_knowledge": []}
     
     try:
-        # Construct prompt for keyword extraction
+        # Construct prompt for comprehensive keyword extraction
         prompt = f"""
-        Extract the top 7 keywords from the following job description for each of the following categories:
-        - Technical Skills
-        - Soft Skills
-        - Cloud Technologies
-        - Programming Knowledge
-
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
         Job Description:
         {job_description}
         """
         response = generate_qwen_response(prompt)
         logger.info(f"Extracted keywords response: {response}")
         
-        # Attempt to parse the response as JSON
-        try:
-            return json.loads(response)
-        except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse JSON from QWEN response: {e}")
-            return {"technical_skills": [], "soft_skills": [], "cloud_technologies": [], "programming_knowledge": []}
+        # Parse the plain text response into a dictionary
+        keywords = {
+            "technical_skills": [],
+            "soft_skills": [],
+            "cloud_technologies": [],
+            "programming_knowledge": []
+        }
+        
+        current_category = None
+        for line in response.splitlines():
+            line = line.strip()
+            if "technical skills" in line.lower():
+                current_category = "technical_skills"
+            elif "soft skills" in line.lower():
+                current_category = "soft_skills"
+            elif "cloud technologies" in line.lower():
+                current_category = "cloud_technologies"
+            elif "programming knowledge" in line.lower():
+                current_category = "programming_knowledge"
+            elif line and line[0] in "•-*1234567890" and current_category:
+                # Extract the keyword, skipping the bullet or number
+                if ". " in line:
+                    keyword = line.split(". ", 1)[-1].strip().replace("*", "")
+                elif ": " in line:
+                    keyword = line.split(": ", 1)[-1].strip().replace("*", "")
+                else:
+                    keyword = line.lstrip("•-*1234567890. ").strip().replace("*", "")
+                
+                # Add keyword only if it's not already in the list (case-insensitive check)
+                if keyword and current_category in keywords and not any(
+                    k.lower() == keyword.lower() for k in keywords[current_category]
+                ):
+                    keywords[current_category].append(keyword)
+        
+        # Ensure we have keywords for each category, even if they weren't explicitly mentioned
+        for category in keywords:
+            if not keywords[category] and job_description:
+                # Request specific keywords for empty categories
+                fallback_prompt = f"""
+                The job description doesn't explicitly mention any {category.replace('_', ' ')}.
+                Based on the context, what are 3 most likely {category.replace('_', ' ')} that would be relevant for this role?
+                
+                Job Description:
+                {job_description}
+                """
+                fallback_response = generate_qwen_response(fallback_prompt)
+                # Parse simple list response
+                for line in fallback_response.splitlines():
+                    line = line.strip()
+                    if line and line[0] in "•-*1234567890":
+                        keyword = line.lstrip("•-*1234567890. ").strip()
+                        if keyword and not any(k.lower() == keyword.lower() for k in keywords[category]):
+                            keywords[category].append(keyword)
+        
+        logger.info(f"Extracted complete keyword set: {keywords}")
+        return keywords
         
     except Exception as e:
         logger.error(f"Error extracting keywords with QWEN: {e}")
@@ -278,6 +335,7 @@ def log_error(func):
 def extract_keywords_with_deepseek(job_description: str) -> Dict[str, List[str]]:
     """
     Extract keywords from job description using DeepSeek LLM.
+    Extracts ALL relevant keywords without duplications.
     
     Args:
         job_description (str): The job description text
@@ -286,14 +344,22 @@ def extract_keywords_with_deepseek(job_description: str) -> Dict[str, List[str]]
         dict: Dictionary of keyword categories and lists
     """
     system_prompt = """
-    You are a job analysis expert. Extract the key skills, requirements, and qualifications 
-    from the provided job description. Organize them into the following categories:
-    1. technical_skills: Technical skills, programming languages, tools, platforms
-    2. soft_skills: Communication, teamwork, leadership, etc.
-    3. experience: Required years or types of experience
-    4. education: Required education, degrees, certifications
+    You are a job analysis expert. Extract ALL skills, requirements, and qualifications 
+    from the provided job description.
     
-    Return your response as a JSON object with these categories as keys and arrays of keywords as values.
+    Organize them into the following categories:
+    1. technical_skills: Technical skills, tools, platforms, databases
+    2. soft_skills: Communication skills, teamwork abilities, leadership traits, work style characteristics
+    3. cloud_technologies: Cloud platforms, services, and related technologies
+    4. programming_knowledge: Programming languages, concepts, paradigms, and specific technical knowledge areas
+    
+    IMPORTANT RULES:
+    - Remove all duplicate keywords within each category
+    - Each keyword should appear exactly once
+    - Format each keyword as a simple phrase (1-4 words typically)
+    - If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+    
+    Return your response as a JSON object with these categories as keys and arrays of non-duplicate keywords as values.
     """
     
     try:
@@ -304,10 +370,19 @@ def extract_keywords_with_deepseek(job_description: str) -> Dict[str, List[str]]
         keywords = extract_json_from_text(content)
         
         # Validate and ensure all expected categories exist
-        expected_categories = ["technical_skills", "soft_skills", "experience", "education"]
+        expected_categories = ["technical_skills", "soft_skills", "cloud_technologies", "programming_knowledge"]
         for category in expected_categories:
             if category not in keywords:
                 keywords[category] = []
+            else:
+                # Ensure no duplicates (case-insensitive)
+                processed_keywords = []
+                seen = set()
+                for kw in keywords[category]:
+                    if kw.lower() not in seen:
+                        seen.add(kw.lower())
+                        processed_keywords.append(kw)
+                keywords[category] = processed_keywords
         
         return keywords
     
@@ -317,8 +392,8 @@ def extract_keywords_with_deepseek(job_description: str) -> Dict[str, List[str]]
         return {
             "technical_skills": [],
             "soft_skills": [],
-            "experience": [],
-            "education": []
+            "cloud_technologies": [],
+            "programming_knowledge": []
         }
 
 @log_error
@@ -347,6 +422,7 @@ def generate_deepseek_response(prompt: str) -> str:
 def infuse_keywords(sections: Dict, keywords: Dict[str, List[str]]) -> Dict:
     """
     Infuse keywords into resume sections.
+    Ensures relevant keywords are included without duplicates.
     
     Args:
         sections (dict): Resume sections
@@ -355,29 +431,56 @@ def infuse_keywords(sections: Dict, keywords: Dict[str, List[str]]) -> Dict:
     Returns:
         dict: Updated resume sections with infused keywords
     """
-    # Add relevant technical skills that aren't already in the resume
+    # Add relevant keywords to skills section
     if "skills" in sections:
         existing_skills = set(s.lower() for s in sections["skills"])
-        for skill in keywords.get("technical_skills", []):
-            if skill.lower() not in existing_skills:
+        
+        # Create a list of all unique keywords from all categories
+        all_keywords = []
+        for category, kw_list in keywords.items():
+            for skill in kw_list:
+                # Only add if not already in all_keywords (case-insensitive check)
+                if not any(existing.lower() == skill.lower() for existing in all_keywords):
+                    all_keywords.append(skill)
+            
+        # Add unique keywords to skills section
+        for skill in all_keywords:
+            if skill.lower() not in existing_skills and not any(
+                skill.lower() in existing.lower() or existing.lower() in skill.lower()
+                for existing in sections["skills"]
+            ):
                 sections["skills"].append(skill)
+                existing_skills.add(skill.lower())
     
     # Enhance summary with relevant keywords if it exists
     if "summary" in sections and sections["summary"]:
-        # Use DeepSeek to rewrite the summary with infused keywords
+        # Build a de-duplicated string of all keywords
+        unique_keywords = []
+        all_seen = set()
+        for category in keywords.values():
+            for kw in category:
+                if kw.lower() not in all_seen:
+                    all_seen.add(kw.lower())
+                    unique_keywords.append(kw)
+                    
+        all_keywords_str = ", ".join(unique_keywords)
+        
+        # Use DeepSeek/Qwen to rewrite the summary with infused keywords
         prompt = f"""
-        Enhance the following resume summary by incorporating these keywords: 
-        {', '.join(keywords.get('technical_skills', []) + keywords.get('soft_skills', []))}
+        Enhance the following resume summary by incorporating relevant keywords: 
+        {all_keywords_str}
         
         Original summary:
         {sections['summary']}
         
-        Provide only the enhanced summary, maintaining a similar length to the original.
+        Make sure to include relevant keywords naturally while keeping the summary coherent.
+        Provide only the enhanced summary.
         """
         enhanced_summary = generate_deepseek_response(prompt).strip()
         if enhanced_summary:  # Only update if we got something back
             sections["summary"] = enhanced_summary
     
+    logger.info(f"Updated skills section with unique keywords. Total skills: {len(sections.get('skills', []))}")
     return sections
 
 @log_error
