@@ -456,7 +456,7 @@ def rephrase_and_tailor_resume(sections: Dict, keywords: Dict[str, List[str]], j
             Provide only the improved version with the same or similar length. Maintain factual accuracy.
             """
             
-            tailored_entry = generate_deepseek_response(prompt).strip()
+            tailored_entry = generate_qwen_response(prompt).strip()
             # Only use the tailored version if we got a valid response
             tailored_experience.append(tailored_entry if tailored_entry else exp_entry)
         
@@ -479,7 +479,7 @@ def rephrase_and_tailor_resume(sections: Dict, keywords: Dict[str, List[str]], j
             Provide only the improved version with the same or similar length. Maintain factual accuracy.
             """
             
-            tailored_entry = generate_deepseek_response(prompt).strip()
+            tailored_entry = generate_qwen_response(prompt).strip()
             tailored_projects.append(tailored_entry if tailored_entry else project_entry)
         
         sections["projects"] = tailored_projects
@@ -641,21 +641,28 @@ def extract_keywords_with_qwen(job_description: str) -> Dict[str, List[str]]:
         dict: Dictionary of keyword categories and lists
     """
     system_prompt = """
-    You are a job analysis expert. Extract ALL skills, requirements, and qualifications 
+    You are a job analysis expert. Extract ALL TOP 5-7 keywords for skills, requirements, and qualifications 
     from the provided job description.
     
     Organize them into the following categories:
-    1. technical_skills: Technical skills, tools, platforms, databases (DO NOT include programming languages here)
-    2. soft_skills: Communication skills, teamwork abilities, leadership traits, work style characteristics (identify at least 5 soft skills from the provided job description)
+    1. technical_skills: Technical skills, tools, platforms, databases, (DO NOT include programming languages here)
+    2. soft_skills: identify Cognitive skills, work style, Communication skills, teamwork abilities, leadership traits, work style characteristics (identify atleast 5 soft skills from the provided job description)
     3. cloud_technologies: Cloud platforms, services, and related technologies
     4. programming_knowledge: Programming languages, concepts, paradigms, and specific technical knowledge areas
     
     IMPORTANT RULES:
-    - Extract keywords exclusively from the provided job description
+    - Do not invent or infer any additional keywords
+    - IDENTIFY ALL POTENTIAL KEYWORDS:
+    - Technical tools/platforms (e.g., Snowflake, Metabase)
+    - Methodologies (e.g., Agile, Scrum)
+    - Domain knowledge (e.g., FP&A, HIPAA)
+    - Soft skills (e.g., Communication, Leadership)
+    - Implied skills from context (e.g., "optimize data collection" → Process Automation)
     - Remove all duplicate keywords within each category
     - Each keyword should appear exactly once
-    - Format each keyword as a simple phrase (1-4 words typically)
+    - Format each keyword as a simple phrase 
     - If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+    - 
     
     Return your response as a JSON object with these categories as keys and arrays of non-duplicate keywords as values.
     """
@@ -691,13 +698,6 @@ def extract_keywords_with_qwen(job_description: str) -> Dict[str, List[str]]:
         job_description_lower = job_description.lower()
         for category in keywords:
             keywords[category] = [kw for kw in keywords[category] if kw.lower() in job_description_lower]
-        
-        # Ensure at least 5 soft skills
-        if len(keywords["soft_skills"]) < 5:
-            logger.warning("Less than 5 soft skills extracted. Repeating existing soft skills to meet the minimum requirement.")
-            while len(keywords["soft_skills"]) < 5:
-                keywords["soft_skills"].extend(keywords["soft_skills"])
-                keywords["soft_skills"] = list(set(keywords["soft_skills"]))[:5]
         
         logger.info(f"Final extracted keywords: {keywords}")
         return keywords
