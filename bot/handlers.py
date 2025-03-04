@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler, ApplicationBuilder
+from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler
 import logging
 import os
 import json
@@ -7,6 +7,7 @@ import time
 from bot.resume_parser import ResumeParser
 from bot.deepseek_processor import QWENProcessor
 from bot.utils import extract_keywords_with_qwen
+from bot.resume_enhancer import enhance_resume, save_json_file
 
 # Get logger for this module
 logger = logging.getLogger(__name__)
@@ -72,7 +73,7 @@ async def receive_files(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
 
     if document and document.file_name.lower().endswith('.pdf'):
         file_name = document.file_name
-        file_path = os.path.join("../data/resumes", file_name)
+        file_path = os.path.join("data/resumes", file_name)
         resume_path = file_path
 
         # Ensure the resumes directory exists
@@ -121,7 +122,7 @@ async def process_files(job_description, resume_path, update, context):
         
         # Save the JSON data to a file
         timestamp = int(time.time())
-        output_dir = os.path.join("../data/outputs")
+        output_dir = os.path.join("data/outputs")
         os.makedirs(output_dir, exist_ok=True)
         output_filename = os.path.join(output_dir, f"resume_{timestamp}.json")
         

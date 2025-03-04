@@ -4181,3 +4181,1289 @@ NameError: name 'time' is not defined
 2025-03-02 22:31:52,504 - INFO - Application is stopping. This might take a moment.
 2025-03-02 22:31:52,506 - INFO - Application.stop() complete
 2025-03-02 22:31:52,506 - INFO - Bot stopped.
+2025-03-03 18:34:38,339 - INFO - Starting bot initialization...
+2025-03-03 18:34:39,419 - INFO - Bot started and polling...
+2025-03-03 18:34:40,019 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-03 18:34:40,120 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-03 18:34:40,120 - INFO - Application started
+2025-03-03 18:34:50,644 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:34:54,106 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:34:54,108 - INFO - Command /start issued - resetting conversation
+2025-03-03 18:34:54,608 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:35:04,231 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:35:14,338 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:35:24,452 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:35:34,545 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:35:44,657 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:35:54,777 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:04,888 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:15,011 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:25,115 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:35,219 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:45,311 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:36:55,422 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:05,529 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:15,627 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:25,729 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:35,835 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:46,012 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:37:56,129 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:06,253 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:16,360 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:26,457 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:36,561 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:46,680 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:38:56,788 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:06,907 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:17,010 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:27,110 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:37,224 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:47,328 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:39:57,431 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:07,539 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:17,642 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:27,758 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:37,860 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:47,963 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:40:58,102 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:08,212 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:18,314 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:28,419 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:38,541 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:48,646 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:41:58,764 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:08,882 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:18,984 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:29,085 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:39,199 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:49,304 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:42:59,409 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:43:09,514 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:43:19,620 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:43:29,739 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:43:40,163 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:43:50,273 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:00,384 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:06,272 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:06,274 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-03 18:44:06,838 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:44:06,839 - INFO - Sending request to QWEN API with prompt: 
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
+        Job Description:
+        Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+        
+2025-03-03 18:44:08,887 - ERROR - Error generating response from QWEN: HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013B41E5E890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 18:44:08,888 - INFO - Extracted keywords response: 
+2025-03-03 18:44:08,889 - INFO - Sending request to QWEN API with prompt: 
+                The job description doesn't explicitly mention any technical skills.
+                Based on the context, what are 3 most likely technical skills that would be relevant for this role?
+                
+                Job Description:
+                Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+                
+2025-03-03 18:44:10,918 - ERROR - Error generating response from QWEN: HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013B41E4A290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 18:44:10,919 - INFO - Sending request to QWEN API with prompt: 
+                The job description doesn't explicitly mention any soft skills.
+                Based on the context, what are 3 most likely soft skills that would be relevant for this role?
+                
+                Job Description:
+                Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+                
+2025-03-03 18:44:12,937 - ERROR - Error generating response from QWEN: HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013B41E69450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 18:44:12,937 - INFO - Sending request to QWEN API with prompt: 
+                The job description doesn't explicitly mention any cloud technologies.
+                Based on the context, what are 3 most likely cloud technologies that would be relevant for this role?
+                
+                Job Description:
+                Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+                
+2025-03-03 18:44:14,982 - ERROR - Error generating response from QWEN: HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013B41E63C90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 18:44:14,982 - INFO - Sending request to QWEN API with prompt: 
+                The job description doesn't explicitly mention any programming knowledge.
+                Based on the context, what are 3 most likely programming knowledge that would be relevant for this role?
+                
+                Job Description:
+                Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+                
+2025-03-03 18:44:17,003 - ERROR - Error generating response from QWEN: HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013B41E2C4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 18:44:17,004 - INFO - Extracted complete keyword set: {'technical_skills': [], 'soft_skills': [], 'cloud_technologies': [], 'programming_knowledge': []}
+2025-03-03 18:44:17,004 - INFO - Extracted Keywords: {'technical_skills': [], 'soft_skills': [], 'cloud_technologies': [], 'programming_knowledge': []}
+2025-03-03 18:44:17,007 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:17,501 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:44:17,794 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:44:27,113 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:37,235 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:47,337 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:44:57,439 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:07,546 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:17,654 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:27,759 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:37,878 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:47,984 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:45:58,097 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:08,212 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:18,307 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:28,416 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:38,525 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:48,627 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:49,409 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:46:49,411 - INFO - Command /start issued - resetting conversation
+2025-03-03 18:46:49,952 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:46:59,525 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:47:09,631 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:47:19,742 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:47:29,846 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:47:39,951 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:47:50,065 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:00,171 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:10,292 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:20,405 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:30,511 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:40,621 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:48:50,727 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:00,839 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:10,942 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:21,047 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:31,150 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:41,264 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:49:51,381 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:01,487 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:11,631 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:21,745 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:31,870 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:42,040 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:50:52,150 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:02,263 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:12,371 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:22,742 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:32,847 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:42,955 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:51:53,096 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:03,198 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:13,304 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:23,405 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:33,518 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:43,621 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:52:53,726 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:03,833 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:13,936 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:24,062 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:34,164 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:44,273 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:53:54,382 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:04,482 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:14,588 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:24,692 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:34,809 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:44,916 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:54:55,018 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:05,140 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:15,240 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:18,624 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:18,627 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-03 18:55:19,213 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:55:19,215 - INFO - Sending request to QWEN API with prompt: 
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
+        Job Description:
+        Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+        
+2025-03-03 18:55:24,176 - INFO - Received response from QWEN API: ### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Metabase BI tool
+- Snowflake cloud platform
+- Amplitude analytics tool
+- Data engineering
+- Database work
+- Self-service tools creation
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Work with large datasets
+- Uncover meaningful patterns and trends
+- Intellectual curiosity
+- Self-driven in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+
+### Cloud Technologies
+- Snowflake cloud platform
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+- Data engineering
+- Database work
+2025-03-03 18:55:24,176 - INFO - Extracted keywords response: ### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Metabase BI tool
+- Snowflake cloud platform
+- Amplitude analytics tool
+- Data engineering
+- Database work
+- Self-service tools creation
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Work with large datasets
+- Uncover meaningful patterns and trends
+- Intellectual curiosity
+- Self-driven in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+
+### Cloud Technologies
+- Snowflake cloud platform
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+- Data engineering
+- Database work
+2025-03-03 18:55:24,176 - INFO - Extracted complete keyword set: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Metabase BI tool', 'Snowflake cloud platform', 'Amplitude analytics tool', 'Data engineering', 'Database work', 'Self-service tools creation'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Work with large datasets', 'Uncover meaningful patterns and trends', 'Intellectual curiosity', 'Self-driven in unstructured environments', 'Communicate effectively', 'Provide meaningful insights'], 'cloud_technologies': ['Snowflake cloud platform'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming', 'Data engineering', 'Database work']}
+2025-03-03 18:55:24,182 - INFO - Extracted Keywords: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Metabase BI tool', 'Snowflake cloud platform', 'Amplitude analytics tool', 'Data engineering', 'Database work', 'Self-service tools creation'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Work with large datasets', 'Uncover meaningful patterns and trends', 'Intellectual curiosity', 'Self-driven in unstructured environments', 'Communicate effectively', 'Provide meaningful insights'], 'cloud_technologies': ['Snowflake cloud platform'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming', 'Data engineering', 'Database work']}
+2025-03-03 18:55:24,491 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:55:24,798 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 18:55:28,731 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:38,835 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:44,364 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 18:55:44,369 - INFO - Application is stopping. This might take a moment.
+2025-03-03 18:55:44,370 - INFO - Application.stop() complete
+2025-03-03 18:55:44,375 - INFO - Bot stopped.
+2025-03-03 19:00:05,484 - INFO - Starting bot initialization...
+2025-03-03 19:00:06,572 - INFO - Bot started and polling...
+2025-03-03 19:00:06,956 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-03 19:00:07,056 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-03 19:00:07,060 - INFO - Application started
+2025-03-03 19:00:14,453 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:00:14,454 - INFO - Command /start issued - resetting conversation
+2025-03-03 19:00:14,963 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:00:21,268 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:00:21,271 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-03 19:00:21,804 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:00:21,806 - INFO - Sending request to QWEN API with prompt: 
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
+        Job Description:
+        Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+        
+2025-03-03 19:00:25,991 - INFO - Received response from QWEN API: ### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Metabase BI tool
+- Snowflake cloud platform
+- Amplitude analytics tool
+- Data engineering
+- Database work
+- Self-service tools creation
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Work with large datasets
+- Uncover meaningful patterns and trends
+- Intellectual curiosity
+- Self-driven in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+
+### Cloud Technologies
+- Snowflake cloud platform
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+2025-03-03 19:00:25,991 - INFO - Extracted keywords response: ### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Metabase BI tool
+- Snowflake cloud platform
+- Amplitude analytics tool
+- Data engineering
+- Database work
+- Self-service tools creation
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Work with large datasets
+- Uncover meaningful patterns and trends
+- Intellectual curiosity
+- Self-driven in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+
+### Cloud Technologies
+- Snowflake cloud platform
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+2025-03-03 19:00:25,991 - INFO - Extracted complete keyword set: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Metabase BI tool', 'Snowflake cloud platform', 'Amplitude analytics tool', 'Data engineering', 'Database work', 'Self-service tools creation'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Work with large datasets', 'Uncover meaningful patterns and trends', 'Intellectual curiosity', 'Self-driven in unstructured environments', 'Communicate effectively', 'Provide meaningful insights'], 'cloud_technologies': ['Snowflake cloud platform'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming']}
+2025-03-03 19:00:25,991 - INFO - Extracted Keywords: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Metabase BI tool', 'Snowflake cloud platform', 'Amplitude analytics tool', 'Data engineering', 'Database work', 'Self-service tools creation'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Work with large datasets', 'Uncover meaningful patterns and trends', 'Intellectual curiosity', 'Self-driven in unstructured environments', 'Communicate effectively', 'Provide meaningful insights'], 'cloud_technologies': ['Snowflake cloud platform'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming']}
+2025-03-03 19:00:26,320 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:00:26,690 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:00:31,402 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:00:41,504 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:00:51,603 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:01:01,735 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:01:11,839 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:01:21,940 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:01:31,805 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:01:31,807 - INFO - Application is stopping. This might take a moment.
+2025-03-03 19:01:31,808 - INFO - Application.stop() complete
+2025-03-03 19:01:31,810 - INFO - Bot stopped.
+2025-03-03 19:04:45,102 - INFO - Starting bot initialization...
+2025-03-03 19:04:46,307 - INFO - Bot started and polling...
+2025-03-03 19:04:46,749 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-03 19:04:46,853 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-03 19:04:46,855 - INFO - Application started
+2025-03-03 19:04:57,160 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:07,264 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:17,369 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:27,473 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:37,580 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:47,680 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:48,779 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:48,885 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:57,131 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:05:57,133 - INFO - Command /start issued - resetting conversation
+2025-03-03 19:05:57,699 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:06:01,227 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:01,229 - INFO - Received job description: FIND YOUR FUTURE
+We're excited about the potential people bring to our organization. You can grow your career here while enjoying first-class perks, benefits and commitment to diversity and inclusion.
+Overview
+The Actuarial Analyst-Senior will provide a full scope of actuarial and statistical analyses. Such projects will support both internal and external customers. This position will support the sales process by analyzing prescription benefit data and providing recommendations to achieve PBD goals. The Actuarial Analyst-Senior will develop a deep understanding of PBD business and goals to best match our products and services with our customer’s needs. They will use logic and analytic skills to perform client analyses in response to specific business questions and be able to communicate the findings, including methodology and estimated outcomes. The position will require working in collaboration with other team members and business units throughout the organization. This role will also develop and maintain financial analytics related to overall administrative costs by Line of Business.
+Qualifications
+Bachelor’s degree required in Mathematics, Statistics, Actuarial Sciences, or related field. Master’s degree preferred.
+Five (5) years of actuarial or related experience required.
+Completion of at least one Society of Actuaries exam preferred.
+Strong understanding of actuarial concepts, functions, and processes.
+Detailed understanding of health care concepts and products, and general understanding of the health care environment.
+Strong actuarial experience of ASA credentials preferred.
+Proficient PC skills in a Windows environment. Advanced knowledge of Excel, Access, and other analytic or query tools required. Programming and coding experience required.
+Ability to handle data sources, filter and assess data quality, and recognize data patterns required. Strong problem-solving skills required. Must be able to develop information derived from multiple and varied inputs.
+Project management skills. Able to support complex projects.
+Excellent oral and written communication skills. Self-motivation and initiative, as well as an ability to perform under pressure. Strong interpersonal skills. Strong organizational skills and ability to prioritize, multitask, and work in fast paced environment.
+Proven examples of displaying the PBD values: Passionate, Caring, Respectful, Trustworthy, Collaborative and Accountable.
+Essential Accountabilities
+Assist with pricing and support trend analysis.
+Provide financial support for prospect contract negotiations and respond to RFP financial requests.
+Work with Sales and Account Management in creating pricing and product positioning strategies.
+Manipulate and analyze large data sets.
+Support budget development process including forecasting and actual to budget comparison. Utilize forecasting techniques to estimate the impact of pricing changes.
+Perform experience studies and drill downs to figure out why certain trends are occurring.
+Provide analysis and reporting for financial and regulatory requirements including but not limited to ROI, product performance, provider and vendor relationships, and audit support.
+Perform actuarial analysis and modeling including but not limited to pricing and forecasting.
+Develop ad hoc reports as a supplement to routine management reports through query building and data extraction.
+Propose and assist in the development of process improvements and automation within the department.
+Manage complex projects. Responsible for development, support, and improvement of departmental projects.
+Understand multiple sources of data; able to identify and utilize the most relevant source to complete task. Ensure overall data integrity. Draw together facts and input from a variety of sources; make recommendations to management.
+Perform peer review as needed. Management track: Provide mentoring and critical analysis to other team members. Management of Actuarial Intern Program.
+2025-03-03 19:06:01,357 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:01,582 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:06:01,584 - INFO - Sending request to QWEN API with prompt: 
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
+        Job Description:
+        FIND YOUR FUTURE
+We're excited about the potential people bring to our organization. You can grow your career here while enjoying first-class perks, benefits and commitment to diversity and inclusion.
+Overview
+The Actuarial Analyst-Senior will provide a full scope of actuarial and statistical analyses. Such projects will support both internal and external customers. This position will support the sales process by analyzing prescription benefit data and providing recommendations to achieve PBD goals. The Actuarial Analyst-Senior will develop a deep understanding of PBD business and goals to best match our products and services with our customer’s needs. They will use logic and analytic skills to perform client analyses in response to specific business questions and be able to communicate the findings, including methodology and estimated outcomes. The position will require working in collaboration with other team members and business units throughout the organization. This role will also develop and maintain financial analytics related to overall administrative costs by Line of Business.
+Qualifications
+Bachelor’s degree required in Mathematics, Statistics, Actuarial Sciences, or related field. Master’s degree preferred.
+Five (5) years of actuarial or related experience required.
+Completion of at least one Society of Actuaries exam preferred.
+Strong understanding of actuarial concepts, functions, and processes.
+Detailed understanding of health care concepts and products, and general understanding of the health care environment.
+Strong actuarial experience of ASA credentials preferred.
+Proficient PC skills in a Windows environment. Advanced knowledge of Excel, Access, and other analytic or query tools required. Programming and coding experience required.
+Ability to handle data sources, filter and assess data quality, and recognize data patterns required. Strong problem-solving skills required. Must be able to develop information derived from multiple and varied inputs.
+Project management skills. Able to support complex projects.
+Excellent oral and written communication skills. Self-motivation and initiative, as well as an ability to perform under pressure. Strong interpersonal skills. Strong organizational skills and ability to prioritize, multitask, and work in fast paced environment.
+Proven examples of displaying the PBD values: Passionate, Caring, Respectful, Trustworthy, Collaborative and Accountable.
+Essential Accountabilities
+Assist with pricing and support trend analysis.
+Provide financial support for prospect contract negotiations and respond to RFP financial requests.
+Work with Sales and Account Management in creating pricing and product positioning strategies.
+Manipulate and analyze large data sets.
+Support budget development process including forecasting and actual to budget comparison. Utilize forecasting techniques to estimate the impact of pricing changes.
+Perform experience studies and drill downs to figure out why certain trends are occurring.
+Provide analysis and reporting for financial and regulatory requirements including but not limited to ROI, product performance, provider and vendor relationships, and audit support.
+Perform actuarial analysis and modeling including but not limited to pricing and forecasting.
+Develop ad hoc reports as a supplement to routine management reports through query building and data extraction.
+Propose and assist in the development of process improvements and automation within the department.
+Manage complex projects. Responsible for development, support, and improvement of departmental projects.
+Understand multiple sources of data; able to identify and utilize the most relevant source to complete task. Ensure overall data integrity. Draw together facts and input from a variety of sources; make recommendations to management.
+Perform peer review as needed. Management track: Provide mentoring and critical analysis to other team members. Management of Actuarial Intern Program.
+        
+2025-03-03 19:06:09,151 - INFO - Received response from QWEN API: ### Technical Skills
+- PC skills in Windows environment
+- Advanced knowledge of Excel, Access
+- Analytic or query tools proficiency
+- Programming and coding experience
+- Data source manipulation
+- Data quality assessment
+- Pattern recognition
+- Forecasting techniques
+- Pricing analysis
+- Trend analysis
+- Financial forecasting
+- ROI analysis
+- Product performance analysis
+- Provider relationship management
+- Vendor relationship management
+- Audit support
+- Experience studies
+- Drill downs
+- Ad hoc reporting
+- Query building
+- Data extraction
+- Process improvements and automation
+
+### Soft Skills
+- Oral communication skills
+- Written communication skills
+- Self-motivation
+- Initiative
+- Ability to perform under pressure
+- Strong interpersonal skills
+- Organizational skills
+- Prioritization ability
+- Multitasking capability
+- Fast-paced environment adaptability
+- Peer review
+- Mentoring
+- Critical analysis
+
+### Cloud Technologies
+- Not explicitly mentioned, but implied: Data management and analytics capabilities which could involve cloud-based tools like AWS, Azure, or Google Cloud for data storage, processing, and analysis.
+
+### Programming Knowledge
+- Programming languages (implied)
+- Coding experience
+- Data manipulation
+- Analytical programming
+- Forecasting techniques implementation
+- Ad hoc reporting development
+- Query building
+- Data extraction
+2025-03-03 19:06:09,152 - INFO - Extracted keywords response: ### Technical Skills
+- PC skills in Windows environment
+- Advanced knowledge of Excel, Access
+- Analytic or query tools proficiency
+- Programming and coding experience
+- Data source manipulation
+- Data quality assessment
+- Pattern recognition
+- Forecasting techniques
+- Pricing analysis
+- Trend analysis
+- Financial forecasting
+- ROI analysis
+- Product performance analysis
+- Provider relationship management
+- Vendor relationship management
+- Audit support
+- Experience studies
+- Drill downs
+- Ad hoc reporting
+- Query building
+- Data extraction
+- Process improvements and automation
+
+### Soft Skills
+- Oral communication skills
+- Written communication skills
+- Self-motivation
+- Initiative
+- Ability to perform under pressure
+- Strong interpersonal skills
+- Organizational skills
+- Prioritization ability
+- Multitasking capability
+- Fast-paced environment adaptability
+- Peer review
+- Mentoring
+- Critical analysis
+
+### Cloud Technologies
+- Not explicitly mentioned, but implied: Data management and analytics capabilities which could involve cloud-based tools like AWS, Azure, or Google Cloud for data storage, processing, and analysis.
+
+### Programming Knowledge
+- Programming languages (implied)
+- Coding experience
+- Data manipulation
+- Analytical programming
+- Forecasting techniques implementation
+- Ad hoc reporting development
+- Query building
+- Data extraction
+2025-03-03 19:06:09,153 - INFO - Extracted complete keyword set: {'technical_skills': ['PC skills in Windows environment', 'Advanced knowledge of Excel, Access', 'Analytic or query tools proficiency', 'Programming and coding experience', 'Data source manipulation', 'Data quality assessment', 'Pattern recognition', 'Forecasting techniques', 'Pricing analysis', 'Trend analysis', 'Financial forecasting', 'ROI analysis', 'Product performance analysis', 'Provider relationship management', 'Vendor relationship management', 'Audit support', 'Experience studies', 'Drill downs', 'Ad hoc reporting', 'Query building', 'Data extraction', 'Process improvements and automation'], 'soft_skills': ['Oral communication skills', 'Written communication skills', 'Self-motivation', 'Initiative', 'Ability to perform under pressure', 'Strong interpersonal skills', 'Organizational skills', 'Prioritization ability', 'Multitasking capability', 'Fast-paced environment adaptability', 'Peer review', 'Mentoring', 'Critical analysis'], 'cloud_technologies': ['Data management and analytics capabilities which could involve cloud-based tools like AWS, Azure, or Google Cloud for data storage, processing, and analysis.'], 'programming_knowledge': ['Programming languages (implied)', 'Coding experience', 'Data manipulation', 'Analytical programming', 'Forecasting techniques implementation', 'Ad hoc reporting development', 'Query building', 'Data extraction']}
+2025-03-03 19:06:09,153 - INFO - Extracted Keywords: {'technical_skills': ['PC skills in Windows environment', 'Advanced knowledge of Excel, Access', 'Analytic or query tools proficiency', 'Programming and coding experience', 'Data source manipulation', 'Data quality assessment', 'Pattern recognition', 'Forecasting techniques', 'Pricing analysis', 'Trend analysis', 'Financial forecasting', 'ROI analysis', 'Product performance analysis', 'Provider relationship management', 'Vendor relationship management', 'Audit support', 'Experience studies', 'Drill downs', 'Ad hoc reporting', 'Query building', 'Data extraction', 'Process improvements and automation'], 'soft_skills': ['Oral communication skills', 'Written communication skills', 'Self-motivation', 'Initiative', 'Ability to perform under pressure', 'Strong interpersonal skills', 'Organizational skills', 'Prioritization ability', 'Multitasking capability', 'Fast-paced environment adaptability', 'Peer review', 'Mentoring', 'Critical analysis'], 'cloud_technologies': ['Data management and analytics capabilities which could involve cloud-based tools like AWS, Azure, or Google Cloud for data storage, processing, and analysis.'], 'programming_knowledge': ['Programming languages (implied)', 'Coding experience', 'Data manipulation', 'Analytical programming', 'Forecasting techniques implementation', 'Ad hoc reporting development', 'Query building', 'Data extraction']}
+2025-03-03 19:06:09,670 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:06:09,995 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:06:11,476 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:21,577 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:31,687 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:41,792 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:06:51,892 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:02,011 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:12,112 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:22,218 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:32,329 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:42,430 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:07:52,531 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:02,641 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:12,746 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:22,856 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:32,957 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:43,056 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:08:53,156 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:03,251 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:13,358 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:23,490 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:33,591 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:43,690 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:09:53,791 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:03,891 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:13,996 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:24,108 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:34,226 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:44,326 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:10:54,428 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:04,529 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:14,628 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:24,733 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:34,833 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:44,936 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:11:55,039 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:05,141 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:15,243 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:25,343 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:35,446 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:45,557 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:12:55,658 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:05,789 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:15,975 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:26,076 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:36,175 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:46,280 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:13:56,381 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:06,490 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:16,593 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:26,694 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:36,805 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:46,910 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:14:57,010 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:07,111 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:17,211 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:27,312 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:37,414 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:47,519 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:15:57,621 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:07,724 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:17,825 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:27,928 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:38,033 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:48,135 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:16:58,239 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:08,345 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:18,446 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:28,573 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:38,682 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:48,783 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:17:58,891 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:08,990 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:19,104 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:29,208 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:39,312 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:49,412 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:18:59,517 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:19:09,617 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:19:19,718 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:19:29,821 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:19:39,922 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:19:50,025 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:00,125 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:10,224 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:20,311 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:30,426 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:40,154 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:20:40,154 - INFO - Application is stopping. This might take a moment.
+2025-03-03 19:20:40,154 - INFO - Application.stop() complete
+2025-03-03 19:20:40,159 - INFO - Bot stopped.
+2025-03-03 19:24:14,689 - INFO - Starting bot initialization...
+2025-03-03 19:24:15,603 - INFO - Bot started and polling...
+2025-03-03 19:24:15,986 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getMe "HTTP/1.1 200 OK"
+2025-03-03 19:24:16,092 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-03 19:24:16,094 - INFO - Application started
+2025-03-03 19:24:26,401 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:24:36,520 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:24:39,587 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:24:39,590 - INFO - Command /start issued - resetting conversation
+2025-03-03 19:24:40,201 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:24:43,344 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:24:43,348 - INFO - Received job description: Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+2025-03-03 19:24:43,651 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:24:43,653 - INFO - Sending request to QWEN API with prompt: 
+        Extract ALL relevant keywords from the following job description for each of these categories:
+        - Technical Skills (include tools, technologies, platforms, and technical abilities)
+        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
+        - Cloud Technologies (include cloud platforms, services, and related technologies)
+        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        
+        IMPORTANT: 
+        1. List each keyword only ONCE, removing all duplicates
+        2. Include ALL relevant keywords from the job description
+        3. Format each keyword as a simple phrase (1-4 words typically)
+        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+        5. Return a bulleted list for each category
+        
+        Job Description:
+        Data Analyst Finance Team 
+
+ job description 
+ 
+
+ role liaison finance data engineering translate business requirements technical specifications 
+
+ Drive accounting financial planning analysis capital markets related data projects 0 1 concept execution 
+
+ Ensure overall reporting solution quality reliability performance 
+
+ Responsible reconciling resolving differences internal data external vendors general ledger cross functional teams 
+
+ Assist problem resolution data reporting issues identifying gaps database work data engineering teams update and/or fix issues 
+
+ Collaborate extensively cross functional teams product marketing operations provide data driven insights optimize financial projections 
+
+ Work closely finance team develop key financial metrics automate reporting provide ongoing visibility performance products business operations 
+
+ Dig dataset uncover insights performance products data driven approaches inform decision making communicate key findings effectively 
+
+ Support capital markets efforts pulling loan data required potential lenders 
+
+ Proactively determine approaches optimize data collection lead automation efforts including creation self service tools 
+
+ looking 
+
+ Strong SQL skills ability use R Python plus 
+
+ Ability understand business requirements provide meaningful insights 
+
+ Experience business intelligence tools Metabase Snowflake Amplitude demonstrated ability create actionable insights data 
+
+ Attention detail ability work large datasets uncover meaningful patterns trends 
+
+ Intellectually curious self driven learn unstructured environment 
+
+ Prior experience working finance teams plus required 
+
+ Strong project management organizational skills ability manage multiple priorities meet deadlines
+        
+2025-03-03 19:24:48,786 - INFO - Received response from QWEN API: Here are the extracted keywords categorized as requested:
+
+### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Business intelligence tools
+- Metabase
+- Snowflake
+- Amplitude
+- Data engineering
+- Database work
+- Self-service tools
+- Large datasets
+- Unstructured data
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Intellectual curiosity
+- Self-driven learning
+- Work in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+- Understand business requirements
+- Collaborate with cross-functional teams
+
+### Cloud Technologies
+- Snowflake (implied cloud platform)
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+- Data engineering
+- Business intelligence tools (Metabase, Amplitude)
+- Large datasets
+- Unstructured data
+2025-03-03 19:24:48,788 - INFO - Extracted keywords response: Here are the extracted keywords categorized as requested:
+
+### Technical Skills
+- SQL skills
+- R programming
+- Python programming
+- Business intelligence tools
+- Metabase
+- Snowflake
+- Amplitude
+- Data engineering
+- Database work
+- Self-service tools
+- Large datasets
+- Unstructured data
+
+### Soft Skills
+- Strong project management
+- Organizational skills
+- Ability to manage multiple priorities
+- Meet deadlines
+- Attention to detail
+- Intellectual curiosity
+- Self-driven learning
+- Work in unstructured environments
+- Communicate effectively
+- Provide meaningful insights
+- Understand business requirements
+- Collaborate with cross-functional teams
+
+### Cloud Technologies
+- Snowflake (implied cloud platform)
+
+### Programming Knowledge
+- SQL skills
+- R programming
+- Python programming
+- Data engineering
+- Business intelligence tools (Metabase, Amplitude)
+- Large datasets
+- Unstructured data
+2025-03-03 19:24:48,789 - INFO - Extracted complete keyword set: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Business intelligence tools', 'Metabase', 'Snowflake', 'Amplitude', 'Data engineering', 'Database work', 'Self-service tools', 'Large datasets', 'Unstructured data'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Intellectual curiosity', 'Self-driven learning', 'Work in unstructured environments', 'Communicate effectively', 'Provide meaningful insights', 'Understand business requirements', 'Collaborate with cross-functional teams'], 'cloud_technologies': ['Snowflake (implied cloud platform)'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming', 'Data engineering', 'Business intelligence tools (Metabase, Amplitude)', 'Large datasets', 'Unstructured data']}
+2025-03-03 19:24:48,790 - INFO - Extracted Keywords: {'technical_skills': ['SQL skills', 'R programming', 'Python programming', 'Business intelligence tools', 'Metabase', 'Snowflake', 'Amplitude', 'Data engineering', 'Database work', 'Self-service tools', 'Large datasets', 'Unstructured data'], 'soft_skills': ['Strong project management', 'Organizational skills', 'Ability to manage multiple priorities', 'Meet deadlines', 'Attention to detail', 'Intellectual curiosity', 'Self-driven learning', 'Work in unstructured environments', 'Communicate effectively', 'Provide meaningful insights', 'Understand business requirements', 'Collaborate with cross-functional teams'], 'cloud_technologies': ['Snowflake (implied cloud platform)'], 'programming_knowledge': ['SQL skills', 'R programming', 'Python programming', 'Data engineering', 'Business intelligence tools (Metabase, Amplitude)', 'Large datasets', 'Unstructured data']}
+2025-03-03 19:24:49,284 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:24:49,588 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/sendMessage "HTTP/1.1 200 OK"
+2025-03-03 19:24:53,460 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:03,569 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:13,679 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:23,784 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:33,901 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:44,018 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:25:54,118 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:26:04,236 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:26:14,338 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:26:24,453 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:26:34,559 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:26:44,663 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:20,685 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:30,844 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:40,944 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:51,046 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:56,124 - INFO - HTTP Request: POST https://api.telegram.org/bot8163454634:AAGwmRaAyj02ef6bxNfPnEInROivAPNeR7M/getUpdates "HTTP/1.1 200 OK"
+2025-03-03 19:37:56,126 - INFO - Application is stopping. This might take a moment.
+2025-03-03 19:37:56,126 - INFO - Application.stop() complete
+2025-03-03 19:37:56,127 - INFO - Bot stopped.
+2025-03-03 19:42:55,019 - INFO - Starting bot initialization...

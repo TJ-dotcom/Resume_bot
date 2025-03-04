@@ -21,6 +21,7 @@ class ResumeParser:
             '.txt': self._parse_txt,
             '.csv': self._parse_csv,
             '.xlsx': self._parse_excel,
+            '.json': self._parse_json,
         }
     
     def parse_resume(self, file_path):
@@ -81,3 +82,8 @@ class ResumeParser:
         """Extract text from Excel files"""
         df = pd.read_excel(file_path)
         return df.to_string()
+    
+    def _parse_json(self, file_path):
+        """Extract text from JSON files"""
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return json.load(file)

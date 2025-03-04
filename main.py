@@ -5,6 +5,8 @@ import json
 import logging
 from pathlib import Path
 from typing import Union, Dict, Any, Optional
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from handlers import start, help_command, handle_resume
 
 # Import our modules
 from resume_parser import ResumeParser
@@ -131,24 +133,32 @@ def process_directory(
     return results
 
 def main():
-    """Main entry point for the resume parsing tool"""
-    parser = argparse.ArgumentParser(description="Resume Parser with Deepseek Integration")
-    parser.add_argument("input", help="Path to resume file or directory of resume files")
-    parser.add_argument("-o", "--output", help="Output directory for parsed JSON files")
-    parser.add_argument("-k", "--api-key", help="Deepseek API key (can also use DEEPSEEK_API_KEY env var)")
-    parser.add_argument("-r", "--recursive", action="store_true", help="Process directories recursively")
-    
-    args = parser.parse_args()
-    
-    input_path = Path(args.input)
-    
-    if input_path.is_file():
-        process_resume_file(input_path, args.output, args.api_key)
-    elif input_path.is_dir():
-        process_directory(input_path, args.output, args.api_key, args.recursive)
-    else:
-        logger.error(f"Input path does not exist: {input_path}")
-        sys.exit(1)
+    # Set up logging
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+    logger = logging.getLogger(__name__)
 
-if __name__ == "__main__":
+    # Load environment variables
+    token = os.getenv('TELEGRAM_TOKEN')
+    if not token:
+        logger.error("TELEGRAM_TOKEN environment variable not set")
+        return
+
+    # Create the Updater and pass it your bot's token
+    updater = Updater(token)
+
+    # Get the dispatcher to register handlers
+    dp = updater.dispatcher
+
+    # Register handlers
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("help", help_command))
+    dp.add_handler(MessageHandler(Filters.document.mime_type("application/json"), handle_resume))
+
+    # Start the Bot
+    updater.start_polling()
+
+    # Run the bot until you press Ctrl-C or the process receives SIGINT, SIGTERM or SIGABRT
+    updater.idle()
+
+if __name__ == '__main__':
     main()

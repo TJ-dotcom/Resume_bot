@@ -68,10 +68,11 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
             Original responsibility: {resp}
             
             Your task:
-            1. Incorporate appropriate job keywords naturally
+            1. Incorporate at least 1-2 job keywords naturally where appropriate
             2. Emphasize relevant skills and achievements
             3. Use action verbs and quantifiable results
             4. Maintain professional resume language
+            5. Keep approximately the same length as the original
             
             Return ONLY the rephrased version with no explanations, quotes, or additional text.
             """
@@ -133,11 +134,12 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
         Original project description: {description}
         
         Your task:
-        1. Incorporate appropriate job keywords naturally
+        1. Incorporate at least 2-3 job keywords naturally
         2. Emphasize relevant technical skills and achievements
         3. Highlight problem-solving abilities and results
         4. Use action verbs and quantifiable metrics
         5. Maintain professional resume language
+        6. Keep approximately the same length as the original
         
         Return ONLY the rephrased version with no explanations, quotes, or additional text.
         """
@@ -157,58 +159,10 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
     
     return rephrased_projects
 
-def enhance_resume_content(resume_data: Dict[str, Any], job_keywords: List[str] = None) -> Dict[str, Any]:
-    """
-    Enhance the resume content by rephrasing work experiences and projects
-    while aligning with job description keywords.
-    
-    Args:
-        resume_data: The resume data to enhance
-        job_keywords: List of keywords extracted from job description
-        
-    Returns:
-        Enhanced resume data
-    """
-    # Use provided job keywords or extract from resume_data
-    if job_keywords is None:
-        job_keywords = resume_data.get('job_description_keywords', [])
-    
-    # If still no keywords, use extracted_keywords as fallback
-    if not job_keywords and 'extracted_keywords' in resume_data:
-        job_keywords = resume_data.get('extracted_keywords', [])
-        print("No job keywords provided, using extracted_keywords as fallback.")
-    
-    # If still no keywords, use some default tech keywords
-    if not job_keywords:
-        print("No job keywords found, using default keywords.")
-        job_keywords = ["SQL", "Python", "machine learning", "analytics", "data processing", 
-                      "optimization", "database", "cloud", "AI", "efficiency"]
-    
-    print(f"Using job description keywords for rephrasing: {job_keywords}")
-    
-    # Create a copy of the resume data to modify
-    enhanced_resume = resume_data.copy()
-    
-    # Rephrase work experience if present
-    if 'experience' in enhanced_resume:
-        print("Rephrasing work experience...")
-        enhanced_resume['experience'] = rephrase_work_experience(
-            enhanced_resume['experience'], job_keywords
-        )
-    elif 'work_experience' in enhanced_resume:
-        print("Rephrasing work_experience...")
-        enhanced_resume['work_experience'] = rephrase_work_experience(
-            enhanced_resume['work_experience'], job_keywords
-        )
-    
-    # Rephrase projects if present
-    if 'projects' in enhanced_resume:
-        print("Rephrasing projects...")
-        enhanced_resume['projects'] = rephrase_projects(
-            enhanced_resume['projects'], job_keywords
-        )
-    
-    return enhanced_resume
+def enhance_resume_content(resume_data: dict, job_keywords: list) -> dict:
+    # Dummy implementation for enhancing resume content
+    resume_data['enhanced_content'] = "Enhanced content based on keywords: " + ", ".join(job_keywords)
+    return resume_data
 
 # For testing purposes
 if __name__ == "__main__":
@@ -233,5 +187,5 @@ if __name__ == "__main__":
         "extracted_keywords": ["Python", "API", "optimization", "SQL"]
     }
     
-    enhanced = enhance_resume_content(sample_resume)
+    enhanced = enhance_resume_content(sample_resume, sample_resume['extracted_keywords'])
     print(json.dumps(enhanced, indent=2))
