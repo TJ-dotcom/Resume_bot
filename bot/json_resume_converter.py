@@ -22,6 +22,8 @@ def convert_to_json_resume(resume_data):
     json_resume = {
         "basics": {
             "name": resume_data.get("name", ""),
+            "lastname": resume_data.get("lastname", ""),
+            "contact": resume_data.get("contact", ""),
             "summary": resume_data.get("summary", ""),
             "email": resume_data.get("email", ""),
             "phone": resume_data.get("phone", ""),
@@ -30,7 +32,7 @@ def convert_to_json_resume(resume_data):
         "skills": [{"name": skill, "level": ""} for skill in resume_data.get("skills", [])],
         "work": [],
         "education": [],
-        "projects": [],
+        "projects": {},
         "certificates": []
     }
     
@@ -38,7 +40,8 @@ def convert_to_json_resume(resume_data):
     for exp in resume_data.get("experience", []):
         work_entry = {
             "company": exp.get("company", ""),
-            "position": exp.get("designation", ""),
+            "role": exp.get("role", ""),
+            "time": exp.get("time", ""),
             "startDate": exp.get("start_date", ""),
             "endDate": exp.get("end_date", "") or "Present",
             "summary": exp.get("description", "")
@@ -48,9 +51,10 @@ def convert_to_json_resume(resume_data):
     # Convert education entries
     for edu in resume_data.get("education", []):
         education_entry = {
-            "institution": edu.get("institution", ""),
+            "university": edu.get("university", ""),
             "area": edu.get("major", ""),
             "studyType": edu.get("degree", ""),
+            "time": edu.get("time", ""),
             "endDate": edu.get("year_of_passing", ""),
         }
         json_resume["education"].append(education_entry)
@@ -61,7 +65,7 @@ def convert_to_json_resume(resume_data):
             "name": proj.get("title", ""),
             "description": proj.get("details", ""),
         }
-        json_resume["projects"].append(project_entry)
+        json_resume["projects"][proj.get("title", "")] = project_entry
     
     # Convert certifications
     for cert in resume_data.get("certifications", []):
@@ -170,6 +174,9 @@ def validate_json_resume(json_resume):
         bool: True if valid, False otherwise
     """
     required_sections = ["basics", "skills", "work", "education"]
+    required_basics_fields = ["name", "lastname", "contact"]
+    required_education_fields = ["university", "time"]
+    required_experience_fields = ["role", "time"]
     
     # Basic validation - check if required sections exist
     for section in required_sections:
@@ -178,8 +185,23 @@ def validate_json_resume(json_resume):
             return False
     
     # Check if basics has required fields
-    if not json_resume["basics"].get("name"):
-        logger.warning("Missing name in basics section")
-        return False
+    for field in required_basics_fields:
+        if not json_resume["basics"].get(field):
+            logger.warning(f"Missing {field} in basics section")
+            return False
+    
+    # Check if education entries have required fields
+    for edu in json_resume.get("education", []):
+        for field in required_education_fields:
+            if not edu.get(field):
+                logger.warning(f"Missing {field} in education entry")
+                return False
+    
+    # Check if experience entries have required fields
+    for exp in json_resume.get("work", []):
+        for field in required_experience_fields:
+            if not exp.get(field):
+                logger.warning(f"Missing {field} in experience entry")
+                return False
     
     return True

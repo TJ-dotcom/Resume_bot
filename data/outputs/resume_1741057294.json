@@ -1,0 +1,127 @@
+{
+    "personal_details": {
+        "name": "Amulya Reddy Datla",
+        "email": "amulyare@buffalo.edu",
+        "phone": "+1 (716)-495-4685",
+        "location": "Buffalo, New York, USA"
+    },
+    "education": [
+        {
+            "institution": "University at Buffalo, The State University of New York",
+            "degree": "Master of Science (MS) in Engineering Science Data Science",
+            "dates": "Jan 2024 – May 2025",
+            "gpa": "3.792/4"
+        },
+        {
+            "institution": "G. Pulla Reddy Engineering College (Autonomous), India",
+            "degree": "Bachelor of Technology in Electronics and Communication Engineering",
+            "dates": "Aug 2019 – June 2023",
+            "gpa": "8.62/10"
+        },
+        {
+            "institution": "G. Pulla Reddy Engineering College (Autonomous), India",
+            "degree": "Minor in Computer Science Engineering"
+        }
+    ],
+    "skills": {
+        "programming_languages": [
+            "Python",
+            "SQL",
+            "Java",
+            "C",
+            "Matlab",
+            "JavaScript",
+            "R"
+        ],
+        "data_science_analysis": [
+            "Machine Learning",
+            "Data Analysis",
+            "Statistical Learning",
+            "Time Series Analysis",
+            "Neural Networks",
+            "Natural Language Processing",
+            "Power BI"
+        ],
+        "big_data_technologies": [
+            "Hadoop",
+            "Spark",
+            "RDBMS"
+        ],
+        "libraries_frameworks": [
+            "TensorFlow",
+            "Prophet",
+            "SciPy",
+            "NumPy",
+            "Flask",
+            "Pandas",
+            "Hugging Face"
+        ],
+        "development_tools": [
+            "Docker",
+            "Git",
+            "DagsHub",
+            "Google Colab",
+            "VS Code"
+        ],
+        "cloud_technologies": [
+            "Azure",
+            "AWS"
+        ],
+        "web_development": [
+            "HTML",
+            "CSS",
+            "AngularJS",
+            "Angular 2+"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI Applications Developer",
+            "dates": "Jan 2025 – Present",
+            "responsibilities": [
+                "Developing and automating AI-driven customer service solutions using NLP (Hugging Face) and machine learning models.",
+                "Improving client communications via email and calls with personalized responses.",
+                "Integrating advanced machine learning algorithms into both internal and client-facing applications, optimizing data management, ensuring scalable systems, and improving operational performance.",
+                "Led NLP model development, analyzing 500k+ records, performing statistical analysis, visualizing data, and implementing APIs for seamless integration while ensuring ethical AI practices and bias mitigation."
+            ]
+        },
+        {
+            "company": "ValueLabs",
+            "position": "Software Developer Intern",
+            "dates": "Jan 2023 – May 2023",
+            "responsibilities": [
+                "Led the development and optimization of key modules for the Cox Automotive project, leveraging AngularJS and .NET for optimizing database interactions and business logic.",
+                "Resulted in improved system performance, efficiency, and scalability."
+            ]
+        },
+        {
+            "company": "Skill Vertex",
+            "position": "Data Science Intern Trainee",
+            "dates": "March 2022 – April 2022",
+            "responsibilities": [
+                "Developed a Python-based machine learning model to predict employee promotion rates, utilizing data preprocessing, feature selection, and ensemble learning techniques.",
+                "Conducted exploratory data analysis (EDA) and model evaluation using Scikit-learn and Matplotlib, delivering actionable insights."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Customer Segmentation",
+            "description": "Implemented customer segmentation using PySpark and Hadoop, leveraging distributed computing for efficient processing of large-scale transactional data. Applied clustering algorithms to identify distinct customer groups, enabling data-driven marketing strategies and improved customer retention."
+        },
+        {
+            "title": "Medical Insurance Charges Prediction",
+            "description": "Addressed missing values, handled outliers, normalized numerical features, applied PCA reducing dimensionality by 70% while retaining 85% of the key predictive features. Engineered and implemented an ML pipeline with Docker, integrating preprocessing, feature selection, and hyperparameter tuning, improving accuracy by 15%, and visualized results with a Streamlit app."
+        },
+        {
+            "title": "Multi-factorial Assessment of Economic Data",
+            "description": "Conducted a multifactorial study of minimum wage policies using statistical analysis and machine learning techniques (Random Forest, Linear Regression, Lasso Regression). Employed time series analysis to gain long-term insights into economic policy impacts."
+        },
+        {
+            "title": "Akinator-inspired Web Application",
+            "description": "Created a web application using Python and machine learning (Naive Bayes, decision trees) achieving 80% prediction accuracy in guessing a character chosen by the user. Designed a seamless front-end experience utilizing HTML, CSS, JavaScript combined with Flask for the backend."
+        }
+    ],
+    "certifications_and_awards": []
+}

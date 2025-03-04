@@ -1,8 +1,8 @@
 import json
 import argparse
 from typing import Dict, Any
-from keyword_extraction import extract_keywords_from_job_description
-from rephrasing import enhance_resume_content
+from bot.utils import extract_keywords_with_qwen
+from bot.rephrasing import enhance_resume_content
 
 def load_json_file(file_path: str) -> Dict:
     """Load JSON data from a file."""
@@ -36,10 +36,10 @@ def enhance_resume(resume_data: Dict[str, Any], job_description: str) -> Dict[st
     """
     # Extract keywords from job description
     print("Extracting keywords from job description...")
-    job_keywords = extract_keywords_from_job_description(job_description)
+    job_keywords = extract_keywords_with_qwen(job_description)
     
     # Eliminate duplicates
-    job_keywords = list(set(job_keywords))
+    job_keywords = {k: list(set(v)) for k, v in job_keywords.items()}
     
     print(f"Extracted keywords: {job_keywords}")
     

@@ -3,6 +3,7 @@ import logging
 import time
 import json
 import os
+from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
 QWEN_MODEL = "qwen2.5-7b-instruct-1m"
@@ -47,104 +48,38 @@ def generate_qwen_response(prompt):
         logger.error(f"Error generating response from QWEN: {e}")
         return ""
 
-def extract_keywords_with_qwen(job_description):
-    """
-    Extract keywords from a job description using QWEN API.
-    Extracts ALL relevant keywords that appear in the job description,
-    with no restrictions or limits on number of keywords per category.
-    
-    Args:
-        job_description (str): The job description text
-        
-    Returns:
-        dict: Dictionary containing extracted keywords by category
-    """
-    if not job_description:
-        logger.warning("Empty job description provided")
-        return {"technical_skills": [], "soft_skills": [], "cloud_technologies": [], "programming_knowledge": []}
-    
+def extract_keywords_with_qwen(job_description: str) -> Dict[str, Any]:
+    """Extract keywords from job description using Qwen model."""
+    url = "http://127.0.0.1:1234/v1/completions"  # Ensure this is the correct endpoint
+    payload = {
+        "model": "qwen2.5-7b-instruct-1m",
+        "prompt": job_description,
+        "temperature": 0.3,
+        "top_p": 0.9,
+        "max_tokens": 512
+    }
     try:
-        # Construct prompt for comprehensive keyword extraction
-        prompt = f"""
-        Extract ALL relevant keywords from the following job description for each of these categories:
-        - Technical Skills (include tools, technologies, platforms, and technical abilities)
-        - Soft Skills (include interpersonal skills, personal qualities, work style traits)
-        - Cloud Technologies (include cloud platforms, services, and related technologies)
-        - Programming Knowledge (include programming languages, concepts, paradigms, and technical knowledge areas)
+        logger.info(f"Sending request to Qwen API with payload: {payload}")
+        response = requests.post(url, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        logger.info(f"Received response from Qwen API: {data}")
         
-        IMPORTANT: 
-        1. List each keyword only ONCE, removing all duplicates
-        2. Include ALL relevant keywords from the job description
-        3. Format each keyword as a simple phrase (1-4 words typically)
-        4. If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
-        5. Return a bulleted list for each category
+        # Extract keywords from the response
+        keywords = data.get('keywords', {})
+        logger.info(f"Extracted keywords before deduplication: {keywords}")
         
-        Job Description:
-        {job_description}
-        """
-        response = generate_qwen_response(prompt)
-        logger.info(f"Extracted keywords response: {response}")
-        
-        # Parse the plain text response into a dictionary
-        keywords = {
-            "technical_skills": [],
-            "soft_skills": [],
-            "cloud_technologies": [],
-            "programming_knowledge": []
-        }
-        
-        current_category = None
-        for line in response.splitlines():
-            line = line.strip()
-            if "technical skills" in line.lower():
-                current_category = "technical_skills"
-            elif "soft skills" in line.lower():
-                current_category = "soft_skills"
-            elif "cloud technologies" in line.lower():
-                current_category = "cloud_technologies"
-            elif "programming knowledge" in line.lower():
-                current_category = "programming_knowledge"
-            elif line and line[0] in "•-*1234567890" and current_category:
-                # Extract the keyword, skipping the bullet or number
-                if ". " in line:
-                    keyword = line.split(". ", 1)[-1].strip().replace("*", "")
-                elif ": " in line:
-                    keyword = line.split(": ", 1)[-1].strip().replace("*", "")
-                else:
-                    keyword = line.lstrip("•-*1234567890. ").strip().replace("*", "")
-                
-                # Add keyword only if it's not already in the list (case-insensitive check)
-                if keyword and current_category in keywords and not any(
-                    k.lower() == keyword.lower() for k in keywords[current_category]
-                ):
-                    keywords[current_category].append(keyword)
-        
-        # Ensure we have keywords for each category, even if they weren't explicitly mentioned
+        # Remove duplicates
         for category in keywords:
-            if not keywords[category] and job_description:
-                # Request specific keywords for empty categories
-                fallback_prompt = f"""
-                The job description doesn't explicitly mention any {category.replace('_', ' ')}.
-                Based on the context, what are 3 most likely {category.replace('_', ' ')} that would be relevant for this role?
-                
-                Job Description:
-                {job_description}
-                """
-                fallback_response = generate_qwen_response(fallback_prompt)
-                # Parse simple list response
-                for line in fallback_response.splitlines():
-                    line = line.strip()
-                    if line and line[0] in "•-*1234567890":
-                        keyword = line.lstrip("•-*1234567890. ").strip()
-                        if keyword and not any(k.lower() == keyword.lower() for k in keywords[category]):
-                            keywords[category].append(keyword)
+            original_list = keywords[category]
+            keywords[category] = list(set(keywords[category]))
+            logger.info(f"Category '{category}' - Original: {original_list}, Deduplicated: {keywords[category]}")
         
-        logger.info(f"Extracted complete keyword set: {keywords}")
+        logger.info(f"Final extracted keywords: {keywords}")
         return keywords
-        
     except Exception as e:
-        logger.error(f"Error extracting keywords with QWEN: {e}")
-        return {"technical_skills": [], "soft_skills": [], "cloud_technologies": [], "programming_knowledge": []}
+        logger.error(f"Error extracting keywords with Qwen model: {str(e)}")
+        return {}
 
 def infuse_keywords(sections, keywords):
     """
@@ -691,4 +626,122 @@ def extract_text_from_file(file_path):
             
     except Exception as e:
         logger.error(f"Error extracting text from {file_path}: {e}")
+        raise
+
+@log_error
+def extract_keywords_with_qwen(job_description: str) -> Dict[str, List[str]]:
+    """
+    Extract keywords from job description using Qwen model.
+    Extracts ALL relevant keywords without duplications.
+    
+    Args:
+        job_description (str): The job description text
+        
+    Returns:
+        dict: Dictionary of keyword categories and lists
+    """
+    system_prompt = """
+    You are a job analysis expert. Extract ALL skills, requirements, and qualifications 
+    from the provided job description.
+    
+    Organize them into the following categories:
+    1. technical_skills: Technical skills, tools, platforms, databases (DO NOT include programming languages here)
+    2. soft_skills: Communication skills, teamwork abilities, leadership traits, work style characteristics (identify at least 5 soft skills from the provided job description)
+    3. cloud_technologies: Cloud platforms, services, and related technologies
+    4. programming_knowledge: Programming languages, concepts, paradigms, and specific technical knowledge areas
+    
+    IMPORTANT RULES:
+    - Extract keywords exclusively from the provided job description
+    - Remove all duplicate keywords within each category
+    - Each keyword should appear exactly once
+    - Format each keyword as a simple phrase (1-4 words typically)
+    - If a category has no explicitly mentioned keywords, identify implied ones that would be relevant
+    
+    Return your response as a JSON object with these categories as keys and arrays of non-duplicate keywords as values.
+    """
+    
+    try:
+        response = call_qwen_api(system_prompt, job_description)
+        
+        # Extract JSON from response
+        content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
+        logger.info(f"Qwen API response: {content}")
+        keywords = extract_json_from_text(content)
+        
+        # Validate and ensure all expected categories exist
+        expected_categories = ["technical_skills", "soft_skills", "cloud_technologies", "programming_knowledge"]
+        for category in expected_categories:
+            if category not in keywords:
+                keywords[category] = []
+            else:
+                # Ensure no duplicates (case-insensitive)
+                processed_keywords = []
+                seen = set()
+                for kw in keywords[category]:
+                    if kw.lower() not in seen:
+                        seen.add(kw.lower())
+                        processed_keywords.append(kw)
+                keywords[category] = processed_keywords
+        
+        # Remove programming languages from technical_skills
+        programming_languages = set(keywords.get("programming_knowledge", []))
+        keywords["technical_skills"] = [kw for kw in keywords["technical_skills"] if kw not in programming_languages]
+        
+        # Verify that extracted keywords are present in the job description
+        job_description_lower = job_description.lower()
+        for category in keywords:
+            keywords[category] = [kw for kw in keywords[category] if kw.lower() in job_description_lower]
+        
+        # Ensure at least 5 soft skills
+        if len(keywords["soft_skills"]) < 5:
+            logger.warning("Less than 5 soft skills extracted. Repeating existing soft skills to meet the minimum requirement.")
+            while len(keywords["soft_skills"]) < 5:
+                keywords["soft_skills"].extend(keywords["soft_skills"])
+                keywords["soft_skills"] = list(set(keywords["soft_skills"]))[:5]
+        
+        logger.info(f"Final extracted keywords: {keywords}")
+        return keywords
+    
+    except Exception as e:
+        logger.error(f"Error extracting keywords with Qwen: {e}")
+        # Return empty structure as fallback
+        return {
+            "technical_skills": [],
+            "soft_skills": [],
+            "cloud_technologies": [],
+            "programming_knowledge": []
+        }
+
+@log_error
+def call_qwen_api(system_prompt: str, user_message: str) -> Dict:
+    """
+    Make an API call to the Qwen server.
+    
+    Args:
+        system_prompt (str): The system prompt
+        user_message (str): The user message
+        
+    Returns:
+        dict: API response
+    """
+    headers = {
+        "Content-Type": "application/json"
+    }
+    
+    data = {
+        "model": QWEN_MODEL,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message}
+        ],
+        "temperature": 0.2,
+        "max_tokens": 1000
+    }
+    
+    try:
+        response = requests.post(QWEN_API_URL, headers=headers, json=data)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Failed to connect to Qwen API: {e}")
         raise

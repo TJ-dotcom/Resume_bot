@@ -1,5 +1,5 @@
 import json
-from keyword_extraction import align_resume_with_job
+from bot.keyword_extraction import align_resume_with_job
 
 def test_resume_alignment():
     """Test aligning a resume with a job description."""

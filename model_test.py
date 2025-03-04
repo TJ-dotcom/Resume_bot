@@ -1,5 +1,5 @@
 import json
-from rephrasing import enhance_resume_content
+from bot.rephrasing import enhance_resume_content
 
 def test_rephrasing():
     """Test the rephrasing module with sample resume data."""

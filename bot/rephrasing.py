@@ -1,24 +1,30 @@
 import json
 from typing import Dict, List, Any
 import os
-from langchain_community.llms import Qwen
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
 
-def setup_qwen_model():
-    """Initialize the Qwen model for rephrasing."""
+def rephrase_text(prompt: str) -> str:
+    """Rephrase text using the Qwen model hosted locally."""
+    url = "http://127.0.0.1:1234/v1/completions"  # Local server address
+    payload = {
+        "model": "qwen2.5-7b-instruct-1m",
+        "prompt": prompt,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "max_tokens": 1024
+    }
     try:
-        qwen = Qwen(
-            model_name="qwen1.5-7b-chat",
-            temperature=0.7,
-            top_p=0.9,
-            max_tokens=1024
-        )
-        return qwen
+        response = requests.post(url, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        rephrased_text = data.get('text', '').strip()
+        return rephrased_text
     except Exception as e:
-        print(f"Error initializing Qwen model: {str(e)}")
-        return None
+        print(f"Error rephrasing text with Qwen model: {str(e)}")
+        return prompt
 
 def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords: List[str]) -> List[Dict[str, Any]]:
     """
@@ -31,11 +37,6 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
     Returns:
         List of rephrased work experience entries
     """
-    qwen = setup_qwen_model()
-    if not qwen:
-        print("Failed to initialize Qwen model. Returning original experience.")
-        return experience_list
-    
     rephrased_experience = []
     
     for exp in experience_list:
@@ -79,7 +80,7 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
             
             try:
                 # Get rephrased responsibility
-                rephrased_resp = qwen.invoke(prompt).strip()
+                rephrased_resp = rephrase_text(prompt)
                 print(f"Original: {resp}\nRephrased: {rephrased_resp}\n")
                 rephrased_responsibilities.append(rephrased_resp)
             except Exception as e:
@@ -104,11 +105,6 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
     Returns:
         List of rephrased project entries
     """
-    qwen = setup_qwen_model()
-    if not qwen:
-        print("Failed to initialize Qwen model. Returning original projects.")
-        return projects
-    
     rephrased_projects = []
     
     for project in projects:
@@ -146,7 +142,7 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
         
         try:
             # Get rephrased description
-            rephrased_description = qwen.invoke(prompt).strip()
+            rephrased_description = rephrase_text(prompt)
             print(f"Original: {description}\nRephrased: {rephrased_description}\n")
             
             # Create the rephrased project entry
@@ -160,8 +156,24 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
     return rephrased_projects
 
 def enhance_resume_content(resume_data: dict, job_keywords: list) -> dict:
-    # Dummy implementation for enhancing resume content
-    resume_data['enhanced_content'] = "Enhanced content based on keywords: " + ", ".join(job_keywords)
+    """
+    Enhance resume content by incorporating job keywords.
+    
+    Args:
+        resume_data: The resume data to enhance
+        job_keywords: List of keywords extracted from the job description
+        
+    Returns:
+        Enhanced resume data
+    """
+    # Rephrase work experience
+    if 'experience' in resume_data:
+        resume_data['experience'] = rephrase_work_experience(resume_data['experience'], job_keywords)
+    
+    # Rephrase projects
+    if 'projects' in resume_data:
+        resume_data['projects'] = rephrase_projects(resume_data['projects'], job_keywords)
+    
     return resume_data
 
 # For testing purposes

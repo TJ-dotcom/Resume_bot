@@ -1,4 +1,4 @@
-from keyword_extraction import extract_keywords_from_job_description, normalize_keywords
+from bot.keyword_extraction import extract_keywords_from_job_description, normalize_keywords
 
 def test_keyword_extraction():
     """Test the keyword extraction and normalization functionality."""

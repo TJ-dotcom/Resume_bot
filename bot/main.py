@@ -7,13 +7,21 @@ from bot.handlers import start, help_command, setup_handlers, error_handler
 
 # Import our modules
 from bot.resume_parser import ResumeParser
-from bot.deepseek_processor import DeepseekProcessor
-from bot.extraction import extract_resume_data
-from bot.keyword_extraction import extract_keywords
+from bot.deepseek_processor import QWENProcessor
+# from bot.extraction import extract_resume_data
+from bot.utils import extract_keywords_with_qwen
 from bot.rephrasing import enhance_resume_content
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_file_path = Path(__file__).parent / "bot.log"
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file_path),
+        logging.StreamHandler()
+    ]
+)
 logger = logging.getLogger(__name__)
 
 def process_resume_file(
@@ -63,9 +71,9 @@ def process_resume_file(
     print("Extracting resume data...")
     resume_data = extract_resume_data(file_path)
     
-    # Extract keywords from the resume
+    # Extract keywords from the job description
     print("Extracting keywords...")
-    resume_data = extract_keywords(resume_data)
+    resume_data = extract_keywords_with_qwen(resume_data)
     
     # Enhance content with rephrasing
     print("Enhancing resume content...")
