@@ -5,6 +5,8 @@ import json
 import os
 from typing import Dict, Any, List
 from yake import KeywordExtractor
+from transformers import pipeline, T5Tokenizer, T5ForConditionalGeneration
+from keybert import KeyBERT
 
 # Configure logging
 logging.basicConfig(
@@ -18,6 +20,23 @@ QWEN_MODEL = "qwen2.5-7b-instruct-1m"
 # Set the QWEN model endpoint
 QWEN_API_URL = "http://127.0.0.1:1234/v1/chat/completions"
 qwen_API_KEY = os.getenv("qwen_API_KEY", "")
+
+# Initialize Hugging Face models
+try:
+    tech_extractor = pipeline("text2text-generation", model="ilsilfverskiold/tech-keywords-extractor", max_length=150)
+except Exception as e:
+    logger.error(f"Error loading tech_extractor model: {e}")
+    raise
+
+try:
+    t5_tokenizer = T5Tokenizer.from_pretrained("Voicelab/vlt5-base-keywords")
+    t5_model = T5ForConditionalGeneration.from_pretrained("Voicelab/vlt5-base-keywords")
+except Exception as e:
+    logger.error(f"Error loading vlt5 model: {e}")
+    raise
+
+kw_model = KeyBERT()
+yake_extractor = KeywordExtractor(top=20)
 
 def log_error(func):
     """Decorator to log errors in functions."""
@@ -116,7 +135,9 @@ def infuse_keywords(sections: Dict, keywords: Dict[str, List[str]]) -> Dict:
             # Only add if not already in all_keywords (case-insensitive check)
             if not any(existing.lower() == skill.lower() for existing in all_keywords):
                 all_keywords.append(skill)
-        
+    
+    logger.debug(f"All Keywords: {all_keywords}")
+    
     # Add unique keywords to skills section
     for skill in all_keywords:
         if skill.lower() not in existing_skills and not any(
@@ -194,8 +215,14 @@ def call_qwen_api(system_prompt: str, user_message: str) -> Dict:
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        logger.error(f"Failed to connect to Qwen API: {e}")
-        raise
+        logger.error(f"Qwen failed, using YAKE: {e}")
+        return yake_extraction(user_message)
+
+def yake_extraction(text: str) -> Dict:
+    """Fallback keyword extraction using YAKE."""
+    yake_extractor = KeywordExtractor(top=20)
+    yake_keywords = yake_extractor.extract_keywords(text)
+    return {"keywords": [kw[0] for kw in yake_keywords]}
 
 @log_error
 def extract_json_from_text(text: str) -> Dict:
@@ -242,7 +269,7 @@ def extract_json_from_text(text: str) -> Dict:
             if start_idx >= 0 and end_idx > start_idx:
                 json_text = text[start_idx:end_idx]
                 return json.loads(json_text)
-        except (ValueError, json.JSONDecodeError):
+        except (ValueValueError, json.JSONDecodeError):
             pass
     
     # If all else fails, return an empty dict
@@ -284,21 +311,49 @@ def extract_text_from_file(file_path):
         logger.error(f"Error extracting text from {file_path}: {e}")
         raise
 
+@log_error
 def hybrid_extraction(jd_text: str) -> Dict:
     """Combine LLM and statistical extraction."""
-    # LLM-based extraction
-    llm_keywords = extract_keywords_with_qwen(jd_text)
-    
-    # YAKE fallback
-    yake_extractor = KeywordExtractor(top=20)
-    yake_keywords = yake_extractor.extract_keywords(jd_text)
-    
-    # Merge results
-    for category in ["technical_skills", "cloud_technologies"]:
-        llm_keywords[category] += [kw[0] for kw in yake_keywords 
-                                   if relevant_to_category(kw[0], category)]
-    
-    return deduplicate_keywords(llm_keywords)
+    try:
+        # Technical skills extraction
+        tech_output = tech_extractor(jd_text)
+        tech_keywords = extract_tech_keywords(tech_output)
+        
+        # Contextual phrases extraction
+        context_keywords = extract_contextual_phrases(jd_text)
+        
+        # Merge results
+        merged_keywords = merge_keywords(tech_keywords, context_keywords)
+        
+        logger.debug(f"Merged Keywords: {merged_keywords}")
+        return deduplicate_keywords(merged_keywords)
+    except Exception as e:
+        logger.error(f"Error in hybrid_extraction, using fallback: {e}")
+        return hybrid_fallback(jd_text)
+
+def extract_tech_keywords(output: str) -> List[str]:
+    """Extract technical keywords from model output."""
+    return list(set(re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', output)))
+
+def extract_contextual_phrases(jd_text: str) -> List[str]:
+    """Extract contextual phrases using T5 model."""
+    inputs = t5_tokenizer("Keywords: " + jd_text, return_tensors="pt", truncation=True)
+    outputs = t5_model.generate(**inputs, no_repeat_ngram_size=3, num_beams=4)
+    return t5_tokenizer.decode(outputs[0], skip_special_tokens=True).split(", ")
+
+def hybrid_fallback(jd_text: str) -> Dict:
+    """Fallback keyword extraction using KeyBERT and YAKE."""
+    return {
+        'keybert': [kw[0] for kw in kw_model.extract_keywords(jd_text)],
+        'yake': [kw[0] for kw in yake_extractor.extract_keywords(jd_text)]
+    }
+
+def merge_keywords(tech_keywords: List[str], context_keywords: List[str]) -> Dict[str, List[str]]:
+    """Merge technical and contextual keywords."""
+    return {
+        "technical_skills": tech_keywords,
+        "contextual": context_keywords
+    }
 
 def relevant_to_category(keyword: str, category: str) -> bool:
     """Check if a keyword is relevant to a category."""

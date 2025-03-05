@@ -117,6 +117,7 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
             
             try:
                 rephrased_resp = rephrase_text(prompt)
+                rephrased_resp = semantic_deduplication(rephrased_resp)
                 print(f"Original: {resp}\nRephrased: {rephrased_resp}\n")
                 rephrased_responsibilities.append(rephrased_resp)
                 
