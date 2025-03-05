@@ -1,0 +1,86 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandrakumar",
+        "email": "envel⌢pevigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present"
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022"
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Database MySQL, PostgreSQL, MongoDB",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "CI/CD Git, Docker, Jenkins",
+            "Tools Power BI, Hadoop, Spark, Tableau",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn"
+        ],
+        "soft_skills": [
+            "Analytical Thinking",
+            "Data-Driven Decision Making",
+            "Communication",
+            "Collaboration",
+            "Adaptability"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Designed and implemented advanced transformer-based models for text-to-text processing.",
+                "Integrated natural language understanding (NLU) and natural language generation (NLG) capabilities into the system.",
+                "Developed AI-driven chatbots and virtual assistants capable of understanding complex technical inquiries."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "client": "Country Financial",
+            "location": "Chennai, India",
+            "responsibilities": [
+                "Optimized data pipelines by developing and implementing SQL queries and stored procedures.",
+                "Resolved real-time database issues under pressure, reducing downtime by 15%.",
+                "Enhanced operational efficiency by streamlining payment reversal processes and billing workflows.",
+                "Demonstrated adaptability and problem-solving skills during early-stage project implementation."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Hand-picked a dataset with unique features for predicting house prices. Performed EDA, PCA, and preprocessing to clean and transform the data. Implemented machine learning algorithms (Linear Regression, Random Forest) to achieve an accuracy of 87%. Deployed the model using Docker."
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a scalable database solution using PostgreSQL, enhancing data retrieval speed by 30%. Integrated Power BI for reporting and analytics."
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a scalable database solution using PostgreSQL to enhance library management. Replaced Excel with advanced database features like referential integrity, concurrent access, and security measures. Integrated reporting and analytics capabilities using Power BI."
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed network traffic, sensor node power, and distance to determine optimal data routing strategies. Implemented ant colony optimization and fuzzy logic, improving energy efficiency by 20%. Designed a solution using Graph Neural Networks (GNNs) to optimize energy savings in wireless sensor networks."
+        }
+    ],
+    "certifications_and_awards": []
+}

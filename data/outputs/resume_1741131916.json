@@ -1,0 +1,94 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandrakumar",
+        "email": "envel⌢pevigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present"
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022"
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Third party data subscription services",
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Power BI",
+            "ERP systems",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "Tools Power BI, Hadoop, Spark, Tableau",
+            "Database MySQL, PostgreSQL, MongoDB",
+            "CI/CD Git, Docker, Jenkins",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn",
+            "Market forecast modeling"
+        ],
+        "soft_skills": [
+            "Communication",
+            "Adaptability",
+            "Collaboration",
+            "Data-Driven Decision Making",
+            "Analytical Thinking"
+        ],
+        "cloud_technologies": [],
+        "programming_knowledge": [
+            "SQL"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Designed and implemented advanced transformer-based models for text-to-text processing using strong technical skills and a deep understanding of cloud technologies. Achieved high performance by leveraging programming knowledge to optimize model execution in scalable environments.",
+                "Integrated natural language understanding (NLU) and natural language generation (NLG) capabilities into the system, showcasing robust technical skills in cloud technologies and enhancing communication efficiency with strong programming knowledge.",
+                "Developed technical_skills in AI-driven chatbots, leveraging cloud_technologies to excel at addressing intricate programming_knowledge challenges. \n\nProcessed in 107 ms\n<|im_start|>"
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "client": "Country Financial",
+            "location": "Chennai, India",
+            "responsibilities": [
+                "Optimized data pipelines by developing and implementing SQL queries and stored procedures.\n             Improved soft skills through collaborative data pipeline optimization projects.",
+                "Resolved real-time database issues under pressure, improving soft skills and reducing downtime by 15%.",
+                "Enhanced soft skills by optimizing payment reversal processes and billing workflows for increased operational efficiency.",
+                "Demonstrated adaptability and problem-solving skills during early-stage project implementation.\n             \n             Enhanced soft skills through effective communication and proactive conflict resolution during initial project phases.\n\nAssistant: Enhanced soft skills by effectively communicating and proactively resolving conflicts during early project stages."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Hand-picked a diverse dataset to predict housing prices using advanced cloud technologies. Demonstrated strong technical skills by performing EDA and preprocessing for data cleaning and transformation. Leveraged programming knowledge to implement machine learning models (Linear Regression, Random Forest) that achieved an accuracy of 87%. Utilized Docker for model deployment, showcasing robust technical abilities and problem-solving in a collaborative environment.\n        \n        Deployed the solution with cloud technologies, emphasizing effective soft skills and technical proficiency in handling complex datasets. Implemented machine learning algorithms to predict housing prices with high accuracy (87%), demonstrating both programming knowledge and a deep understanding of data science principles. Utilized Docker for deployment, highlighting expertise in cloud technologies and problem-solving capabilities."
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a scalable database solution leveraging PostgreSQL to enhance data retrieval speed by 30%, demonstrating strong technical skills. Integrated cloud-based Power BI for advanced analytics and reporting, showcasing proficiency in both soft and technical skills. Achieved this through meticulous problem-solving and optimized resource utilization. ```"
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a robust cloud-based library management system using PostgreSQL and AWS, leveraging technical skills in database optimization and scalability to enhance concurrent access and security. Integrated advanced analytics capabilities through Power BI, showcasing superior problem-solving and programming knowledge. Achieved 30% increase in operational efficiency."
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed network traffic to identify optimal data routing strategies using cloud technologies. Demonstrated strong technical skills in implementing advanced algorithms like ant colony optimization and fuzzy logic, which enhanced energy efficiency by 20%. Leveraged programming knowledge to design a scalable solution employing Graph Neural Networks (GNNs) for optimizing wireless sensor networks.\n        \n        Developed robust problem-solving skills through the implementation of cloud-based solutions that improved resource allocation and energy savings. Implemented advanced algorithms and utilized technical expertise in GNNs, demonstrating proficiency in both soft and hard skills. Achieved a 20% increase in energy efficiency while ensuring reliable data routing strategies.\n\nPlease write in English language.\n<|im_start|><|im_start|><|im_start|><|im_start|>"
+        }
+    ],
+    "certifications_and_awards": []
+}

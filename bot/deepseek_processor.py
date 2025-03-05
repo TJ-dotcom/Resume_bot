@@ -38,12 +38,13 @@ class QWENProcessor:
                 "temperature": 0.1  # Low temperature for more deterministic responses
             }
             
-            logger.info("Sending request to QWEN API")
+            logger.info(f"Sending request to QWEN API with payload: {payload}")
             response = requests.post(self.api_url, headers=headers, json=payload)
             
             if response.status_code == 200:
                 result = response.json()
                 content = result.get('choices', [{}])[0].get('message', {}).get('content', '')
+                logger.info(f"Received response from QWEN API: {content}")
                 
                 # Extract JSON from the response
                 try:

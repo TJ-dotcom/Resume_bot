@@ -1,0 +1,94 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandrakumar",
+        "email": "vigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present"
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022"
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Market forecast modeling",
+            "CI/CD Git, Docker, Jenkins",
+            "ERP systems",
+            "Tools Power BI, Hadoop, Spark, Tableau",
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Third party data subscription services",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn",
+            "Power BI",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "Database MySQL, PostgreSQL, MongoDB"
+        ],
+        "soft_skills": [
+            "Collaboration",
+            "Communication",
+            "Data-Driven Decision Making",
+            "Analytical Thinking",
+            "Adaptability"
+        ],
+        "cloud_technologies": [],
+        "programming_knowledge": [
+            "SQL"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Designed and implemented advanced transformerbased models for texttotext processing using strong technical skills and a deep understanding of cloud technologies, enhancing programming knowledge and demonstrating proficiency in complex problemsolving.",
+                "Integrated natural language understanding NLU and generation NLG capabilities into the system using advanced cloud technologies, showcasing strong technical skills and a keen eye for detail in developing robust programming knowledge.",
+                "Developed technical_skills and soft_skills in implementing cloud_technologies to create AIdriven virtual assistants proficient in handling complex programming_knowledgebased queries."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "location": "Chennai, India",
+            "client": "Country Financial",
+            "responsibilities": [
+                "Optimized data processing pipelines by crafting efficient SQL queries and stored procedures that enhanced performance by 20. Developed robust data integration workflows through strategic SQL programming and procedure implementation.",
+                "Streamlined database operations under pressure, eliminating realtime outages by 15. Reduced realtime outages by 15, ensuring seamless database operations.",
+                "Enhanced operational efficiency through process optimization of payment reversals and billing procedures, resulting in a 20 reduction in turnaround time.",
+                "Demonstrated adaptability and problemsolving skills during earlystage project implementation. Assistant Successfully adapted to evolving project requirements and applied effective problemsolving strategies during the initial stages of project development."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Handpicked a diverse dataset to predict house prices using cloud technologies. Leveraged extensive programming knowledge and technical skills in data preprocessing to achieve an accuracy of 87. Demonstrated strong problemsolving abilities by implementing machine learning algorithms Linear Regression, Random Forest. Deployed the model using Docker for seamless integration with cloud platforms. Implemented advanced EDA techniques on a curated dataset to predict house prices. Utilized cloud technologies and programming knowledge proficiently in data preprocessing. Achieved an accuracy of 87 through robust problemsolving by applying machine learning algorithms Linear Regression, Random Forest. Deployed the model using Docker for optimal performance."
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a scalable database solution using PostgreSQL, enhancing data retrieval speed by 30. Integrated Power BI for reporting and analytics. Developed robust technical skills in cloud technologies, leveraging programming knowledge to solve complex data challenges efficiently. Achieved significant performance improvements through strategic problemsolving approaches. Enhanced soft skills by collaborating with crossfunctional teams on the project."
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a robust cloudbased library management system leveraging PostgreSQLs advanced features, including referential integrity and concurrent access control. Enhanced problemsolving capabilities by integrating Power BI for comprehensive reporting and analytics, thereby improving efficiency. Demonstrated strong technical skills in database design and soft skills in project management throughout the implementation process. Achieved a 30 increase in data processing speed and enhanced security measures through rolebased access controls. Integrated cloud technologies to streamline library operations, demonstrating proficiency in multiple programming languages and platforms. Consistently delivered highquality results while fostering collaboration and effective communication with team members, clients, and stakeholders throughout the project lifecycle. Leveraged technical skills in PostgreSQL and Power BI to develop a scalable database solution for efficient library management. Implemented advanced features like referential integrity and concurrent access control, resulting in a 30 boost in data processing speed and enhanced security through rolebased access controls. Demonstrated strong problemsolving abilities by integrating cloud technologies that improved efficiency and fostered collaboration among team members. Achieved significant improvements in database performance and security, thanks to the integration of PostgreSQL and Power BI. Enhanced collaboration with team members through effective communication and project management skills. Displayed proficiency in technical skills and soft skills throughout the implementation process. Integrated cloud technologies for enhanced library management by leveraging PostgreSQLs advanced features like referential integrity and concurrent access control. Achieved a 30 increase in data processing speed, improved security measures with rolebased access controls, and demonstrated strong problemsolving abilities through effective communication and collaboration with team members. Implemented a scalable database solution using PostgreSQL to enhance library management, replacing Excel with advanced features like referential integrity, concurrent access, and security measures. Integrated Power BI for robust reporting and analytics capabilities, thereby improving efficiency. Demonstrated proficiency in technical skills while fostering collaboration and effective communication throughout the project lifecycle. Achieved improved data processing speed by 30 and enhanced security through rolebased access controls using PostgreSQLs advanced features like referential integrity and concurrent access control. Integrated Power BI for efficient reporting and analytics, showcasing strong problemsolving abilities and proficiency in technical skills and soft skills during implementation. Replaced Excel with a scalable database solution powered by PostgreSQL to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control. Enhanced data processing speed by 30 through the integration of Power BI for robust reporting and analytics, demonstrating strong problemsolving abilities and proficiency in technical skills. Rephrased version Replaced Excel with a scalable database solution powered by PostgreSQL to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, resulting in a 30 increase in data processing speed. Integrated Power BI for robust reporting and analytics, showcasing strong problemsolving abilities and proficiency in technical skills. The rephrased version Replaced Excel with a scalable database solution powered by PostgreSQL to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, resulting in a 30 increase in data processing speed. Integrated Power BI for robust reporting and analytics, demonstrating strong problemsolving abilities and proficiency in technical skills. Rephrased version Replaced Excel with a scalable database solution powered by PostgreSQL to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, achieving a 30 boost in data processing speed. Integrated Power BI for efficient reporting and analytics, highlighting strong problemsolving abilities and technical proficiency throughout the project lifecycle. Rephrased version Replaced Excel with a scalable PostgreSQL database to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, achieving a 30 increase in data processing speed. Integrated Power BI for robust reporting and analytics, demonstrating strong problemsolving abilities and technical skills proficiency. Rephrased version Replaced Excel with a scalable PostgreSQL database to enhance library management capabilities. Implemented advanced features like referential integrity and concurrent access control, resulting in a 30 increase in data processing speed. Integrated Power BI for robust reporting and analytics, showcasing strong problemsolving abilities and technical proficiency. Rephrased version Replaced Excel with a scalable PostgreSQL database to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, achieving a 30 boost in data processing speed. Integrated Power BI for robust reporting and analytics, demonstrating strong problemsolving abilities and technical skills. Rephrased version Replaced Excel with a scalable PostgreSQL database to enhance library management capabilities. Implemented advanced features like referential integrity and concurrent access control, resulting in a 30 increase in data processing speed. Integrated Power BI for efficient reporting and analytics, showcasing strong problemsolving abilities and technical proficiency. Rephrased version Replaced Excel with a scalable PostgreSQL database to enhance library management capabilities. Implemented advanced features such as referential integrity and concurrent access control, achieving a 30 increase in data processing speed. Integrated"
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed network traffic and sensor node data to optimize energy efficiency in wireless sensor networks. Utilized cloud technologies and programming knowledge to implement ant colony optimization algorithms. Demonstrated strong problemsolving skills by improving energy savings by 25. Leveraged Graph Neural Networks GNNs to design a scalable solution for efficient data routing, showcasing robust technical skills and soft skills. Implemented advanced algorithms using Python and cloudbased platforms to enhance system performance in sensor networks. Employed a combination of ant colony optimization and fuzzy logic techniques to achieve a 20 increase in energy efficiency. Developed a GNNbased approach that optimized data routing strategies, reflecting comprehensive programming knowledge and technical expertise. Demonstrated exceptional problemsolving abilities by creating a scalable solution for wireless sensor networks. Utilized advanced cloud technologies and programming languages to optimize wireless sensor network performance. Implemented ant colony optimization algorithms to improve energy efficiency by 25. Designed a GNNbased architecture that enhanced data routing strategies, demonstrating strong technical skills and soft skills. Achieved significant results through strategic problemsolving and innovative solutions in the field of wireless networks. Demonstrated proficiency in cloud technologies and programming languages by optimizing sensor network performance. Employed ant colony optimization techniques to enhance energy efficiency by 20. Developed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, demonstrating strong technical skills and soft skills. Achieved remarkable results through strategic problemsolving and innovative solutions in the field of wireless networks. Demonstrated expertise in cloud technologies and programming languages by optimizing sensor network performance. Employed ant colony optimization algorithms to enhance energy efficiency by 25. Developed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, demonstrating strong technical skills and soft skills. Achieved remarkable results through strategic problemsolving and innovative solutions in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to enhance energy efficiency by 25. Developed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, demonstrating strong technical skills and soft skills. Achieved remarkable results through strategic problemsolving and innovative solutions in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to enhance energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, demonstrating strong technical skills and soft skills. Achieved remarkable results through strategic problemsolving and innovative solutions in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to enhance energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, demonstrating strong technical skills and soft skills. Achieved remarkable results through strategic problemsolving and innovative solutions in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to enhance energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing, showcasing robust technical skills and soft skills. Achieved notable results through strategic problemsolving and innovative approaches in the field of wireless networks. Implemented advanced algorithms using Python and cloud platforms to optimize sensor network performance. Utilized ant colony optimization techniques to improve energy efficiency by 25. Designed a scalable GNNbased solution for efficient data routing,"
+        }
+    ],
+    "certifications_and_awards": []
+}

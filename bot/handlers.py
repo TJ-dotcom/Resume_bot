@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler
+from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler, ApplicationBuilder
 import logging
 import os
 import json
@@ -8,6 +8,7 @@ from bot.resume_parser import ResumeParser
 from bot.deepseek_processor import QWENProcessor
 from bot.utils import extract_keywords_with_qwen
 from bot.resume_enhancer import enhance_resume, save_json_file
+from bot.rephrasing import enhance_resume_content
 
 # Get logger for this module
 logger = logging.getLogger(__name__)
@@ -114,31 +115,36 @@ async def process_files(job_description, resume_path, update, context):
             return ConversationHandler.END
         
         # Convert the extracted text to JSON using QWENProcessor
+        qwen_processor = QWENProcessor()
         json_data = qwen_processor.convert_to_json(resume_text)
         
         if not json_data:
             await update.message.reply_text("Failed to convert resume text to JSON. Please try again.")
             return ConversationHandler.END
         
-        # Save the JSON data to a file
+        # Enhance the resume content by rephrasing work experience and project descriptions
+        extracted_keywords = extract_keywords_with_qwen(job_description)
+        enhanced_json_data = enhance_resume_content(json_data, extracted_keywords)
+        
+        # Save the enhanced JSON data to a file
         timestamp = int(time.time())
         output_dir = os.path.join("data/outputs")
         os.makedirs(output_dir, exist_ok=True)
         output_filename = os.path.join(output_dir, f"resume_{timestamp}.json")
         
         with open(output_filename, 'w', encoding='utf-8') as json_file:
-            json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+            json.dump(enhanced_json_data, json_file, ensure_ascii=False, indent=4)
         
-        logger.info(f"Resume JSON generated at {output_filename}")
+        logger.info(f"Enhanced resume JSON generated at {output_filename}")
         
-        # Send the JSON file back to the user
+        # Send the enhanced JSON file back to the user
         with open(output_filename, 'rb') as json_file:
             await context.bot.send_document(
                 chat_id=update.effective_chat.id, 
                 document=json_file,
                 filename=os.path.basename(output_filename)
             )
-        await update.message.reply_text('Your resume has been processed and converted to JSON format.')
+        await update.message.reply_text('Your resume has been processed and enhanced.')
     
     except Exception as e:
         logger.error(f"Error in process_files: {e}", exc_info=True)

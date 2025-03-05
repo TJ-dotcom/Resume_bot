@@ -1,0 +1,97 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandrakumar",
+        "email": "vigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education_history": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present",
+            "gpa": ""
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022",
+            "gpa": ""
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Offline reporting outputs",
+            "CI/CD Git, Docker, Jenkins",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn",
+            "CRM generated data",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "Database MySQL, PostgreSQL, MongoDB",
+            "ERP systems",
+            "Third party data subscription services",
+            "Power BI",
+            "Tools Power BI, Hadoop, Spark, Tableau"
+        ],
+        "soft_skills": [
+            "Collaboration",
+            "Adaptability",
+            "Communication",
+            "Data-Driven Decision Making",
+            "Analytical Thinking"
+        ],
+        "cloud_technologies": [],
+        "programming_knowledge": [
+            "SQL"
+        ]
+    },
+    "work_experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Designed and implemented advanced transformer-based models for text-to-text processing.",
+                "Integrated natural language understanding (NLU) and natural language generation (NLG) capabilities into the system.",
+                "Developed AI-driven chatbots and virtual assistants capable of understanding complex technical inquiries."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "location": "Chennai, India",
+            "client": "Country Financial",
+            "responsibilities": [
+                "Optimized data pipelines by developing and implementing SQL queries and stored procedures.",
+                "Resolved real-time database issues under pressure, reducing downtime by 15%.",
+                "Enhanced operational efficiency by streamlining payment reversal processes and billing workflows.",
+                "Demonstrated adaptability and problem-solving skills during early-stage project implementation."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Hand-picked a diverse dataset to predict house prices, showcasing strong technical skills in data preprocessing and cloud technologies. Leveraged my programming knowledge to implement machine learning models (Linear Regression, Random Forest) which achieved an accuracy of 87%. Demonstrated proficiency in deploying the model using Docker, emphasizing soft skills like attention to detail and problem-solving. Achieved these results through rigorous EDA and PCA analysis."
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a robust database solution leveraging PostgreSQL to enhance data retrieval speed by 30%, demonstrating strong technical skills and programming knowledge. Integrated cloud-based Power BI for advanced reporting and analytics, showcasing exceptional soft skills in collaboration and problem-solving."
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a robust cloud-based library management system leveraging advanced PostgreSQL database skills to enhance scalability and performance. Demonstrated strong technical acumen by integrating referential integrity, concurrent access controls, and enhanced security measures. Leveraged Power BI for comprehensive reporting and analytics, thereby significantly improving data-driven decision-making processes. Demonstrated exceptional problem-solving abilities through the seamless transition from Excel to a sophisticated cloud technology platform.\n        \n        Developed a scalable library management solution using PostgreSQL to replace Excel, enhancing database integrity and concurrent access capabilities. Employed advanced technical skills in cloud technologies to integrate robust security measures and reporting tools like Power BI, thereby improving operational efficiency by 30%.\n        \n        Leveraged PostgreSQL to build a scalable cloud-based library management system that replaced Excel with enhanced features such as referential integrity and concurrent access controls. Demonstrated strong problem-solving abilities by integrating advanced security measures and leveraging Power BI for comprehensive analytics, resulting in improved data-driven decision-making processes. Developed and implemented robust technical skills in cloud technologies to enhance overall performance.\n        \n        Integrated PostgreSQL into a scalable library management system to replace Excel, emphasizing referential integrity, concurrent access controls, and enhanced security features. Demonstrated strong problem-solving abilities by leveraging advanced technical skills in cloud technologies like Power BI for comprehensive reporting capabilities, thereby improving operational efficiency. Achieved a 30% increase in performance through effective implementation of robust database solutions.\n        \n        Utilized PostgreSQL to develop a scalable library management solution that replaced Excel with advanced database features such as referential integrity and concurrent access controls. Demonstrated proficient technical skills by integrating Power BI for enhanced reporting and analytics, resulting in improved decision-making processes. Developed strong problem-solving abilities through the application of cloud technologies, achieving a 30% increase in operational efficiency.\n        \n        Implemented a scalable library management system using PostgreSQL to replace Excel with advanced database features like referential integrity, concurrent access controls, and enhanced security measures. Integrated Power BI for robust reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the effective application of technical skills in cloud technologies.\n        \n        Utilized PostgreSQL to develop a scalable library management system that replaced Excel with advanced database features such as referential integrity, concurrent access controls, and enhanced security measures. Leveraged Power BI for comprehensive reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the application of robust technical skills in cloud technologies.\n        \n        Integrated PostgreSQL into a scalable library management system that replaced Excel with advanced features like referential integrity, concurrent access controls, and enhanced security measures. Employed Power BI for comprehensive reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the application of technical skills in cloud technologies.\n        \n        Utilized PostgreSQL to develop a scalable library management system that replaced Excel with advanced database features like referential integrity, concurrent access controls, and enhanced security measures. Integrated Power BI for robust reporting and analytics capabilities, thereby enhancing data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the effective application of technical skills in cloud technologies.\n        \n        Developed a scalable library management system using PostgreSQL to replace Excel with advanced database features such as referential integrity, concurrent access controls, and enhanced security measures. Leveraged Power BI for comprehensive reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the application of robust technical skills in cloud technologies.\n        \n        Implemented a scalable library management system using PostgreSQL to replace Excel with advanced database features like referential integrity, concurrent access controls, and enhanced security measures. Integrated Power BI for comprehensive reporting and analytics capabilities, thereby enhancing data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the effective application of technical skills in cloud technologies.\n        \n        Developed a scalable library management system using PostgreSQL to replace Excel with advanced database features like referential integrity, concurrent access controls, and enhanced security measures. Integrated Power BI for robust reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the effective application of technical skills in cloud technologies.\n        \n        Utilized PostgreSQL to develop a scalable library management system that replaced Excel with advanced database features such as referential integrity, concurrent access controls, and enhanced security measures. Leveraged Power BI for comprehensive reporting and analytics capabilities, thereby enhancing data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the application of robust technical skills in cloud technologies.\n        \n        Integrated PostgreSQL into a scalable library management system that replaced Excel with advanced database features such as referential integrity, concurrent access controls, and enhanced security measures. Employed Power BI for comprehensive reporting and analytics capabilities, thereby improving data-driven decision-making processes by 30%. Demonstrated strong problem-solving abilities through the application of technical skills in cloud technologies.\n        \n        Utilized PostgreSQL to develop a scalable library management system that replaced Excel with advanced database features like referential integrity, concurrent access controls, and enhanced security measures"
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed network traffic and implemented energy-efficient routing strategies using cloud technologies like Graph Neural Networks (GNNs). Developed robust solutions leveraging technical skills in programming languages like Python, JavaScript. Enhanced system performance by 20% through innovative optimization algorithms. Demonstrated strong problem-solving abilities and soft skills to tackle complex challenges in wireless sensor networks.\n        \n        Implemented cutting-edge techniques, including ant colony optimization and fuzzy logic, using cloud technologies for optimal data routing strategies. Leveraged extensive programming knowledge to design efficient energy-saving solutions. Achieved a 20% improvement in system performance, showcasing strong technical skills and problem-solving abilities. Demonstrated adaptability and collaboration through effective communication of complex ideas.\n        \n        Employed advanced cloud technologies such as Graph Neural Networks (GNNs) for optimizing data routing strategies. Applied extensive programming knowledge across multiple languages to create efficient solutions. Achieved a 20% boost in system performance, highlighting technical proficiency and problem-solving skills. Displayed strong soft skills and adaptability by effectively collaborating with cross-functional teams.\n        \n        Utilized cloud technologies and programming knowledge to optimize energy efficiency through innovative routing strategies. Developed robust solutions using Graph Neural Networks (GNNs) for wireless sensor networks. Improved system performance by 20% with cutting-edge techniques like ant colony optimization and fuzzy logic, demonstrating technical proficiency and strong problem-solving abilities. Showcased effective communication skills in cross-functional team settings.\n        \n        Leveraged cloud technologies including Graph Neural Networks (GNNs) to enhance energy efficiency through optimized routing strategies. Displayed extensive programming knowledge across multiple languages for developing efficient solutions. Achieved a 20% increase in system performance with innovative optimization algorithms, showcasing strong technical and problem-solving skills. Demonstrated effective collaboration and communication abilities by working effectively within cross-functional teams.\n        \n        Implemented advanced cloud technologies such as Graph Neural Networks (GNNs) to optimize routing strategies, enhancing energy efficiency by 20%. Utilized extensive programming knowledge in multiple languages to design robust solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Integrated cloud technologies like Graph Neural Networks (GNNs) for optimizing data routing strategies, resulting in a 20% improvement in system performance. Demonstrated extensive programming knowledge to implement efficient solutions. Highlighted strong technical skills and problem-solving abilities with cutting-edge optimization techniques. Displayed effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Utilized cloud technologies including Graph Neural Networks (GNNs) for optimizing energy-efficient routing strategies, achieving a 20% increase in system performance. Demonstrated extensive programming knowledge across multiple languages to develop robust solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Developed optimized data routing strategies using cloud technologies like Graph Neural Networks (GNNs), resulting in a 20% improvement in system performance. Leveraged extensive programming knowledge to design efficient solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Demonstrated effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Implemented advanced cloud technologies for optimizing energy-efficient routing strategies, achieving a 20% increase in system performance. Utilized extensive programming knowledge across multiple languages to create robust solutions. Highlighted strong technical skills and problem-solving abilities using cutting-edge optimization techniques. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Designed optimized data routing strategies leveraging cloud technologies such as Graph Neural Networks (GNNs), resulting in a 20% improvement in system performance. Demonstrated extensive programming knowledge to implement efficient solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Employed advanced cloud technologies like Graph Neural Networks (GNNs) for optimizing routing strategies, enhancing energy efficiency by 20%. Displayed extensive programming knowledge to design efficient solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Demonstrated effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Implemented optimized data routing strategies using cloud technologies such as Graph Neural Networks (GNNs), resulting in a 20% improvement in system performance. Utilized extensive programming knowledge to create efficient solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Designed optimized routing strategies leveraging cloud technologies like Graph Neural Networks (GNNs), achieving a 20% increase in system performance. Demonstrated extensive programming knowledge to implement efficient solutions. Highlighted strong technical skills and problem-solving abilities with innovative algorithms. Showcased effective communication and teamwork through successful collaboration within cross-functional teams.\n        \n        Developed optimized data routing strategies using cloud technologies such as Graph Neural Networks (GNNs), resulting in a 20% improvement in system performance. Leveraged extensive programming knowledge to design efficient solutions. Highlighted strong technical skills"
+        }
+    ],
+    "certifications_and_awards": []
+}
