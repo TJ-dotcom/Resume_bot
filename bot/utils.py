@@ -7,12 +7,13 @@ from typing import Dict, Any, List
 from yake import KeywordExtractor
 from transformers import pipeline, T5Tokenizer, T5ForConditionalGeneration
 from keybert import KeyBERT
+import re
 
 # Configure logging
 logging.basicConfig(
     filename=os.path.join(os.path.dirname(__file__), 'bot.log'),
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
@@ -24,8 +25,9 @@ qwen_API_KEY = os.getenv("qwen_API_KEY", "")
 # Initialize Hugging Face models
 try:
     tech_extractor = pipeline("text2text-generation", model="ilsilfverskiold/tech-keywords-extractor", max_length=150)
+    classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 except Exception as e:
-    logger.error(f"Error loading tech_extractor model: {e}")
+    logger.error(f"Error loading models: {e}")
     raise
 
 try:
@@ -37,6 +39,9 @@ except Exception as e:
 
 kw_model = KeyBERT()
 yake_extractor = KeywordExtractor(top=20)
+
+# Define categories for classification
+CATEGORIES = ["technical skills", "soft skills", "programming", "tools", "management skills"]
 
 def log_error(func):
     """Decorator to log errors in functions."""
@@ -73,41 +78,126 @@ def generate_qwen_response(prompt: str) -> str:
         return ""
 
 @log_error
-def extract_keywords_with_qwen(job_description: str) -> Dict:
-    """Extract keywords from job description using Qwen API."""
-    system_prompt = """
-    You are a job analysis expert. Extract ALL TOP 10-12 keywords for skills, requirements, and qualifications
-    from the provided job description using these guidelines:
+def extract_keywords_with_huggingface(job_description: str) -> Dict:
+    """Extract keywords from job description using Hugging Face models."""
+    try:
+        # Technical skills extraction
+        tech_output = tech_extractor(job_description)
+        tech_keywords = extract_tech_keywords(tech_output[0]['generated_text'])
+        
+        # Contextual phrases extraction
+        context_keywords = extract_contextual_phrases(job_description)
+        
+        # Merge results
+        merged_keywords = merge_keywords(tech_keywords, context_keywords)
+        
+        # Use fallback mechanisms to extract additional keywords
+        fallback_keywords = hybrid_fallback(job_description)
+        
+        # Combine all keywords
+        combined_keywords = combine_keywords(merged_keywords, fallback_keywords)
+        
+        # Deduplicate keywords
+        unique_keywords = deduplicate_keywords(combined_keywords)
+        
+        # Categorize keywords
+        categorized_keywords = categorize_keywords(unique_keywords)
+        
+        # Refine categorized keywords
+        refined_keywords = refine_keywords(categorized_keywords)
+        
+        return refined_keywords
+    except Exception as e:
+        logger.error(f"Error in extract_keywords_with_huggingface, using fallback: {e}")
+        return hybrid_fallback(job_description)
 
-    Technical Skills (8-12 keywords):
-    - Software/tools (ERP, BI tools, databases)
-    - Methodologies (Agile, DevOps)
-    - Technical processes (Data modeling, ETL)
-    - Industry-specific skills (FP&A, HIPAA compliance)
+def extract_tech_keywords(output: str) -> List[str]:
+    """Extract technical keywords from model output."""
+    return list(set(re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', output)))
 
-    Cloud Technologies (5-8 keywords):
-    - Platforms (AWS, Azure, GCP)
-    - Services (EC2, S3, Lambda)
-    - Related tech (Kubernetes, Docker)
+def extract_contextual_phrases(jd_text: str) -> List[str]:
+    """Extract contextual phrases using T5 model."""
+    inputs = t5_tokenizer("Keywords: " + jd_text, return_tensors="pt", truncation=True)
+    outputs = t5_model.generate(**inputs, no_repeat_ngram_size=3, num_beams=4)
+    return t5_tokenizer.decode(outputs[0], skip_special_tokens=True).split(", ")
 
-    Programming Knowledge (5-7 keywords):
-    - Languages (Python, Java)
-    - Frameworks (React, Django)
-    - Paradigms (OOP, Functional)
+def hybrid_fallback(jd_text: str) -> Dict:
+    """Fallback keyword extraction using KeyBERT and YAKE."""
+    return {
+        'keybert': [kw[0] for kw in kw_model.extract_keywords(jd_text)],
+        'yake': [kw[0] for kw in yake_extractor.extract_keywords(jd_text)]
+    }
 
-    Soft Skills (5-7 keywords):
-    - Team collaboration
-    - Client communication
-    - Strategic planning
+def combine_keywords(primary_keywords: Dict[str, List[str]], fallback_keywords: Dict[str, List[str]]) -> Dict[str, List[str]]:
+    """Combine primary and fallback keywords."""
+    combined_keywords = primary_keywords
+    for category, keywords in fallback_keywords.items():
+        if category in combined_keywords:
+            combined_keywords[category].extend(keywords)
+        else:
+            combined_keywords[category] = keywords
+    return combined_keywords
 
-    Extraction Rules:
-    1. Identify both explicit and contextually implied keywords
-    2. Include synonyms and related terms (e.g., "CI/CD" → "Jenkins")
-    3. Capture multi-word phrases ("data pipeline optimization")
-    4. Prioritize frequency and position (first 1/3 of JD)
-    """
-    user_message = job_description
-    return call_qwen_api(system_prompt, user_message)
+def merge_keywords(tech_keywords: List[str], context_keywords: List[str]) -> Dict[str, List[str]]:
+    """Merge technical and contextual keywords."""
+    return {
+        "technical_skills": tech_keywords,
+        "contextual": context_keywords
+    }
+
+def deduplicate_keywords(keywords: Dict[str, List[str]]) -> List[str]:
+    """Remove duplicate keywords."""
+    seen = set()
+    unique_keywords = []
+    for category, kw_list in keywords.items():
+        for keyword in kw_list:
+            lower_keyword = keyword.lower()
+            if lower_keyword not in seen:
+                unique_keywords.append(keyword)
+                seen.add(lower_keyword)
+    return unique_keywords
+
+def categorize_keywords(keywords: List[str]) -> Dict[str, List[str]]:
+    """Categorize keywords into generalized categories using zero-shot classification."""
+    categories = {category: [] for category in CATEGORIES}
+    seen = set()
+    
+    for keyword in keywords:
+        if keyword.lower() not in seen:
+            classification = classifier(keyword, CATEGORIES)
+            best_category = classification["labels"][0]
+            categories[best_category].append(keyword)
+            seen.add(keyword.lower())
+    
+    return categories
+
+def refine_keywords(categorized_keywords: Dict[str, List[str]]) -> Dict[str, List[str]]:
+    """Refine categorized keywords to remove redundancies and ensure proper categorization."""
+    refined_keywords = {category: [] for category in CATEGORIES}
+    seen = set()
+    
+    for category, keywords in categorized_keywords.items():
+        for keyword in keywords:
+            lower_keyword = keyword.lower()
+            if lower_keyword not in seen:
+                refined_keywords[category].append(keyword)
+                seen.add(lower_keyword)
+    
+    return refined_keywords
+
+def validate_keywords(keywords: Dict[str, List[str]], job_description: str) -> Dict[str, List[str]]:
+    """Validate and filter keywords based on job description."""
+    job_description_lower = job_description.lower()
+    for category in keywords:
+        keywords[category] = [kw for kw in keywords[category] 
+                              if kw.lower() in job_description_lower 
+                              or is_contextually_implied(kw, job_description)]
+    return keywords
+
+def is_contextually_implied(keyword: str, job_description: str) -> bool:
+    """Check if a keyword is contextually implied in the job description."""
+    # Implement your logic to determine contextual implication
+    return True
 
 @log_error
 def infuse_keywords(sections: Dict, keywords: Dict[str, List[str]]) -> Dict:
@@ -255,7 +345,7 @@ def extract_json_from_text(text: str) -> Dict:
             end_idx = text.find("```", start_idx)
             json_text = text[start_idx:end_idx].strip()
             return json.loads(json_text)
-        except (ValueError, json.JSONDecodeError):
+        except (ValueValueError, json.JSONDecodeError):
             pass
     
     # Try parsing the entire text as JSON
@@ -317,65 +407,19 @@ def hybrid_extraction(jd_text: str) -> Dict:
     try:
         # Technical skills extraction
         tech_output = tech_extractor(jd_text)
-        tech_keywords = extract_tech_keywords(tech_output)
+        logger.debug(f"Tech Output: {tech_output}")
+        tech_keywords = extract_tech_keywords(tech_output[0]['generated_text'])
+        logger.debug(f"Tech Keywords: {tech_keywords}")
         
         # Contextual phrases extraction
         context_keywords = extract_contextual_phrases(jd_text)
+        logger.debug(f"Context Keywords: {context_keywords}")
         
         # Merge results
         merged_keywords = merge_keywords(tech_keywords, context_keywords)
-        
         logger.debug(f"Merged Keywords: {merged_keywords}")
+        
         return deduplicate_keywords(merged_keywords)
     except Exception as e:
         logger.error(f"Error in hybrid_extraction, using fallback: {e}")
         return hybrid_fallback(jd_text)
-
-def extract_tech_keywords(output: str) -> List[str]:
-    """Extract technical keywords from model output."""
-    return list(set(re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', output)))
-
-def extract_contextual_phrases(jd_text: str) -> List[str]:
-    """Extract contextual phrases using T5 model."""
-    inputs = t5_tokenizer("Keywords: " + jd_text, return_tensors="pt", truncation=True)
-    outputs = t5_model.generate(**inputs, no_repeat_ngram_size=3, num_beams=4)
-    return t5_tokenizer.decode(outputs[0], skip_special_tokens=True).split(", ")
-
-def hybrid_fallback(jd_text: str) -> Dict:
-    """Fallback keyword extraction using KeyBERT and YAKE."""
-    return {
-        'keybert': [kw[0] for kw in kw_model.extract_keywords(jd_text)],
-        'yake': [kw[0] for kw in yake_extractor.extract_keywords(jd_text)]
-    }
-
-def merge_keywords(tech_keywords: List[str], context_keywords: List[str]) -> Dict[str, List[str]]:
-    """Merge technical and contextual keywords."""
-    return {
-        "technical_skills": tech_keywords,
-        "contextual": context_keywords
-    }
-
-def relevant_to_category(keyword: str, category: str) -> bool:
-    """Check if a keyword is relevant to a category."""
-    # Implement your logic to determine relevance
-    return True
-
-def deduplicate_keywords(keywords: Dict[str, List[str]]) -> Dict[str, List[str]]:
-    """Remove duplicate keywords."""
-    for category in keywords:
-        keywords[category] = list(set(keywords[category]))
-    return keywords
-
-def validate_keywords(keywords: Dict[str, List[str]], job_description: str) -> Dict[str, List[str]]:
-    """Validate and filter keywords based on job description."""
-    job_description_lower = job_description.lower()
-    for category in keywords:
-        keywords[category] = [kw for kw in keywords[category] 
-                              if kw.lower() in job_description_lower 
-                              or is_contextually_implied(kw, job_description)]
-    return keywords
-
-def is_contextually_implied(keyword: str, job_description: str) -> bool:
-    """Check if a keyword is contextually implied in the job description."""
-    # Implement your logic to determine contextual implication
-    return True

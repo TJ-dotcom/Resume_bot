@@ -6,7 +6,7 @@ import json
 import time
 from bot.resume_parser import ResumeParser
 from bot.deepseek_processor import QWENProcessor
-from bot.utils import extract_keywords_with_qwen
+from bot.utils import extract_keywords_with_huggingface
 from bot.resume_enhancer import enhance_resume, save_json_file
 from bot.rephrasing import enhance_resume_content
 
@@ -51,19 +51,28 @@ async def receive_job_description(update: Update, context: ContextTypes.DEFAULT_
     await update.message.reply_text('Analyzing job description...')
     
     # Extract keywords using QWEN
-    extracted_keywords = extract_keywords_with_qwen(job_description)
+    extracted_keywords = extract_keywords_with_huggingface(job_description)
     
     logger.info(f"Extracted Keywords: {extracted_keywords}")
     
     # Format keywords for display
-    keywords_display = []
+    keywords_display = ""
     for category, keywords in extracted_keywords.items():
         if keywords:
             category_name = category.replace("_", " ").title()
-            keywords_display.append(f"• {category_name}: {', '.join(keywords)}")
+            if isinstance(keywords, list):
+                keywords_display += f"• {category_name}: {', '.join(map(str, keywords))}\n"
+            elif isinstance(keywords, dict):
+                # Handle nested dictionary structure
+                for sub_category, sub_keywords in keywords.items():
+                    if isinstance(sub_keywords, list):
+                        keywords_display += f"• {category_name} - {sub_category}: {', '.join(map(str, sub_keywords))}\n"
+                    else:
+                        keywords_display += f"• {category_name} - {sub_category}: {str(sub_keywords)}\n"
+            else:
+                keywords_display += f"• {category_name}: {str(keywords)}\n"
     
-    formatted_keywords = "\n".join(keywords_display)
-    await update.message.reply_text(f"Extracted Keywords:\n{formatted_keywords}")
+    await update.message.reply_text(f"Extracted Keywords:\n{keywords_display}")
     await update.message.reply_text('Send your current resume in PDF format.')
     return RESUME
 
@@ -123,7 +132,7 @@ async def process_files(job_description, resume_path, update, context):
             return ConversationHandler.END
         
         # Enhance the resume content by rephrasing work experience and project descriptions
-        extracted_keywords = extract_keywords_with_qwen(job_description)
+        extracted_keywords = extract_keywords_with_huggingface(job_description)
         enhanced_json_data = enhance_resume_content(json_data, extracted_keywords)
         
         # Save the enhanced JSON data to a file

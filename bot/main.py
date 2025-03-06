@@ -9,7 +9,7 @@ from bot.handlers import start, help_command, setup_handlers, error_handler
 from bot.resume_parser import ResumeParser
 from bot.deepseek_processor import QWENProcessor
 # from bot.extraction import extract_resume_data
-from bot.utils import extract_keywords_with_qwen
+from bot.utils import extract_keywords_with_huggingface
 from bot.rephrasing import enhance_resume_content
 
 # Configure logging
@@ -73,7 +73,7 @@ def process_resume_file(
     
     # Extract keywords from the job description
     print("Extracting keywords...")
-    resume_data = extract_keywords_with_qwen(resume_data)
+    resume_data = extract_keywords_with_huggingface(resume_data)
     
     # Enhance content with rephrasing
     print("Enhancing resume content...")
