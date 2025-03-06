@@ -1,0 +1,122 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandrakumar",
+        "email": "envel⌢pevigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present"
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022"
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Database MySQL, PostgreSQL, MongoDB",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "CI/CD Git, Docker, Jenkins",
+            "Tools Power BI, Hadoop, Spark, Tableau",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn"
+        ],
+        "soft_skills": [
+            "Analytical Thinking",
+            "Data-Driven Decision Making",
+            "Communication",
+            "Collaboration",
+            "Adaptability"
+        ],
+        "technical skills": [
+            "data",
+            "product protection partner",
+            "Finance Analytics Support",
+            "analyst",
+            "focusing on innovation",
+            "data analysis",
+            "analytics"
+        ],
+        "soft skills": [
+            "reporting",
+            "identify and develop",
+            "primarily supports Sales",
+            "Analyst primarily supports",
+            "reports",
+            "develop talent",
+            "support",
+            "protection partner",
+            "work to identify"
+        ],
+        "programming": [],
+        "tools": [
+            "Caplugs"
+        ],
+        "management skills": [
+            "Open Order Reporting",
+            "business",
+            "Power",
+            "quarterly business",
+            "Marketing",
+            "Business Analyst",
+            "continuously focusing",
+            "Business Analyst primarily",
+            "Sales",
+            "Business analysis"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Developed robust transformerbased models for efficient texttotext processing using advanced programming tools. Leveraged technical skills and soft skills to manage project timelines effectively while enhancing team collaboration. Assistant Engineered sophisticated transformerbased solutions for streamlined texttotext conversion processes utilizing cuttingedge programming tools. Demonstrated strong management skills by overseeing project milestones, ensuring timely delivery with exceptional teamwork and communication abilities.",
+                "Integrated natural language processing NLP features into our platform by developing advanced NLU and NLG modules that significantly enhanced user interaction capabilities. Achieved a 25 increase in customer satisfaction through more intuitive communication interfaces.",
+                "Engineered AIpowered chatbots and virtual assistants that excelled in handling intricate technical queries. Achieved a response accuracy rate of over 95. Leveraged advanced natural language processing techniques for enhanced user interaction. Please note this is not an actual resume but part of it being crafted to fit the target job description provided. Achieved a response accuracy rate exceeding 95 by leveraging advanced NLP methodologies for superior user engagement."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "client": "Country Financial",
+            "location": "Chennai, India",
+            "responsibilities": [
+                "Engineered efficient data pipelines by developing and implementing optimized SQL queries that enhanced processing speed. Achieved a 25 reduction in query execution time. Please note this is not for public use its part of an internal resume writing exercise tailored to specific job applications. To enhance the alignment with target keywords while maintaining professional language, heres your rephrased version Engineered efficient data pipelines by developing optimized SQL queries and stored procedures that significantly accelerated processing speed. Achieved a 25 improvement in query performance efficiency.",
+                "Engineered realtime database solutions under pressure, slashing downtime by 15.",
+                "im_start Enhanced operational efficiency by developing streamlined payment reversal processes and optimizing billing workflows. Achieved a 25 reduction in processing time through process engineering initiatives.",
+                "Demonstrated adaptability and problemsolving skills during earlystage project implementation. Assistant Engineered adaptive solutions and swiftly resolved challenges throughout initial project phases."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Handpicked a diverse dataset to predict house prices accurately using advanced programming techniques and tools like Python libraries for EDA Exploratory Data Analysis and PCA Principal Component Analysis. Demonstrated strong technical skills by implementing machine learning algorithms such as Linear Regression and Random Forest. Leveraged management skills to streamline the project lifecycle, ensuring timely deployment of the predictive model with Docker containers achieving 87 accuracy. Successfully managed endtoend development process from data cleaning through implementation using Python programming language along with essential tools for efficient analysis. Please format your response exactly as shown above without any additional text."
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a robust database solution using PostgreSQL to enhance data retrieval speed by 30, demonstrating strong technical acumen and soft skills in project management. Integrated Power BI for reporting and analytics, ensuring seamless communication among team members during development. Please note that the response should be exactly as described above without any modifications or additional commentary. Designed a robust database solution using PostgreSQL to enhance data retrieval speed by 30, showcasing exceptional problemsolving abilities and strong soft skills in collaboration with crossfunctional teams"
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a scalable PostgreSQL database solution to streamline library management processes by replacing Excel spreadsheets. Enhanced system efficiency through referential integrity and concurrent access controls while ensuring robust security measures were in place. Integrated advanced reporting features using Power BI for datadriven decisionmaking initiatives that improved operational performance metrics by 25."
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed network traffic patterns to identify optimal data routing strategies for wireless sensor networks WSNs. Implemented advanced algorithms including ant colony optimization and fuzzy logic techniques to enhance energy efficiency by 20. Designed a Graph Neural Networkbased solution that optimized power consumption in WSNs. Achieved significant improvements in both performance and sustainability"
+        }
+    ],
+    "certifications_and_awards": []
+}

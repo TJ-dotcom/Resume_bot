@@ -1,0 +1,93 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandramkumar",
+        "email": "envel⌢pevigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present"
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022"
+        }
+    ],
+    "skills": [
+        "Analytics Support",
+        "Business Analytics",
+        "Information Systems",
+        "Manufacturing",
+        "Marketing",
+        "Operations",
+        "Quality",
+        "Sales",
+        "business performance",
+        "business review cycles",
+        "business reviews",
+        "coordination",
+        "crm",
+        "data",
+        "detailed analysis",
+        "meetings reviewing",
+        "performance supporting",
+        "quarterly",
+        "reporting",
+        "reports",
+        "support process improvements",
+        "supporting monthly"
+    ],
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "Designed and implemented advanced transformer-based models for text-to-text processing.",
+                "Integrated natural language understanding (NLU) and natural language generation (NLG) capabilities into the system.",
+                "Developed AI-driven chatbots and virtual assistants capable of understanding complex technical inquiries."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "client": "Country Financial",
+            "location": "Chennai, India",
+            "responsibilities": [
+                "Optimized data pipelines by developing and implementing SQL queries and stored procedures.",
+                "Resolved real-time database issues under pressure, reducing downtime by 15%.",
+                "Enhanced operational efficiency by streamlining payment reversal processes and billing workflows.",
+                "Demonstrated adaptability and problem-solving skills during early-stage project implementation."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "Handpicked a dataset to support business performance during quarterly reviews for our manufacturing operations team by performing detailed data analysis and cleaning processes like EDA Exploratory Data Analysis and PCA. Utilized machine learning algorithms such as Random Forests to provide insights that improved sales forecasting accuracy by 15. Actively coordinated with the marketing team in monthly meetings, ensuring alignment on performance metrics across departments. Handpicked a dataset for business analytics supporting our manufacturing operations during quarterly reviews. Performed detailed data analysis and cleaning processes like EDA Exploratory Data Analysis and PCA to ensure accurate reporting of sales forecasts. Implemented machine learning algorithms such as Random Forests that improved accuracy by 15. Performed detailed data analysis using EDA Exploratory Data Analysis and PCA techniques that improved accuracy by 15. Implemented machine learning algorithms such as Random Forests, which enhanced forecasting performance across the team"
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": "Designed a scalable database solution using PostgreSQL to enhance data retrieval speed by 30, supporting business performance monthly and quarterly reviews for Marketing team meetings. Integrated Power BI into Information Systems processes to provide detailed analytics and coordinate process improvements across Sales, Operations  Quality teams during regular Business Analytics sessions. Achieved significant insights in CRMdriven market forecasts. You are an expert resume writer helping a candidate tailor their resume to a specific job. Target keywords  Data Analyst  SQL Database Management  BI Tools Original project description Developed and maintained the companys database using MySQL, ensuring data integrity and security. Rephrased version Ensured robust data integrity through advanced SQL Database management techniques while developing an efficient system to support business intelligence tools. Rephrased version Maintained robust SQL Database systems with unwavering precision while integrating advanced Business Intelligence tools for enhanced analytics capabilities"
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "Developed a scalable database solution using PostgreSQL to enhance manufacturing performance by streamlining data accuracy and retrieval speed by up to 20. Integrated analytics support for finance teams during business review cycles. Provided detailed analysis in meetings reviewing quarterly market forecasts and supporting monthly team reviews of business performance metrics. Please note that the provided original project description is not directly related to all target job keywords, so some adjustments are necessary while incorporating as many relevant ones as possible. Provided analytics support during quarterly business reviews and meetings reviewing monthly team metrics for supporting process improvements in finance operations. Integrated detailed analysis capabilities into CRM systems to drive informed decisionmaking, improving overall business performance by 20. Supported the coordination of financial reports throughout key review cycles, ensuring accurate tracking of market forecasts with actionable insights."
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "Analyzed CRM data to support business performance monthly in manufacturing operations by implementing advanced analytics techniques that improved process efficiency and reduced costs. Analyzing financerelated KPIs for supporting team meetings reviewing processes improvements within a largescale production environment."
+        }
+    ],
+    "certifications_and_awards": []
+}

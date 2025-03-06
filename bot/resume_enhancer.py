@@ -1,6 +1,6 @@
 import json
 import argparse
-from typing import Dict, Any
+from typing import Dict, Any, List
 from bot.utils import extract_keywords_with_huggingface
 from bot.rephrasing import enhance_resume_content
 
@@ -23,6 +23,43 @@ def save_json_file(data: Dict, file_path: str) -> bool:
         print(f"Error saving JSON file: {e}")
         return False
 
+def enhance_resume_content(resume_data: Dict[str, Any], job_keywords: List[str]) -> Dict[str, Any]:
+    """
+    Enhance resume content by aligning it with job description keywords.
+    
+    Args:
+        resume_data: The resume data to enhance
+        job_keywords: The list of extracted job description keywords
+        
+    Returns:
+        Enhanced resume data
+    """
+    # Add relevant keywords to skills section
+    if "skills" not in resume_data:
+        resume_data["skills"] = []
+
+    existing_skills = set(s.lower() for s in resume_data["skills"])
+    
+    # Add unique keywords to skills section
+    for skill in job_keywords:
+        if skill.lower() not in existing_skills and not any(
+            skill.lower() in existing.lower() or existing.lower() in skill.lower()
+            for existing in resume_data["skills"]
+        ):
+            resume_data["skills"].append(skill)
+            existing_skills.add(skill.lower())
+    
+    logger.info(f"Updated skills section with unique keywords. Total skills: {len(resume_data.get('skills', []))}")
+    
+    # Rephrase work experience and project descriptions
+    if "work_experience" in resume_data:
+        resume_data["work_experience"] = rephrase_work_experience(resume_data["work_experience"], job_keywords)
+    
+    if "projects" in resume_data:
+        resume_data["projects"] = rephrase_projects(resume_data["projects"], job_keywords)
+    
+    return resume_data
+
 def enhance_resume(resume_data: Dict[str, Any], job_description: str) -> Dict[str, Any]:
     """
     Enhance a resume by aligning it with a job description.
@@ -39,7 +76,7 @@ def enhance_resume(resume_data: Dict[str, Any], job_description: str) -> Dict[st
     job_keywords = extract_keywords_with_huggingface(job_description)
     
     # Eliminate duplicates
-    job_keywords = {k: list(set(v)) for k, v in job_keywords.items()}
+    job_keywords = list(set(job_keywords))
     
     print(f"Extracted keywords: {job_keywords}")
     

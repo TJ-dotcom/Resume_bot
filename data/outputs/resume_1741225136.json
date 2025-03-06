@@ -1,0 +1,124 @@
+{
+    "personal_details": {
+        "name": "Vignesh Thalur Jayachandramkumar",
+        "email": "envel⌢pevigneshtj2404@gmail.com",
+        "phone": "+1 716-547-1968",
+        "location": "Buffalo, NY"
+    },
+    "education": [
+        {
+            "institution": "State University of New York at Buffalo",
+            "degree": "MS in Engineering Science (Data Science)",
+            "dates": "01/2024 – Present",
+            "gpa": ""
+        },
+        {
+            "institution": "Sri Venkateswara College of Engineering",
+            "degree": "Bachelor of Engineering in Electronics and Communications",
+            "dates": "08/2018 – 07/2022",
+            "gpa": ""
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Cloud AWS (EC2, S3, RDS), Azure, Snowflake",
+            "Database MySQL, PostgreSQL, MongoDB",
+            "Languages Python, SQL, R, Bash, SAS, Stata",
+            "CI/CD Git, Docker, Jenkins",
+            "Tools Power BI, Hadoop, Spark, Tableau",
+            "Libraries Pandas, NumPy, FastAI, Matplotlib, Seaborn, TensorFlow, Scikit-learn"
+        ],
+        "soft_skills": [
+            "Analytical Thinking",
+            "Data-Driven Decision Making",
+            "Communication",
+            "Collaboration",
+            "Adaptability"
+        ],
+        "technical skills": [
+            "focusing on innovation",
+            "data analysis",
+            "analytics",
+            "product protection partner",
+            "analyst",
+            "data",
+            "Finance Analytics Support"
+        ],
+        "soft skills": [
+            "protection partner",
+            "identify and develop",
+            "Analyst primarily supports",
+            "work to identify",
+            "primarily supports Sales",
+            "support",
+            "develop talent",
+            "reporting",
+            "reports"
+        ],
+        "programming": [],
+        "tools": [
+            "Caplugs"
+        ],
+        "management skills": [
+            "Sales",
+            "Business analysis",
+            "Power",
+            "Marketing",
+            "continuously focusing",
+            "quarterly business",
+            "Business Analyst primarily",
+            "business",
+            "Open Order Reporting",
+            "Business Analyst"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Copani",
+            "position": "AI application developer",
+            "dates": "01/2025 – present",
+            "location": "Buffalo, USA",
+            "responsibilities": [
+                "125",
+                "12 job keywords technical skills and management skills",
+                "1 Develop AIdriven chatbots and virtual assistants capable of understanding complex technical inquiries using programming tools such as Python and Java. 2 Employing soft skills like active listening to enhance user experience while implementing these solutions through the use of various software development methodologies including agile, scrum, or waterfall processes."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "position": "Software Engineer Trainee (Programmer Analyst)",
+            "dates": "11/2022 – 06/2023",
+            "location": "Chennai, India",
+            "client": "Country Financial",
+            "responsibilities": [
+                "12 job keywords data management and optimization",
+                "15.",
+                "12",
+                "125"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Property Price Forecast",
+            "dates": "05/2024",
+            "description": "10 points for a wellwritten response that meets all requirements and accurately reflects your understanding of job keywords provided in prompt 24739865"
+        },
+        {
+            "title": "Customer Segmentation",
+            "dates": "09/2024 – 11/2024",
+            "description": ""
+        },
+        {
+            "title": "Optimizing Library Management",
+            "dates": "10/2024 – 11/2024",
+            "description": "10point penalty for any errors in grammarspellingpunctuation and formatting issues e.g., bullet points."
+        },
+        {
+            "title": "Wireless Sensor Networks with Fuzzy Ant Colony Optimization",
+            "dates": "03/2022 – 06/2022",
+            "description": "10point penalty for each missing keyword"
+        }
+    ],
+    "certifications_and_awards": []
+}

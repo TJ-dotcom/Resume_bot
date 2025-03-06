@@ -6,8 +6,12 @@ from dotenv import load_dotenv
 import re
 from sentence_transformers import SentenceTransformer
 import numpy as np
+import logging
 
 load_dotenv()
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 def clean_text(text: str) -> str:
     """Clean up the text by removing special characters and unwanted characters."""
@@ -43,17 +47,19 @@ def semantic_deduplication(text: str, threshold=0.85) -> str:
     return '. '.join(unique)
 
 def rephrase_text(prompt: str) -> str:
-    """Rephrase text using the Qwen model hosted locally."""
+    """Rephrase text using the Mistral model hosted locally."""
     url = "http://127.0.0.1:1234/v1/completions"  # Local server address
     payload = {
         "model": "qwen2.5-7b-instruct-1m",
         "prompt": prompt,
-        "temperature": 0.2,  # Reduced from 0.3
+        "temperature": 0.3,
         "top_p": 0.9,
-        "max_tokens": 512,
-        "frequency_penalty": 1.5,  # Added
-        "presence_penalty": 0.9,   # Added
-        "repetition_penalty": 1.5  # Added
+        "max_tokens": 400,
+        "frequency_penalty": 2.0,
+        "presence_penalty": 1.2,
+        "repetition_penalty": 2.2,
+        "typical_p": 0.92,
+        "top_k": 40
     }
     try:
         response = requests.post(url, json=payload)
@@ -67,7 +73,7 @@ def rephrase_text(prompt: str) -> str:
         print(f"Response: {json.dumps(data, indent=2)}")  # Debug response
         return rephrased_text
     except Exception as e:
-        print(f"Error rephrasing text with Qwen model: {str(e)}")
+        print(f"Error rephrasing text with Mistral model: {str(e)}")
         return prompt
 
 def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords: Dict[str, List[str]]) -> List[Dict[str, Any]]:
@@ -188,34 +194,40 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: Dict[str, Li
     
     return rephrased_projects
 
-def enhance_resume_content(resume_data: dict, job_keywords: dict) -> dict:
+def enhance_resume_content(resume_data: Dict[str, Any], job_keywords: List[str]) -> Dict[str, Any]:
     """
-    Enhance resume content by incorporating job keywords.
+    Enhance resume content by aligning it with job description keywords.
     
     Args:
         resume_data: The resume data to enhance
-        job_keywords: Dictionary of keyword categories and lists
+        job_keywords: The list of extracted job description keywords
         
     Returns:
         Enhanced resume data
     """
-    # Rephrase work experience
-    if 'experience' in resume_data:
-        resume_data['experience'] = rephrase_work_experience(resume_data['experience'], job_keywords)
+    # Ensure the skills section is a list
+    if "skills" not in resume_data or not isinstance(resume_data["skills"], list):
+        resume_data["skills"] = []
+
+    existing_skills = set(s.lower() for s in resume_data["skills"])
     
-    # Rephrase projects
-    if 'projects' in resume_data:
-        resume_data['projects'] = rephrase_projects(resume_data['projects'], job_keywords)
+    # Add unique keywords to skills section
+    for skill in job_keywords:
+        if skill.lower() not in existing_skills and not any(
+            skill.lower() in existing.lower() or existing.lower() in skill.lower()
+            for existing in resume_data["skills"]
+        ):
+            resume_data["skills"].append(skill)
+            existing_skills.add(skill.lower())
     
-    # Add extracted keywords to skills section
-    if 'skills' not in resume_data:
-        resume_data['skills'] = {}
+    logger.info(f"Updated skills section with unique keywords. Total skills: {len(resume_data.get('skills', []))}")
     
-    for category, keywords in job_keywords.items():
-        if category not in resume_data['skills']:
-            resume_data['skills'][category] = []
-        resume_data['skills'][category].extend(keywords)
-        resume_data['skills'][category] = list(set(resume_data['skills'][category]))  # Remove duplicates
+    # Rephrase work experience and project descriptions
+    if "work_experience" in resume_data:
+        resume_data["work_experience"] = rephrase_work_experience(resume_data["work_experience"], job_keywords)
+    
+    if "projects" in resume_data:
+        resume_data["projects"] = rephrase_projects(resume_data["projects"], job_keywords)
     
     return resume_data
 

@@ -78,7 +78,7 @@ def generate_qwen_response(prompt: str) -> str:
         return ""
 
 @log_error
-def extract_keywords_with_huggingface(job_description: str) -> Dict:
+def extract_keywords_with_huggingface(job_description: str) -> List[str]:
     """Extract keywords from job description using Hugging Face models."""
     try:
         # Technical skills extraction
@@ -100,13 +100,10 @@ def extract_keywords_with_huggingface(job_description: str) -> Dict:
         # Deduplicate keywords
         unique_keywords = deduplicate_keywords(combined_keywords)
         
-        # Categorize keywords
-        categorized_keywords = categorize_keywords(unique_keywords)
+        # Sort keywords alphabetically
+        sorted_keywords = sorted(unique_keywords)
         
-        # Refine categorized keywords
-        refined_keywords = refine_keywords(categorized_keywords)
-        
-        return refined_keywords
+        return sorted_keywords
     except Exception as e:
         logger.error(f"Error in extract_keywords_with_huggingface, using fallback: {e}")
         return hybrid_fallback(job_description)
@@ -121,78 +118,39 @@ def extract_contextual_phrases(jd_text: str) -> List[str]:
     outputs = t5_model.generate(**inputs, no_repeat_ngram_size=3, num_beams=4)
     return t5_tokenizer.decode(outputs[0], skip_special_tokens=True).split(", ")
 
-def hybrid_fallback(jd_text: str) -> Dict:
+def hybrid_fallback(jd_text: str) -> List[str]:
     """Fallback keyword extraction using KeyBERT and YAKE."""
-    return {
-        'keybert': [kw[0] for kw in kw_model.extract_keywords(jd_text)],
-        'yake': [kw[0] for kw in yake_extractor.extract_keywords(jd_text)]
-    }
+    keybert_keywords = [kw[0] for kw in kw_model.extract_keywords(jd_text)]
+    yake_keywords = [kw[0] for kw in yake_extractor.extract_keywords(jd_text)]
+    return keybert_keywords + yake_keywords
 
-def combine_keywords(primary_keywords: Dict[str, List[str]], fallback_keywords: Dict[str, List[str]]) -> Dict[str, List[str]]:
+def combine_keywords(primary_keywords: List[str], fallback_keywords: List[str]) -> List[str]:
     """Combine primary and fallback keywords."""
-    combined_keywords = primary_keywords
-    for category, keywords in fallback_keywords.items():
-        if category in combined_keywords:
-            combined_keywords[category].extend(keywords)
-        else:
-            combined_keywords[category] = keywords
+    combined_keywords = primary_keywords + fallback_keywords
     return combined_keywords
 
-def merge_keywords(tech_keywords: List[str], context_keywords: List[str]) -> Dict[str, List[str]]:
+def merge_keywords(tech_keywords: List[str], context_keywords: List[str]) -> List[str]:
     """Merge technical and contextual keywords."""
-    return {
-        "technical_skills": tech_keywords,
-        "contextual": context_keywords
-    }
+    return tech_keywords + context_keywords
 
-def deduplicate_keywords(keywords: Dict[str, List[str]]) -> List[str]:
+def deduplicate_keywords(keywords: List[str]) -> List[str]:
     """Remove duplicate keywords."""
     seen = set()
     unique_keywords = []
-    for category, kw_list in keywords.items():
-        for keyword in kw_list:
-            lower_keyword = keyword.lower()
-            if lower_keyword not in seen:
-                unique_keywords.append(keyword)
-                seen.add(lower_keyword)
+    for keyword in keywords:
+        lower_keyword = keyword.lower()
+        if lower_keyword not in seen:
+            unique_keywords.append(keyword)
+            seen.add(lower_keyword)
     return unique_keywords
 
-def categorize_keywords(keywords: List[str]) -> Dict[str, List[str]]:
-    """Categorize keywords into generalized categories using zero-shot classification."""
-    categories = {category: [] for category in CATEGORIES}
-    seen = set()
-    
-    for keyword in keywords:
-        if keyword.lower() not in seen:
-            classification = classifier(keyword, CATEGORIES)
-            best_category = classification["labels"][0]
-            categories[best_category].append(keyword)
-            seen.add(keyword.lower())
-    
-    return categories
-
-def refine_keywords(categorized_keywords: Dict[str, List[str]]) -> Dict[str, List[str]]:
-    """Refine categorized keywords to remove redundancies and ensure proper categorization."""
-    refined_keywords = {category: [] for category in CATEGORIES}
-    seen = set()
-    
-    for category, keywords in categorized_keywords.items():
-        for keyword in keywords:
-            lower_keyword = keyword.lower()
-            if lower_keyword not in seen:
-                refined_keywords[category].append(keyword)
-                seen.add(lower_keyword)
-    
-    return refined_keywords
-
-def validate_keywords(keywords: Dict[str, List[str]], job_description: str) -> Dict[str, List[str]]:
+def validate_keywords(keywords: List[str], job_description: str) -> List[str]:
     """Validate and filter keywords based on job description."""
     job_description_lower = job_description.lower()
-    for category in keywords:
-        keywords[category] = [kw for kw in keywords[category] 
-                              if kw.lower() in job_description_lower 
-                              or is_contextually_implied(kw, job_description)]
-    return keywords
+    validated_keywords = [kw for kw in keywords 
+                          if kw.lower() in job_description_lower 
+                          or is_contextually_implied(kw, job_description)]
+    return validated_keywords
 
 def is_contextually_implied(keyword: str, job_description: str) -> bool:
     """Check if a keyword is contextually implied in the job description."""
@@ -312,7 +270,7 @@ def yake_extraction(text: str) -> Dict:
     """Fallback keyword extraction using YAKE."""
     yake_extractor = KeywordExtractor(top=20)
     yake_keywords = yake_extractor.extract_keywords(text)
-    return {"keywords": [kw[0] for kw in yake_keywords]}
+    return {"keybert": [], "yake": [kw[0] for kw in yake_keywords]}
 
 @log_error
 def extract_json_from_text(text: str) -> Dict:

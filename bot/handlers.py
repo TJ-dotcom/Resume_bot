@@ -56,21 +56,7 @@ async def receive_job_description(update: Update, context: ContextTypes.DEFAULT_
     logger.info(f"Extracted Keywords: {extracted_keywords}")
     
     # Format keywords for display
-    keywords_display = ""
-    for category, keywords in extracted_keywords.items():
-        if keywords:
-            category_name = category.replace("_", " ").title()
-            if isinstance(keywords, list):
-                keywords_display += f"• {category_name}: {', '.join(map(str, keywords))}\n"
-            elif isinstance(keywords, dict):
-                # Handle nested dictionary structure
-                for sub_category, sub_keywords in keywords.items():
-                    if isinstance(sub_keywords, list):
-                        keywords_display += f"• {category_name} - {sub_category}: {', '.join(map(str, sub_keywords))}\n"
-                    else:
-                        keywords_display += f"• {category_name} - {sub_category}: {str(sub_keywords)}\n"
-            else:
-                keywords_display += f"• {category_name}: {str(keywords)}\n"
+    keywords_display = ", ".join(extracted_keywords)
     
     await update.message.reply_text(f"Extracted Keywords:\n{keywords_display}")
     await update.message.reply_text('Send your current resume in PDF format.')
