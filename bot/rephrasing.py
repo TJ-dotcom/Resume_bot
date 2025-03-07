@@ -47,7 +47,7 @@ def semantic_deduplication(text: str, threshold=0.85) -> str:
     return '. '.join(unique)
 
 def rephrase_text(prompt: str) -> str:
-    """Rephrase text using the Mistral model hosted locally."""
+    """Rephrase text using the Qwen model hosted locally."""
     url = "http://127.0.0.1:1234/v1/completions"  # Local server address
     payload = {
         "model": "qwen2.5-7b-instruct-1m",
@@ -69,14 +69,12 @@ def rephrase_text(prompt: str) -> str:
         rephrased_text = clean_text(rephrased_text)  # Clean up the rephrased text
         rephrased_text = remove_duplicate_sentences(rephrased_text)  # Remove duplicate sentences
         rephrased_text = semantic_deduplication(rephrased_text)  # Advanced deduplication
-        print(f"Payload: {json.dumps(payload, indent=2)}")  # Debug payload
-        print(f"Response: {json.dumps(data, indent=2)}")  # Debug response
         return rephrased_text
     except Exception as e:
-        print(f"Error rephrasing text with Mistral model: {str(e)}")
+        print(f"Error rephrasing text with Qwen model: {str(e)}")
         return prompt
 
-def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords: Dict[str, List[str]]) -> List[Dict[str, Any]]:
+def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords: List[str]) -> List[Dict[str, Any]]:
     rephrased_experience = []
     used_keywords = set()
     
@@ -141,7 +139,7 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
     
     return rephrased_experience
 
-def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: Dict[str, List[str]]) -> List[Dict[str, Any]]:
+def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -> List[Dict[str, Any]]:
     rephrased_projects = []
     used_keywords = set()
     
@@ -178,6 +176,7 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: Dict[str, Li
         
         try:
             rephrased_description = rephrase_text(prompt)
+            rephrased_description = semantic_deduplication(rephrased_description)
             print(f"Original: {description}\nRephrased: {rephrased_description}\n")
             
             rephrased_project = project.copy()
@@ -223,8 +222,8 @@ def enhance_resume_content(resume_data: Dict[str, Any], job_keywords: List[str])
     logger.info(f"Updated skills section with unique keywords. Total skills: {len(resume_data.get('skills', []))}")
     
     # Rephrase work experience and project descriptions
-    if "work_experience" in resume_data:
-        resume_data["work_experience"] = rephrase_work_experience(resume_data["work_experience"], job_keywords)
+    if "experience" in resume_data:
+        resume_data["experience"] = rephrase_work_experience(resume_data["experience"], job_keywords)
     
     if "projects" in resume_data:
         resume_data["projects"] = rephrase_projects(resume_data["projects"], job_keywords)
