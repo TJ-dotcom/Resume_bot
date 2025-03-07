@@ -10,18 +10,55 @@ resume_bot
 │   ├── __init__.py
 │   ├── handlers.py          # Handles Telegram bot interactions
 │   ├── resume_parser.py     # Parses resume data
-│   ├── t5_model.py          # Manages the T5 model for content generation
-│   └── pdf_generator.py      # Generates PDF files from LaTeX templates
+│   ├── deepseek_parser.py   # Parses resumes using Deepseek LLM
+│   ├── deepseek_processor.py# Processes resume text using QWEN API
+│   ├── json_resume_converter.py # Converts resume data to/from JSON Resume schema
+│   ├── pdf_generator.py     # Generates PDF files from LaTeX templates
+│   ├── rephrasing.py        # Rephrases and enhances resume content
+│   ├── resume_enhancer.py   # Enhances resume content by aligning it with job descriptions
+│   └── utils.py             # Utility functions for keyword extraction and API calls
 ├── tests
 │   ├── __init__.py
 │   ├── test_handlers.py      # Unit tests for handlers.py
 │   ├── test_resume_parser.py  # Unit tests for resume_parser.py
-│   ├── test_t5_model.py      # Unit tests for t5_model.py
-│   └── test_pdf_generator.py  # Unit tests for pdf_generator.py
+│   ├── test_pdf_generator.py  # Unit tests for pdf_generator.py
 ├── bot_v1.py                # Main script to run the bot
-├── requirements.txt          # Project dependencies
-└── README.md                 # Project documentation
+├── cli.py                   # Command line interface for processing resumes
+├── config.py                # Configuration settings
+├── requirements.txt         # Project dependencies
+└── README.md                # Project documentation
 ```
+
+## Transformer Models and LLMs Used
+
+### Transformer Models
+
+1. **Tech Keyword Specialist**
+   - **Model:** `ilsilfverskiold/tech-keywords-extractor`
+   - **Purpose:** Extract hard technical skills/tools from job descriptions
+   - **Implementation:** Used in `bot/utils.py` for extracting technical keywords.
+
+2. **Contextual Phrase Model**
+   - **Model:** `Voicelab/vlt5-base-keywords`
+   - **Purpose:** Extract contextual phrases and implied skills
+   - **Implementation:** Used in `bot/utils.py` for extracting contextual phrases.
+
+3. **Zero-Shot Classification Model**
+   - **Model:** `facebook/bart-large-mnli`
+   - **Purpose:** Classify text into predefined categories
+   - **Implementation:** Used in `bot/utils.py` for classification tasks.
+
+### Large Language Models (LLMs)
+
+1. **Deepseek LLM**
+   - **Model:** `deepseek-r1-distill-qwen-7b`
+   - **Purpose:** Parse resumes and convert them into structured JSON Resume schema
+   - **Implementation:** Used in `bot/deepseek_parser.py` for parsing resumes.
+
+2. **QWEN API**
+   - **Model:** `qwen2.5-7b-instruct-1m`
+   - **Purpose:** Generate text and convert resume text to structured JSON
+   - **Implementation:** Used in `bot/deepseek_processor.py` and `bot/utils.py` for generating responses and processing resumes.
 
 ## Setup Instructions
 
