@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 import re
 from sentence_transformers import SentenceTransformer
-import numpy as np
+import numpy as np  # Corrected import statement
 import logging
 
 load_dotenv()
@@ -46,7 +46,7 @@ def semantic_deduplication(text: str, threshold=0.85) -> str:
             seen_embeddings.append(embeddings[i])
     return '. '.join(unique)
 
-def rephrase_text(prompt: str) -> str:
+def rephrase_text(prompt: str, max_tokens: int = 90) -> str:
     """Rephrase text using the Qwen model hosted locally."""
     url = "http://127.0.0.1:1234/v1/completions"  # Local server address
     payload = {
@@ -54,7 +54,7 @@ def rephrase_text(prompt: str) -> str:
         "prompt": prompt,
         "temperature": 0.3,
         "top_p": 0.9,
-        "max_tokens": 400,
+        "max_tokens": max_tokens,  # Limit the maximum tokens to ensure concise output
         "frequency_penalty": 2.0,
         "presence_penalty": 1.2,
         "repetition_penalty": 2.2,
@@ -93,6 +93,7 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
         print(f"Using job keywords: {job_keywords}")
         
         rephrased_responsibilities = []
+        total_tokens = 0
         for resp in responsibilities:
             available_keywords = [kw for kw in job_keywords if kw not in used_keywords]
             prompt = f"""
@@ -104,14 +105,16 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
             Original responsibility: {resp}
             
             Your task:
-            1. Incorporate at least 1-2 job keywords naturally where appropriate
+            1. Incorporate at least 1-2 extracted job keywords naturally where appropriate (only once)
             2. Emphasize relevant skills and achievements
             3. Use action verbs and quantifiable results
             4. Maintain professional resume language
-            5. Keep approximately the same length as the original
+            5. Keep accurately the same length as the original
+            6. Limit the rephrased description to a maximum of four points (each point in a single sentence)
+            7. DO NOT deviate from the original content, keep it relevant
             
             Additional constraints:
-            - Avoid repeating any technical terms more than twice per section
+            - Avoid repeating any technical terms more than once per section
             - Never use the same sentence structure consecutively
             - Vary action verbs between 'developed', 'engineered', 'implemented', etc.
             - Ensure 30% lexical diversity compared to original content
@@ -120,7 +123,8 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
             """
             
             try:
-                rephrased_resp = rephrase_text(prompt)
+                remaining_tokens = 90 - total_tokens
+                rephrased_resp = rephrase_text(prompt, max_tokens=remaining_tokens)
                 rephrased_resp = semantic_deduplication(rephrased_resp)
                 print(f"Original: {resp}\nRephrased: {rephrased_resp}\n")
                 rephrased_responsibilities.append(rephrased_resp)
@@ -129,9 +133,16 @@ def rephrase_work_experience(experience_list: List[Dict[str, Any]], job_keywords
                 for kw in available_keywords:
                     if kw in rephrased_resp:
                         used_keywords.add(kw)
+                
+                total_tokens += len(rephrased_resp.split())
+                if total_tokens >= 90:
+                    break
             except Exception as e:
                 print(f"Error rephrasing responsibility for {company}: {str(e)}")
                 rephrased_responsibilities.append(resp)
+        
+        # Limit the rephrased responsibilities to a maximum of four points
+        rephrased_responsibilities = rephrased_responsibilities[:4]
         
         rephrased_exp = exp.copy()
         rephrased_exp['responsibilities'] = rephrased_responsibilities
@@ -170,6 +181,7 @@ def rephrase_projects(projects: List[Dict[str, Any]], job_keywords: List[str]) -
         4. Use action verbs and quantifiable metrics
         5. Maintain professional resume language
         6. Keep approximately the same length as the original
+        7. Limit the rephrased description to a maximum of four points
         
         Return ONLY the rephrased version with no explanations, quotes, or additional text.
         """
